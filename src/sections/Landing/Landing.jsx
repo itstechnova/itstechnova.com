@@ -5,6 +5,7 @@ import "./Landing.scss";
 import facebook from "../../resources/images/socials/facebook-dark.svg";
 import instagram from "../../resources/images/socials/ig-dark.svg";
 import linkedin from "../../resources/images/socials/linkedin-dark.svg";
+import email from "../../resources/images/socials/email-dark.svg";
 import slack from "../../resources/images/socials/slack-dark.svg";
 import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
@@ -20,13 +21,14 @@ const Landing = () => (
           <span className="slogan-connect">{landing.sloganConnect}</span>
         </div>
         <div className="socials">
+          <SocialMediaLink src={email} link={socials.email} />
           <SocialMediaLink src={facebook} link={socials.facebook} />
           <SocialMediaLink src={instagram} link={socials.instagram} />
           <SocialMediaLink src={linkedin} link={socials.linkedin} />
           <SocialMediaLink src={slack} link={socials.twitter} />
         </div>
         <div className="button-container">
-          <button>{landing.mail}</button>
+            <a className="button" href={socials.mailingList}>{landing.mail}</a>
         </div>
       </div>
     </div>
