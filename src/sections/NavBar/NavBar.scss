@@ -1,0 +1,22 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #faf8ff;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  list-style: none;
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+}
+
+.nav-link {
+  color: #7676e8;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}

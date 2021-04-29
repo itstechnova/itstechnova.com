@@ -1,0 +1,10 @@
+.social-link-container {
+  padding: 10px;
+}
+
+.social-icon {
+  height: 50px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
