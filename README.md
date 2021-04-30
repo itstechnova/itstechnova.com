@@ -1,6 +1,7 @@
 ## itsTechNova Website
 
-**Checkout the live website: [itstechnova.com](itstechnova.com)**
+**Checkout the live website: [www.itstechnova.com](http://itstechnova.com/)**
+
 
 ### Getting Started
 
