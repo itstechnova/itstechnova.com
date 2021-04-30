@@ -7,6 +7,7 @@ import instagram from "../../resources/images/socials/ig-dark.svg";
 import linkedin from "../../resources/images/socials/linkedin-dark.svg";
 import email from "../../resources/images/socials/email-dark.svg";
 import slack from "../../resources/images/socials/slack-dark.svg";
+// import twitter from "../../resources/images/socials/twitter-dark.svg";
 import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
 
@@ -16,9 +17,9 @@ const Landing = () => (
       <div className="landing-content">
         <span className="title">{landing.title}</span>
         <div className="slogan">
-          <span className="slogan-prepare">{landing.sloganPrepare}</span>
-          <span className="slogan-hack">{landing.sloganHack}</span>
-          <span className="slogan-connect">{landing.sloganConnect}</span>
+          <span className="slogan-prepare">{landing.sloganPrepare} </span>
+          <span className="slogan-hack">{landing.sloganHack} </span>
+          <span className="slogan-connect">{landing.sloganConnect} </span>
         </div>
         <div className="socials">
           <SocialMediaLink src={email} link={socials.email} />
