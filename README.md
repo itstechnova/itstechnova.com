@@ -1,29 +1,48 @@
-## itsTechNova Website
+# itsTechNova Website
 
-**Checkout the live website: [www.itstechnova.com](http://itstechnova.com/)**
-
-
-### Getting Started
-
-1. Clone the project by running: `git clone https://github.com/itstechnova/itstechnova.com`
-2. Run `yarn install` in the project directory to install all the packages
-3. Run `yarn start`, you will be able to view the website on http://localhost:3000
+**Checkout the live website: [www.itstechnova.com](http://itstechnova.com/)**  
+**Temp link until DNS stuff gets sorted out: [https://itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
 
 
-### Deployment Steps
+## Getting Started
 
-1. 
+Clone the project: 
+```
+git clone https://github.com/itstechnova/itstechnova.com 
+```
+Navigate to project directory and install required packages:
+```
+cd itstechnova.com
+yarn install
+```
+Run the following to view live changes on http://localhost:3000
+```
+yarn start
+```
 
-### Development Tips
+
+## Deployment
+
+Netlify is set up to **automatically trigger a deployment** when you push to main.  
+To see build status and analytics, login by email here: https://app.netlify.com/ 
+```
+email: hacktechnova@gmail.com
+password: Technova123!
+```
+Unfortunately the free plan does not allow for adding team members.
+
+## Development Tips
 
 #### Naming Convention
 
-- For new features: `initial/feature/ticket#`, the ticket # will be the Jira ticket that you are working on
+- Name your branches `feature/ticket#-title`, where ticket# refers to the task id you are working on
+- e.g. feature/12-create-nav-bar
 
 #### Pull Requests & Commits
 
 - Always write a descriptive commit message in the following format: `ticket#: description`
 - Write a detailed, but not overly detailed description of the feature or bug fixes when creating a PR
+- AVOID pushing directly to dev and main
 
 #### Other Tips
 
