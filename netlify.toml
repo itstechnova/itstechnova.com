@@ -1,6 +1,14 @@
 [[redirects]]
+  from = "https://itstechnova.netlify.app"
+  to = "https://www.itstechnova.com"
+  
+[[redirects]]
   from = "https://itstechnova.netlify.app/*"
   to = "https://www.itstechnova.com/:splat"
+
+[[redirects]]
+  from = "https://www.itstechnova.org"
+  to = "https://www.itstechnova.com"
 
 [[redirects]]
   from = "https://www.itstechnova.org/*"
