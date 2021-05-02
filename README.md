@@ -1,6 +1,6 @@
 # itsTechNova Website
 
-**Checkout the live website: [www.itstechnova.com](http://itstechnova.com/), [www.itstechnova.org](http://itstechnova.org/)**  
+**Checkout the live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
 **Dev site: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
 **Netlify domain: [itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
 
