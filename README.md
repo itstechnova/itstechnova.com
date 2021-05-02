@@ -1,7 +1,8 @@
 # itsTechNova Website
 
-**Checkout the live website: [www.itstechnova.com](http://itstechnova.com/)**  
-**Temp link until DNS stuff gets sorted out: [https://itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
+**Checkout the live website: [www.itstechnova.com](http://itstechnova.com/), [www.itstechnova.org](http://itstechnova.org/)**  
+**Dev site: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
+**Netlify domain: [itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
 
 
 ## Getting Started
