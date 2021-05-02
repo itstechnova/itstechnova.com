@@ -26,8 +26,9 @@ yarn start
 
 Netlify is set up to **automatically trigger deployments** upon changes to.  
 - **dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
-- **main branch for: [www.itstechnova.com](http://itstechnova.com/)**    
+- **main branch for: [www.itstechnova.com](http://itstechnova.com/)**   
 
+A preview website will be deployed by Netlify when you create a pull request.   
 To see build status and analytics, login by email here: https://app.netlify.com/ 
 ```
 email: hacktechnova@gmail.com
