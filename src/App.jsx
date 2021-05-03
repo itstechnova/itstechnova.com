@@ -12,9 +12,9 @@ const routes = [
 const App = () => {
   return (
     <div className="App">
-      <NavBar routes={routes} />
+      {/*<NavBar routes={routes} />*/}
       <Landing />
-      <About />
+      {/*<About />*/}
     </div>
   );
 };
