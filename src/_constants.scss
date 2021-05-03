@@ -6,9 +6,9 @@ $font-regular: "Poppins";
 
 $text-xxsmall: 10px;
 $text-xsmall: 12px;
-$text-small: 15px;
-$text-medium: 18px;
-$text-large: 25px;
+$text-small: 14px;
+$text-medium: 16px;
+$text-large: 23px;
 $text-xlarge: 50px;
 $text-logo: 60px;
 
@@ -35,28 +35,34 @@ $text-muted: #6a6868;
 $text-dark: #333333;
 
 // Breakpoints
-$screen-xsm-max: 390px;
-$screen-sm-max: 540px;
-$screen-md-max: 820px;
-$screen-lg-max: 1300px;
+$width-xsm-max: 390px;
+$width-sm-max: 540px;
+$width-md-max: 820px;
+$width-lg-max: 1300px;
+
+$height-xsm-max: 470px;
+$height-sm-max: 550px;
+$height-md-max: 580px;
+$height-lg-max: 600px;
+
 
 @mixin small-phone {
-  @media (max-width: #{$screen-xsm-max}) {
+  @media (max-width: #{$width-xsm-max}), (max-height: #{$height-xsm-max}) {
     @content;
   }
 }
 @mixin phone {
-  @media (max-width: #{$screen-sm-max}) {
+  @media (max-width: #{$width-sm-max}), (max-height: #{$height-sm-max}) {
     @content;
   }
 }
 @mixin tablet {
-  @media (max-width: #{$screen-md-max}) {
+  @media (max-width: #{$width-md-max}), (max-height: #{$height-md-max}) {
     @content;
   }
 }
 @mixin desktop {
-  @media (max-width: #{$screen-lg-max}) {
+  @media (max-width: #{$width-lg-max}), (max-height: #{$height-lg-max}) {
     @content;
   }
 }
