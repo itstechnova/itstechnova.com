@@ -24,11 +24,13 @@ yarn start
 
 ## Deployment
 
-Netlify is set up to **automatically trigger deployments** upon changes to.  
-- **dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
-- **main branch for: [www.itstechnova.com](http://itstechnova.com/)**   
+Netlify is set up to **automatically trigger deployments** upon changes to:  
+- dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)  
+- main branch for: [www.itstechnova.com](http://itstechnova.com/)     
 
-A preview website will be deployed by Netlify when you create a pull request.   
+A preview website will be deployed by Netlify when you create a pull request. Navigate by clicking on the `Details` button below:   
+<img width="922" alt="Screen Shot 2021-05-02 at 4 58 54 PM" src="https://user-images.githubusercontent.com/43832056/116832521-f8dbc400-ab69-11eb-9cf5-dc725645e73d.png">
+
 To see build status and analytics, login by email here: https://app.netlify.com/ 
 ```
 email: hacktechnova@gmail.com
