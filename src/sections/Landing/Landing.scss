@@ -4,8 +4,12 @@
   &-container {
     //padding-top: 8vh;
     height: 100vh;
+    max-height: -webkit-fill-available;
     justify-content: center;
     background-color: $background-light;
+    @include phone {
+      height: 90vh;
+    }
   }
 
   &-content {
