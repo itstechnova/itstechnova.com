@@ -1,62 +1,109 @@
-.landing-container {
-  padding-top: 8vh;
-  height: 92vh;
-  justify-content: center;
-  background-color: #faf8ff;
+@import "../../constants";
+
+.landing {
+  &-container {
+    //padding-top: 8vh;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    justify-content: center;
+    background-color: $background-light;
+    @include phone {
+      height: 90vh;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-regular;
+    font-size: $text-medium;
+    @include phone {
+      padding: 20px;
+      font-size: $text-xsmall;
+    }
+  }
+
+  &-logo {
+    height: 132px;
+    padding-bottom: 40px;
+    @include phone {
+      height: 100px;
+      padding-bottom: 20px;
+    }
+    @include small-phone {
+      height: 80px;
+    }
+  }
+
+  &-title {
+    font-size: $text-logo;
+    font-family: $font-logo;
+    @include tablet {
+      font-size: $text-xlarge;
+    }
+  }
+
+  &-slogan {
+    color: $text-muted;
+    font-size: $text-large;
+    @include tablet {
+      font-size: $text-medium;
+    }
+    @include phone {
+      font-size: $text-xsmall;
+    }
+    @include small-phone {
+      font-size: $text-xxsmall;
+    }
+  }
+
+  &-description {
+    padding: 50px;
+    @include tablet {
+      padding: 30px;
+    }
+    @include phone {
+      padding: 20px;
+    }
+  }
+
+  &-coming-soon {
+    color: $text-muted;
+    font-family: $font-italic;
+  }
 }
 
-.landing-content {
-  height: 100%;
+.socials {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 }
 
-.title {
-  font-size: 120px;
-  color: #7676e8;
-}
-
-span {
-  font-size: 30px;
-  padding: 10px;
+.button-container {
+  padding-top: 10px;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #7676e8;
-  color: white;
-  width: 300px;
-  height: 70px;
-  font-size: 25px;
+  background-color: $accent-pink;
+  color: $text-light;
+  width: 220px;
+  height: 42px;
+  font-size: $text-small;
   border-radius: 50px;
   font-weight: bold;
   border-style: none;
   text-decoration: none;
 
-  &:hover {
+  @include phone {
+    font-size: $text-xsmall;
+  }
+
+  &:hover, &:focus {
     opacity: 0.7;
   }
-}
-
-.button-container {
-  padding-top: 30px;
-}
-
-.socials {
-  display: flex;
-  padding-top: 20px;
-}
-
-.slogan-prepare {
-  color: #ff988c;
-}
-.slogan-hack {
-  color: #7676e8;
-}
-.slogan-connect {
-  color: #39abfb;
 }
