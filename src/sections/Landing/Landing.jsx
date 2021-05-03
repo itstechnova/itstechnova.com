@@ -13,7 +13,7 @@ const Landing = () => (
   <React.Fragment>
     <div className="landing-container" id="landing">
       <div className="landing-content">
-      <img className="landing-logo" src={logo} alt="logo" />
+        <img className="landing-logo" src={logo} alt="logo" />
         <span className="landing-title">{landing.title}</span>
 
         <span className="landing-slogan">
