@@ -3,17 +3,18 @@
 .landing {
   &-container {
     //padding-top: 8vh;
-    height: 100vh;
-    max-height: -webkit-fill-available;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
     background-color: $background-light;
     @include phone {
-      height: 90vh;
+      min-height: 90vh;
     }
   }
 
   &-content {
-    height: 100%;
+    padding: 20px 0 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
