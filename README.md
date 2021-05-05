@@ -34,7 +34,7 @@ A preview website will be deployed by Netlify when you create a pull request. Na
 To see build status and analytics, login by email here: https://app.netlify.com/ 
 ```
 email: hacktechnova@gmail.com
-password: Technova123!
+password: {Same as gmail}
 ```
 Unfortunately the free plan does not allow for adding team members.
 
