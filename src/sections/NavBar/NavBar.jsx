@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { HashLink as Link } from 'react-router-hash-link';
 import "./NavBar.scss";
 import nav from "../../resources/strings/nav";
 
@@ -11,7 +11,7 @@ const NavBar = ({ routes }) => {
           <Link
             className="nav-link"
             activeClass="active"
-            to={route.sectionId}
+            to={`/#${route.sectionId}`}
             spy={true}
             smooth={true}
             offset={-70}
