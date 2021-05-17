@@ -13,12 +13,12 @@ $text-xlarge: 50px;
 $text-logo: 60px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
-  @font-face {
-    font-weight: $weight;
-    font-family: '#{$name}';
-    font-style: $style;
-    src: url('./resources/fonts/#{$file}.ttf') format('truetype');
-  }
+    @font-face {
+        font-weight: $weight;
+        font-family: '#{$name}';
+        font-style: $style;
+        src: url('./resources/fonts/#{$file}.ttf') format('truetype');
+    }
 }
 
 @include fontface('Josefin Sans', 'JosefinSans/static/JosefinSans-Regular'); 
@@ -47,22 +47,22 @@ $height-lg-max: 600px;
 
 
 @mixin small-phone {
-  @media (max-width: #{$width-xsm-max}), (max-height: #{$height-xsm-max}) {
-    @content;
-  }
+    @media (max-width: #{$width-xsm-max}), (max-height: #{$height-xsm-max}) {
+        @content;
+    }
 }
 @mixin phone {
-  @media (max-width: #{$width-sm-max}), (max-height: #{$height-sm-max}) {
-    @content;
-  }
+    @media (max-width: #{$width-sm-max}), (max-height: #{$height-sm-max}) {
+        @content;
+    }
 }
 @mixin tablet {
-  @media (max-width: #{$width-md-max}), (max-height: #{$height-md-max}) {
-    @content;
-  }
+    @media (max-width: #{$width-md-max}), (max-height: #{$height-md-max}) {
+        @content;
+    }
 }
 @mixin desktop {
-  @media (max-width: #{$width-lg-max}), (max-height: #{$height-lg-max}) {
-    @content;
-  }
+    @media (max-width: #{$width-lg-max}), (max-height: #{$height-lg-max}) {
+        @content;
+    }
 }
