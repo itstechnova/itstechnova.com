@@ -5,9 +5,8 @@ function useToggleMode() {
         const localMode = window.localStorage.getItem("mode");
         if (!localMode) {
             window.localStorage.setItem("mode", "light");
-            setMode("light");
         }
-        return localMode;
+        return localMode == null ? "light" : localMode;
     }
 
     const [mode, setMode] = useState(initMode);
