@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-function useToggleMode(initialValue) {
-    const [mode, setMode] = useState(initialValue);
+function useToggleMode() {
+    const [mode, setMode] = useState(window.localStorage.getItem("mode"));
 
     const toggleMode = () => {
         const prevMode = window.localStorage.getItem("mode");
