@@ -15,24 +15,37 @@ $text-logo: 60px;
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
     @font-face {
         font-weight: $weight;
-        font-family: '#{$name}';
+        font-family: "#{$name}";
         font-style: $style;
-        src: url('./resources/fonts/#{$file}.ttf') format('truetype');
+        src: url("./resources/fonts/#{$file}.ttf") format("truetype");
     }
 }
 
-@include fontface('Josefin Sans', 'JosefinSans/static/JosefinSans-Regular'); 
-@include fontface('Poppins', 'Poppins/Poppins-Regular'); 
-@include fontface('Poppins Bold', 'Poppins/Poppins-Bold', bold);
-@include fontface('Poppins Italic', 'Poppins/Poppins-Italic');
+@include fontface("Josefin Sans", "JosefinSans/static/JosefinSans-Regular");
+@include fontface("Poppins", "Poppins/Poppins-Regular");
+@include fontface("Poppins Bold", "Poppins/Poppins-Bold", bold);
+@include fontface("Poppins Italic", "Poppins/Poppins-Italic");
 
-// Color
-$background-light: #ffffff;
-$accent-pink: #FC6D83;
+// Color Scheme
+$accent-pink: #fd6a80;
+$accent-pink-focus: #c95566;
 $accent-purple: #7676e8;
-$text-light: #ffffff;
-$text-muted: #6a6868;
-$text-dark: #333333;
+$background-light: #fffdfa;
+$background-dark: #19123c;
+$text-light: #fffdfa;
+$text-muted: #c4c4c4;
+$text-dark: #19123c;
+$nav-bar-color: #f0efef;
+
+@mixin lightmode() {
+    --text-color: #19123c;
+    --background-color: #fffdfa;
+}
+
+@mixin darkmode() {
+    --text-color: #fffdfa;
+    --background-color: #19123c;
+}
 
 // Breakpoints
 $width-xsm-max: 390px;
@@ -44,7 +57,6 @@ $height-xsm-max: 470px;
 $height-sm-max: 550px;
 $height-md-max: 580px;
 $height-lg-max: 600px;
-
 
 @mixin small-phone {
     @media (max-width: #{$width-xsm-max}), (max-height: #{$height-xsm-max}) {
