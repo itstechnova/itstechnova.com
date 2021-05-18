@@ -22,7 +22,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $background-light;
         @include phone {
             min-height: 90vh;
         }
@@ -44,6 +43,7 @@
 
     &-logo {
         height: 100px;
+        z-index: 1;
         padding-bottom: 25px;
         animation: bounce 3s linear infinite;
         @include phone {
