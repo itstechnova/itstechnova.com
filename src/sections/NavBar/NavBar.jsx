@@ -2,8 +2,12 @@ import React from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 import "./NavBar.scss";
 import nav from "../../resources/strings/nav";
+import ModeToggle from "../../components/ModeToggle/ModeToggle";
+import useToggleMode from "../../hooks/useToggleMode";
 
 const NavBar = ({ routes }) => {
+    const [mode, toggleMode] = useToggleMode("light");
+
     return (
         <nav>
             <div className="nav-container">
@@ -20,6 +24,7 @@ const NavBar = ({ routes }) => {
                         {route.label}
                     </Link>
                 ))}
+                <ModeToggle mode={mode} toggle={toggleMode}/>
             </div>
         </nav>
     );
