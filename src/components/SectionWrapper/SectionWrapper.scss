@@ -1,0 +1,15 @@
+@import "../../constants";
+
+.section-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.section-container {
+    width: $width-lg-max;
+    padding-top: 8vh;
+    @include tablet {
+        width: 100%;
+    }
+    background-color: grey;
+}

@@ -1,12 +1,13 @@
 import React from "react";
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./About.scss";
 
 const About = () => (
-    <React.Fragment>
-        <div className="about-container" id="about">
+    <SectionWrapper id="about" >
+        <div className="about-container">
             <span className="title">About</span>
         </div>
-    </React.Fragment>
+    </SectionWrapper>
 );
 
 export default About;
