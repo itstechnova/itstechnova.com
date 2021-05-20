@@ -1,16 +1,18 @@
 // Font
-$font-logo: "Josefin Sans";
+
+$font-logo: "Lexend";
+$font-title: "Quicksand Bold";
 $font-bold: "Poppins Bold";
-$font-italic: "Poppins Italic";
 $font-regular: "Poppins";
 
 $text-xxsmall: 10px;
-$text-xsmall: 12px;
-$text-small: 14px;
-$text-medium: 16px;
-$text-large: 23px;
-$text-xlarge: 50px;
-$text-logo: 60px;
+$text-xsmall: 14px;
+$text-small: 18px;
+$text-medium: 24px;
+$text-large: 36px;
+$text-xlarge: 64px;
+$text-xxlarge: 96px;
+$text-logo: 45px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
     @font-face {
@@ -21,12 +23,14 @@ $text-logo: 60px;
     }
 }
 
-@include fontface("Josefin Sans", "JosefinSans/static/JosefinSans-Regular");
+@include fontface("Lexend", "Lexend/Lexend-Medium");
+@include fontface("Quicksand", "Quicksand/static/Quicksand-Regular");
+@include fontface("Quicksand Bold", "Quicksand/static/Quicksand-Bold");
 @include fontface("Poppins", "Poppins/Poppins-Regular");
-@include fontface("Poppins Bold", "Poppins/Poppins-Bold", bold);
-@include fontface("Poppins Italic", "Poppins/Poppins-Italic");
+@include fontface("Poppins Bold", "Poppins/Poppins-Medium");
 
 // Color Scheme
+
 $accent-pink: #fd6a80;
 $accent-pink-focus: #c95566;
 $accent-purple: #7676e8;
@@ -35,6 +39,8 @@ $background-dark: #19123c;
 $text-light: #fffdfa;
 $text-muted: #c4c4c4;
 $text-dark: #19123c;
+$grey: #c4c4c4;
+$light-grey: #e5e9f2;
 $nav-bar-color: #f0efef;
 
 @mixin lightmode() {
@@ -48,10 +54,11 @@ $nav-bar-color: #f0efef;
 }
 
 // Breakpoints
+
 $width-xsm-max: 390px;
 $width-sm-max: 540px;
 $width-md-max: 820px;
-$width-lg-max: 1300px;
+$width-lg-max: 1440px;
 
 $height-xsm-max: 470px;
 $height-sm-max: 550px;

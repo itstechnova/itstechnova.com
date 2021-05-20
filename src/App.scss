@@ -13,3 +13,39 @@ body {
     color: var(--text-color);
     transition: all 0.25s linear;
 }
+
+h1 {
+    font-family: "Quicksand Bold";
+    font-size: $text-xlarge;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Quicksand Bold";
+    font-size: $text-large;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Poppins Bold";
+    font-size: $text-medium;
+    margin: 0;
+}
+
+h4 {
+    font-family: "Poppins";
+    font-size: $text-medium;
+    margin: 0;
+}
+
+h5 {
+    font-family: "Quicksand";
+    font-size: $text-medium;
+    margin: 0;
+}
+
+p {
+    font-family: "Poppins";
+    font-size: $text-small;
+    margin: 0;
+}

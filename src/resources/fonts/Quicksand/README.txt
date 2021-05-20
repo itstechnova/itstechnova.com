@@ -1,32 +1,22 @@
-Josefin Sans Variable Font
-==========================
+Quicksand Variable Font
+=======================
 
-This download contains Josefin Sans as both variable fonts and static fonts.
+This download contains Quicksand as both a variable font and static fonts.
 
-Josefin Sans is a variable font with this axis:
+Quicksand is a variable font with this axis:
   wght
 
-This means all the styles are contained in these files:
-  JosefinSans-VariableFont_wght.ttf
-  JosefinSans-Italic-VariableFont_wght.ttf
+This means all the styles are contained in a single file:
+  Quicksand-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Josefin Sans:
-  static/JosefinSans-Thin.ttf
-  static/JosefinSans-ExtraLight.ttf
-  static/JosefinSans-Light.ttf
-  static/JosefinSans-Regular.ttf
-  static/JosefinSans-Medium.ttf
-  static/JosefinSans-SemiBold.ttf
-  static/JosefinSans-Bold.ttf
-  static/JosefinSans-ThinItalic.ttf
-  static/JosefinSans-ExtraLightItalic.ttf
-  static/JosefinSans-LightItalic.ttf
-  static/JosefinSans-Italic.ttf
-  static/JosefinSans-MediumItalic.ttf
-  static/JosefinSans-SemiBoldItalic.ttf
-  static/JosefinSans-BoldItalic.ttf
+in those cases you can use the static font files for Quicksand:
+  static/Quicksand-Light.ttf
+  static/Quicksand-Regular.ttf
+  static/Quicksand-Medium.ttf
+  static/Quicksand-SemiBold.ttf
+  static/Quicksand-Bold.ttf
 
 Get started
 -----------
