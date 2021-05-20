@@ -1,25 +1,45 @@
 @import "../../constants";
 
 .nav-container {
+    width: 100%;
+    background-color: $nav-bar-color;
     display: flex;
     flex-direction: row;
-    background-color: $nav-bar-color;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
     height: 7vh;
     list-style: none;
-    font-size: 20px;
+    font-size: $text-small;
     position: fixed;
     top: 0;
     z-index: 2;
+    transition: top 0.4s;
+}
+
+.logo-link {
+    padding: 0 50px;
+    &:hover {
+        opacity: 0.7;
+        transition: linear 0.4s;
+    }
+    img {
+        height: 40px;
+    }
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .nav-link {
     text-decoration: none;
+    padding: 20px;
     color: $text-dark;
-}
-
-.nav-link:hover {
-    opacity: 0.5;
+    font-weight: 500;
+    &:hover {
+        opacity: 0.5;
+        transition: linear 0.4s;
+    }
 }

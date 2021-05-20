@@ -8,16 +8,17 @@ import OurSponsors from "./sections/Sponsor/OurSponsors";
 import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
+import logo from "./resources/images/logo/logo.png";
 
 import nav from "./resources/strings/nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
-    { label: nav.title, sectionId: "landing" },
     { label: nav.about, sectionId: "about" },
-    { label: nav.story, sectionId: "story" },
     { label: nav.sponsor, sectionId: "sponsor-us" },
     { label: nav.faq, sectionId: "faq" },
+    { label: nav.contact, sectionId: "contact" },
 ];
 
 // PDF locations in public folder
@@ -40,7 +41,7 @@ const App = () => {
                 />
                 <Route exact path="/">
                     <div className="App">
-                        <NavBar routes={routes} />
+                        <NavBar routes={routes} logoRoute={logoRoute} />
                         <Landing />
                         <About />
                         <Story />
