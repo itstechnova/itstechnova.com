@@ -11,7 +11,7 @@ $text-small: 18px;
 $text-medium: 24px;
 $text-large: 36px;
 $text-xlarge: 64px;
-$text-xxlarge: 96px;
+$text-xxlarge: 90px;
 $text-logo: 45px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
@@ -59,7 +59,7 @@ $dark-blue: #7D92DB;
 
 $width-xsm-max: 390px;
 $width-sm-max: 540px;
-$width-md-max: 820px;
+$width-md-max: 900px;
 $width-lg-max: 1440px;
 
 $height-xsm-max: 470px;

@@ -1,19 +1,44 @@
 @import "../../constants";
-
-.nav-container {
+.nav {
+  &-container {
     width: 100%;
     background-color: $nav-bar-color;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 7vh;
-    list-style: none;
-    font-size: $text-small;
     position: fixed;
     top: 0;
     z-index: 2;
     transition: top 0.4s;
+  }
+
+  &-content {
+    width: 1440px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: $text-small;
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-link {
+    text-decoration: none;
+    padding: 20px;
+    color: $text-dark;
+    font-weight: 500;
+    &:hover {
+      opacity: 0.5;
+      transition: linear 0.4s;
+    }
+  }
 }
 
 .logo-link {
@@ -24,22 +49,5 @@
     }
     img {
         height: 40px;
-    }
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.nav-link {
-    text-decoration: none;
-    padding: 20px;
-    color: $text-dark;
-    font-weight: 500;
-    &:hover {
-        opacity: 0.5;
-        transition: linear 0.4s;
     }
 }
