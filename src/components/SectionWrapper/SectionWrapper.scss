@@ -1,14 +1,18 @@
 @import "../../constants";
 
-.section-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.section-container {
-    width: $width-lg-max;
-    padding-top: 5vh;
-    @include tablet {
-        width: 100%;
+.section {
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &-container {
+        width: $width-lg-max;
+        padding-top: 5vh;
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &-content {
+        padding: 0 50px;
     }
 }
