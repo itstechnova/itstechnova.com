@@ -1,6 +1,87 @@
 .contact-container {
     height: 92vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+}
+
+.email-input{
+    width: 340px;
+    height: 40px;
+    background: #E8EAFA;
+    border-radius: 5px;
+    border: none;
+}
+
+.email-wrapper {
+    margin-top: 16px;
+    position: relative;
+}
+
+.submit-wrapper{
+    width: 40px;
+    height: 33px;
+    margin-top: 1%;
+    left: 295px;
+    border-radius: 3px;
+    background-color: #C4C4C4;
+    display: inline;
+    position: absolute;
+}
+
+.submit-btn{
+    width: 15px;
+    height: 15px;
+}
+
+.wrapper {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact{
+    width: 50%;
+}
+
+.contact-links{
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.contact-links:hover {
+    text-decoration: underline;
+}
+
+.contact-image{
+}
+
+.socials-row{
+    max-width: 300px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links-row{
+    max-width: 450px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team-title {
+    margin-top: 32px;
 }
