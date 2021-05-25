@@ -26,10 +26,6 @@
         font-family: $font-regular;
         font-size: $text-medium;
         width: 55%;
-        @include phone {
-            padding: 20px;
-            font-size: $text-xsmall;
-        }
     }
 
     &-title {
@@ -41,6 +37,7 @@
         font-size: $text-xxlarge;
         font-family: "Quicksand";
         padding-bottom: 10px;
+        text-align: left;
     }
 
     &-graphic {
@@ -61,6 +58,7 @@
 h4 {
     line-height: $text-large;
     margin-top: 5px;
+    text-align: left;
 }
 
 .button {
