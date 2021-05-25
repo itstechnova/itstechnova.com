@@ -1,58 +1,62 @@
-import React from "react";
-import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
+import React, { useState, useEffect } from "react";
+import Typist from 'react-typist';
 import "./Landing.scss";
-import logo from "../../resources/images/logo/logo.png";
-import facebook from "../../resources/images/socials/facebook.svg";
-import instagram from "../../resources/images/socials/ig.svg";
-import linkedin from "../../resources/images/socials/linkedin.svg";
-import twitter from "../../resources/images/socials/twitter.svg";
 import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 
-const Landing = () => (
-    <React.Fragment>
-        <div className="landing-container" id="landing">
-            <div className="landing-content">
-                <img className="landing-logo" src={logo} alt="logo" />
-                <span className="landing-title">{landing.title}</span>
+const TextLoop = () => {
+    const [mounted, setMounted] = useState(true);
 
+    useEffect(() => {
+        console.log("Count: " + mounted);
+        setMounted(true);
+    }, [mounted]);
+
+    return (
+        <div>
+            {mounted ? (
+                <Typist className="landing-slogan" onTypingDone={() => setMounted(false)}>
+                    <span><span style={{ fontWeight: "700" }}>Prepare</span> With Us</span>
+                    <Typist.Backspace count={20} delay={800} />
+                    <span><span style={{ fontWeight: "700" }}>Hack</span> With Us</span>
+                    <Typist.Backspace count={17} delay={800} />
+                    <span><span style={{ fontWeight: "700" }}>Connect</span> With Us</span>
+                    <Typist.Backspace count={20} delay={800} />
+                </Typist>
+            ) : (
                 <span className="landing-slogan">
-                    {landing.sloganPrepare}&nbsp;&nbsp;⭐&nbsp;&nbsp;{landing.sloganHack}
-                    &nbsp;&nbsp;⭐&nbsp;&nbsp;{landing.sloganConnect}
+                    {"n"}
                 </span>
-
-                <div className="landing-description">
-                    <span>
-                        {landing.description1} <br />
-                    </span>
-                    <span>{landing.description2}</span>
-                    <span style={{ "font-weight": "bold" }}>
-                        {landing.descriptionBolded}
-                    </span>
-                    <span>{landing.description3}</span>
-                </div>
-
-                <span className="landing-coming-soon">{landing.comingSoon}</span>
-
-                <div className="button-container">
-                    <a className="button" href={socials.mailingList}>
-                        {landing.mailingListCTA}
-                    </a>
-                </div>
-
-                <div className="socials">
-                    <SocialMediaLink src={instagram} link={socials.instagram} />
-                    <SocialMediaLink src={linkedin} link={socials.linkedin} />
-                    <SocialMediaLink src={facebook} link={socials.facebook} />
-                    <SocialMediaLink src={twitter} link={socials.twitter} />
-                </div>
-                <span>{landing.sponsor}</span>
-                <span>
-                    {landing.emailUs} <a href={socials.email}>{landing.email}</a>
-                </span>
-            </div>
+            )}
         </div>
-    </React.Fragment>
-);
+    );
+
+}
+
+const Landing = () => {
+    return (
+        <SectionWrapper id="landing">
+            <div className="landing-container">
+                <div className="landing-content">
+                    <div className="landing-text">
+                        <h4>
+                            <span className="landing-title">{landing.title1}</span>
+                            {landing.title2}
+                        </h4>
+                        <TextLoop />
+                        <h4>{landing.description}</h4>
+                        <h4>{landing.dates}</h4>
+                        <a className="button" href={socials.mailingList}>
+                            {landing.applyCTA}
+                        </a>
+                    </div>
+                    <div className="landing-graphic" />
+
+                </div>
+            </div>
+        </SectionWrapper>
+    );
+};
 
 export default Landing;
