@@ -1,6 +1,75 @@
-.sponsor-us-container {
+@import "../../constants";
+
+// .sponsor-us-container {
+//   height: 92vh;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+// }
+
+.sponsor-us {
+  &-container {
+    display: inline-block;
+    margin-left: 1ch;
     height: 92vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    text-align: left;
+    @include phone {
+      height: auto;
+      padding: 2rem;
+    }
+  }
+  &-title {
+    font-family: $font-title;
+    font-size: $text-xlarge;
+    margin-bottom: 3rem;
+    @include phone {
+      margin-bottom: 2rem;
+      font-size: $text-medium;
+      text-align: center;
+    }
+  }
+  &-description {
+    font-family: $font-regular;
+    font-size: $text-xlarge;
+    width: 70%;
+    margin-bottom: 3rem;
+    @include phone {
+      margin-bottom: 2rem;
+      font-size: $text-medium;
+      text-align: center;
+    }
+  }
+  &-image {
+    width: 30%;
+  }
+  &-button {
+    background-color: #7676e8;
+    border-radius: 1rem;
+    font-family: $font-regular;
+    font-size: $text-small;
+    color: white;
+    border: 0em;
+    padding: 0.75em;
+    @include phone {
+      font-size: $text-small;
+      text-align: center;
+    }
+  }
+  &-showcase {
+    font-family: $font-title;
+    font-size: $text-large;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    @include phone {
+      margin-bottom: 2rem;
+      font-size: $text-medium;
+      text-align: center;
+    }
+  }
+  &-carousel {
+    display: inline-block;
+    margin-left: 1ch;
+    height: 92vh;
+    width: 200ch;
+  }
 }
