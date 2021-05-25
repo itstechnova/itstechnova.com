@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
-import styled from "styled-components";
+import React from "react";
+//import styled from "styled-components";
 
-const AUTOPLAY_SLIDE_DURATION = 20000;
-const STORIES_LENGTH = 3;
+// const AUTOPLAY_SLIDE_DURATION = 20000;
+// const STORIES_LENGTH = 3;
 
 
 // const ProgressBarTrack = styled.div`
