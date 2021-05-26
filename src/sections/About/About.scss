@@ -24,7 +24,7 @@
     align-items: flex-start;
     font-family: $font-regular;
     font-size: $text-medium;
-    width: 55%;
+    width: 65%;
   }
 
   &-title {
@@ -48,12 +48,16 @@
     }
   }
 
-  &-graphic {
+  &-graphic-container {
     height: 100%;
-    width: 45%;
+    width: 35%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+  }
+
+  &-graphic {
+    width: 80%;
   }
 }
 

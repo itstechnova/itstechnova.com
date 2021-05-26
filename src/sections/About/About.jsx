@@ -2,6 +2,7 @@ import React from "react";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./About.scss";
 import about from "../../resources/strings/about";
+import logo from "../../resources/images/logo/logo.png";
 
 const About = () => (
     <SectionWrapper id="about" >
@@ -16,7 +17,9 @@ const About = () => (
                     <br />
                     <p>{about.description2}</p>
                 </div>
-                <div className="about-graphic" />
+                <div className="about-graphic-container">
+                    <img className="about-graphic" src={logo} alt="logo" />
+                </div>
             </div>
             <div className="about-events">
 
