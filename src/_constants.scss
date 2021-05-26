@@ -11,7 +11,7 @@ $text-small: 18px;
 $text-medium: 24px;
 $text-large: 36px;
 $text-xlarge: 64px;
-$text-xxlarge: 96px;
+$text-xxlarge: 90px;
 $text-logo: 45px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
@@ -42,6 +42,8 @@ $text-dark: #19123c;
 $grey: #c4c4c4;
 $light-grey: #e5e9f2;
 $nav-bar-color: #f0efef;
+$light-blue: #C0CBF2;
+$dark-blue: #7D92DB;
 
 @mixin lightmode() {
     --text-color: #19123c;
@@ -57,7 +59,7 @@ $nav-bar-color: #f0efef;
 
 $width-xsm-max: 390px;
 $width-sm-max: 540px;
-$width-md-max: 820px;
+$width-md-max: 900px;
 $width-lg-max: 1440px;
 
 $height-xsm-max: 470px;
