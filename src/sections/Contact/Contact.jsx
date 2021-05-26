@@ -18,7 +18,7 @@ function Contact() {
     })
 
     async function submitEmail() {
-        /*
+        
         const url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdUCqXqrW53nkw3xM5MDDjreqfnCNYGuIMcZZe_EvKZItrgiw/formResponse`
         
         const bodyValues = {
@@ -33,7 +33,7 @@ function Contact() {
             },
             "body": `entry.1170762674=${state.email}`
         })
-        */
+        
     }
 
     return (
