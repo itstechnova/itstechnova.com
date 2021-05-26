@@ -23,6 +23,7 @@ function Contact() {
 
         const response = fetch(url, {
             "method": "POST",
+            "mode": "no-cors",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
                 'access-control-allow-origin': '*',
