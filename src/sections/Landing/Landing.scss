@@ -72,13 +72,12 @@ h4 {
 
 .button {
     margin-top: 20px;
+    padding: 15px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $accent-purple;
     color: $text-light;
-    width: 185px;
-    height: 58px;
     font-size: $text-medium;
     font-family: "Quicksand";
     font-weight: 700;
