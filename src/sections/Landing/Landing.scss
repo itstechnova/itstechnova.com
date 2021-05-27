@@ -1,31 +1,56 @@
 @import "../../constants";
 
+@keyframes bounce-up {
+    0% {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+}
+
 .landing {
     &-container {
         min-height: 93vh;
         width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "landing-text landing-graphic"
+            "landing-button landing-graphic";
 
-    &-content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 40%;
+        @include phone {
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "landing-text"
+                "landing-button"
+                "landing-graphic";
+        }
     }
-
     &-text {
-        padding: 10px, 0;
+        align-self: flex-end;
+        justify-self: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         font-family: $font-regular;
         font-size: $text-medium;
-        width: 55%;
+        width: 100%;
+        grid-area: landing-text;
+        text-align: left;
+        @include phone {
+                align-items: center;
+                text-align: center;
+        }
     }
 
     &-title {
@@ -34,32 +59,41 @@
         @include tablet {
             font-size: $text-large;
         }
+        @include phone {
+                font-size: 18px;
+        }
     }
 
     &-slogan {
         font-size: $text-xxlarge;
         font-family: "Quicksand";
         padding-bottom: 10px;
-        text-align: left;
         @include desktop {
             font-size: 58px;
         }
         @include tablet {
             font-size: $text-large;
         }
+        @include small-phone {
+                font-size: 30px;
+        }
     }
 
-    &-graphic {
-        height: 100%;
-        width: 45%;
-        background-color: pink; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        div {
-            background-color: gray;
-            width: 80%;
-            height: 20%;
+    &-graphic-container {
+        align-self: center;
+        img {
+            margin-left: 20px;
+            animation: bounce-up 3s linear infinite;
+            @include phone {
+                    margin-left: 0;
+            }
+        }
+        grid-area: landing-graphic;
+    }
+
+    &-button-container {
+        @include phone {
+            justify-self: center;
         }
     }
 }
@@ -67,12 +101,15 @@
 h4 {
     line-height: $text-large;
     margin-top: 5px;
-    text-align: left;
+    @include phone {
+            line-height: 24px;
+    }
 }
 
 .button {
     margin-top: 20px;
-    padding: 15px 30px;
+    width: 160px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,9 +122,11 @@ h4 {
     border-style: none;
     text-decoration: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    grid-area: landing-button;
     @include phone {
-        font-size: $text-xsmall;
+        font-size: 16px;
+        width: 136px;
+        height: 48px;
     }
 
     &:hover,
