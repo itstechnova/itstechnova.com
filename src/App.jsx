@@ -21,7 +21,7 @@ const App = () => {
             <Switch>
                 <Route
                     // Redirect itstechnova.org/sponsorship-package to pdf location
-                    path="/sponsorship-package"
+                    path="/sponsors"
                     component={() => {
                         window.location.href = SponsorPackage;
                         return null;
