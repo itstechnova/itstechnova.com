@@ -46,6 +46,12 @@ h4 {
     font-size: $text-medium;
     font-weight: 400;
     margin: 0;
+    @include tablet {
+        font-size: 20px;
+    }
+    @include phone {
+        font-size: 16px;
+    }
 }
 
 h5 {
