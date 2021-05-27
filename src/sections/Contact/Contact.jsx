@@ -18,22 +18,20 @@ function Contact() {
     })
 
     async function submitEmail() {
-        /*
-        const url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdUCqXqrW53nkw3xM5MDDjreqfnCNYGuIMcZZe_EvKZItrgiw/formResponse`
         
-        const bodyValues = {
-            'entry.1170762674': state.email,
-        }
+        const url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdUCqXqrW53nkw3xM5MDDjreqfnCNYGuIMcZZe_EvKZItrgiw/formResponse`
 
         const response = fetch(url, {
             "method": "POST",
+            "mode": "no-cors",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
                 'access-control-allow-origin': '*',
             },
             "body": `entry.1170762674=${state.email}`
         })
-        */
+        console.log(response);
+        
     }
 
     return (
