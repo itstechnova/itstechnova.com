@@ -12,12 +12,18 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: all 0.25s linear;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
     font-family: "Quicksand Bold";
     font-size: $text-xlarge;
     margin: 0;
+    @include phone {
+        font-size: 36px;
+    }
 }
 
 h2 {
@@ -27,9 +33,12 @@ h2 {
 }
 
 h3 {
-    font-family: "Poppins Bold";
-    font-size: $text-medium;
+    font-family: "Quicksand Bold";
+    font-size: 30px;
     margin: 0;
+    @include phone {
+        font-size: 24px;
+    }
 }
 
 h4 {
@@ -49,4 +58,7 @@ p {
     font-family: "Poppins";
     font-size: $text-small;
     margin: 0;
+    @include phone {
+        font-size: 16px;
+    }
 }
