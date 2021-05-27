@@ -4,6 +4,7 @@
     &-wrapper {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
     &-container {
         width: $width-lg-max;
@@ -14,5 +15,8 @@
     }
     &-content {
         padding: 0 100px;
+        @include tablet {
+            padding: 0 30px;
+        }
     }
 }
