@@ -13,20 +13,20 @@ const routes = [
 */
 
 // PDF locations in public folder
-const SponsorPackage = `${process.env.PUBLIC_URL}/pdfs/sponsorship_package.pdf`;
+//const SponsorPackage = `${process.env.PUBLIC_URL}/pdfs/sponsorship_package.pdf`;
 
 const App = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route
+                {/*<Route
                     // Redirect itstechnova.org/sponsorship-package to pdf location
                     path="/sponsors"
                     component={() => {
                         window.location.href = SponsorPackage;
                         return null;
                     }}
-                />
+                />*/}
                 <Route exact path="/">
                     <div className="App">
                         {/*<NavBar routes={routes} />*/}
