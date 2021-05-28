@@ -1,6 +1,32 @@
-.our-sponsors-container {
+@import "../../constants";
+
+.our-sponsors {
+  &-container {
+    display: inline-block;
+    margin-left: 1ch;
     height: 92vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    text-align: left;
+    @include phone {
+      height: auto;
+      padding: 2rem;
+    }
+  }
+  &-title {
+    font-family: $font-title;
+    font-size: $text-xlarge;
+    margin-bottom: 3rem;
+    @include phone {
+      margin-bottom: 2rem;
+      font-size: $text-medium;
+      text-align: center;
+    }
+  }
+  &-silver {
+    width: 33%;
+    margin-left: 0.25rem;
+  }
+  &-bronze {
+    width: 20%;
+    margin-left: 0.25rem;
+  }
 }
