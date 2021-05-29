@@ -41,7 +41,6 @@ $text-muted: #c4c4c4;
 $text-dark: #19123c;
 $grey: #c4c4c4;
 $light-grey: #e5e9f2;
-$nav-bar-color: #f0efef;
 $light-blue: #C0CBF2;
 $dark-blue: #7D92DB;
 
@@ -49,12 +48,14 @@ $dark-blue: #7D92DB;
     --text-color: #19123c;
     --background-color: #fffdfa;
     --faq-card-bg-color: #C0CBF2;
+    --header-footer-color: #f0efef;
 }
 
 @mixin darkmode() {
     --text-color: #fffdfa;
     --background-color: #19123c;
     --faq-card-bg-color: #7D92DB;
+    --header-footer-color: #3D3D75;
 }
 
 // Breakpoints

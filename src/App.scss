@@ -5,22 +5,32 @@
 }
 
 body {
-  @include lightmode();
-  &.dark-mode {
-    @include darkmode();
-  }
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: all 0.25s linear;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  details {
-    background-color: var(--faq-card-bg-color);
-  }
-  a {
+    // handle ALL dark mode things here
+    @include lightmode();
+    &.dark-mode {
+        @include darkmode();
+    }
+    background-color: var(--background-color);
     color: var(--text-color);
-  }
+    transition: all 0.25s linear;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    details {
+      background-color: var(--faq-card-bg-color);
+    }
+    .nav-container {
+        background-color: var(--header-footer-color);
+        transition: all 0.25s linear;
+    }
+    .nav-link {
+        color: var(--text-color);
+        transition: all 0.25s linear;
+    }
+    a {
+        color: var(--text-color);
+        transition: all 0.25s linear;
+    }
 }
 
 h1 {
@@ -67,10 +77,15 @@ h5 {
 }
 
 p {
-  font-family: "Poppins";
-  font-size: $text-small;
-  margin: 0;
-  @include phone {
-    font-size: 16px;
-  }
+    font-family: "Poppins";
+    font-size: $text-small;
+    margin: 0;
+    @include phone {
+        font-size: 16px;
+    }
+}
+
+a {
+    font-family: $font-bold;
+    font-weight: bold;
 }
