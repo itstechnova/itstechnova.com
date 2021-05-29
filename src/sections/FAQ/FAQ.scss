@@ -13,7 +13,7 @@
     font-size: $text-xlarge;
     margin-bottom: 3rem;
     align-self: flex-start;
-    @include phone {
+    @include tablet {
       margin-bottom: 2rem;
       font-size: $text-medium;
       text-align: center;

@@ -1,18 +1,17 @@
 @import "../../constants.scss";
 
 .card {
-  width: 590px;
+  display: block;
+  width: 40vw;
+  max-width: 590px;
   border-radius: 10px;
   padding: 1rem;
   font-family: $font-regular;
   &:hover {
     cursor: pointer;
   }
-  @include phone {
-    width: 320px;
-  }
   @include tablet {
-    width: 455px;
+    width: 80vw;
   }
 }
 
@@ -24,12 +23,16 @@
   .question {
     font-size: $text-medium;
     font-family: "Quicksand";
+    @include phone {
+      width: 13rem;
+    }
     @include tablet {
       font-family: $font-bold;
       font-weight: bolder;
       font-size: $text-small;
       display: inline-block;
     }
+    margin-right: 2rem;
   }
 }
 
