@@ -10,9 +10,14 @@
     top: 5px;
 }
 
-.light-icon {
+.react-toggle-track-x {
+    margin: 0;
+    right: 10px;
+    top: 4.5px;
+}
+
+.light-icon, .dark-icon {
     height: 15px;
-    width: 15px;
 }
 
 .mode-toggle.react-toggle--checked .react-toggle-track {
@@ -23,11 +28,27 @@
     background-color: $accent-pink-focus;
 }
 
+.mode-toggle.react-toggle .react-toggle-track {
+    background-color: $accent-pink;
+}
+
+.mode-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: $accent-pink-focus;
+}
+
 .mode-toggle.react-toggle--checked .react-toggle-thumb {
     border-color: $accent-pink;
 }
 
 .mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-thumb {
+    border-color: $accent-pink-focus;
+}
+
+.mode-toggle.react-toggle .react-toggle-thumb {
+    border-color: $accent-pink;
+}
+
+.mode-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-thumb {
     border-color: $accent-pink-focus;
 }
 
