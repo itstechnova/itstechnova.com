@@ -1,12 +1,13 @@
 import React from "react";
 import Toggle from "react-toggle";
 import sun from "../../resources/images/icons/sun.svg";
+import moon from "../../resources/images/icons/moon.svg";
 import useToggleMode from "../../hooks/useToggleMode";
 
 import "react-toggle/style.css";
 import "./ModeToggle.scss";
 
-const ThemeToggle = () => {
+const ModeToggle = () => {
     const [mode, toggleMode] = useToggleMode();
 
     return (
@@ -20,7 +21,9 @@ const ThemeToggle = () => {
                         checked: (
                             <img className="light-icon" src={sun} alt="" />
                         ),
-                        unchecked: null,
+                        unchecked: (
+                            <img className="dark-icon" src={moon} alt="" />
+                        ),
                     }}
                 />
             )}
@@ -28,4 +31,4 @@ const ThemeToggle = () => {
     );
 };
 
-export default ThemeToggle;
+export default ModeToggle;
