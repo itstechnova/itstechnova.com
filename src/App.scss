@@ -1,70 +1,76 @@
 @import "./constants";
 
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 body {
-    @include lightmode();
-    &.dark-mode {
-        @include darkmode();
-    }
-    background-color: var(--background-color);
+  @include lightmode();
+  &.dark-mode {
+    @include darkmode();
+  }
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.25s linear;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  details {
+    background-color: var(--faq-card-bg-color);
+  }
+  a {
     color: var(--text-color);
-    transition: all 0.25s linear;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  }
 }
 
 h1 {
-    font-family: "Quicksand Bold";
-    font-size: $text-xlarge;
-    margin: 0;
-    @include phone {
-        font-size: 36px;
-    }
+  font-family: "Quicksand Bold";
+  font-size: $text-xlarge;
+  margin: 0;
+  @include phone {
+    font-size: 36px;
+  }
 }
 
 h2 {
-    font-family: "Quicksand Bold";
-    font-size: $text-large;
-    margin: 0;
+  font-family: "Quicksand Bold";
+  font-size: $text-large;
+  margin: 0;
 }
 
 h3 {
-    font-family: "Quicksand Bold";
-    font-size: 30px;
-    margin: 0;
-    @include phone {
-        font-size: 24px;
-    }
+  font-family: "Quicksand Bold";
+  font-size: 30px;
+  margin: 0;
+  @include phone {
+    font-size: 24px;
+  }
 }
 
 h4 {
-    font-family: "Poppins";
-    font-size: $text-medium;
-    font-weight: 400;
-    margin: 0;
-    @include tablet {
-        font-size: 20px;
-    }
-    @include phone {
-        font-size: 16px;
-    }
+  font-family: "Poppins";
+  font-size: $text-medium;
+  font-weight: 400;
+  margin: 0;
+  @include tablet {
+    font-size: 20px;
+  }
+  @include phone {
+    font-size: 16px;
+  }
 }
 
 h5 {
-    font-family: "Quicksand";
-    font-size: $text-medium;
-    margin: 0;
+  font-family: "Quicksand";
+  font-size: $text-medium;
+  margin: 0;
 }
 
 p {
-    font-family: "Poppins";
-    font-size: $text-small;
-    margin: 0;
-    @include phone {
-        font-size: 16px;
-    }
+  font-family: "Poppins";
+  font-size: $text-small;
+  margin: 0;
+  @include phone {
+    font-size: 16px;
+  }
 }

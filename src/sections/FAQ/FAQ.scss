@@ -2,28 +2,30 @@
 
 .faq {
   &-container {
-    display: inline-block;
-    height: 92vh;
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    @include phone {
-      height: auto;
-      padding: 2rem;
-    }
+    min-height: 92vh;
+    align-items: center;
   }
   &-title {
     font-family: $font-title;
     font-size: $text-xlarge;
     margin-bottom: 3rem;
-    @include phone {
+    align-self: flex-start;
+    @include tablet {
       margin-bottom: 2rem;
       font-size: $text-medium;
       text-align: center;
+      align-self: center;
     }
   }
   &-questions {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
     gap: 1rem;
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &-left-col > *,
   &-right-col > * {
@@ -38,8 +40,10 @@
     margin-top: 2.125rem;
     font-family: $font-regular;
     font-size: $text-small;
+    @include phone {
+      width: 300px;
+    }
     > a {
-      color: $text-dark;
       font-family: $font-bold;
       font-weight: bold;
     }

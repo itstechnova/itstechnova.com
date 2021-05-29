@@ -48,11 +48,13 @@ $dark-blue: #7D92DB;
 @mixin lightmode() {
     --text-color: #19123c;
     --background-color: #fffdfa;
+    --faq-card-bg-color: #C0CBF2;
 }
 
 @mixin darkmode() {
     --text-color: #fffdfa;
     --background-color: #19123c;
+    --faq-card-bg-color: #7D92DB;
 }
 
 // Breakpoints
