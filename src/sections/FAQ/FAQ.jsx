@@ -11,7 +11,7 @@ const FAQ = () => (
         <div className="faq-left-col">
           <ExpandableCard question={"What is a Hackathon?"}>
             A hackathon is an event where students work together to build a
-            technology based solution to a problem. You can build an app, a
+            technology-based solution to a problem. You can build an app, a
             website, an extension, whatever you’d like. The sky’s the limit and
             we’re here to help along the way!
           </ExpandableCard>
@@ -35,7 +35,7 @@ const FAQ = () => (
         <div className="faq-right-col">
           <ExpandableCard question={"What if it's my first hackathon?"}>
             No worries! We have our Prepare with Us event to get you up to speed
-            so you're ready to hack during the weekend! We also have mentors
+            so you're ready to hack during the weekend! Additionally, mentors are
             available to help guide you through your projects.
           </ExpandableCard>
           <ExpandableCard question={"Why is this event women only?"}>
