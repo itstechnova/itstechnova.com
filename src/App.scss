@@ -3,7 +3,9 @@
 .App {
   text-align: center;
 }
-
+html {
+  width: 100%;
+}
 body {
     // handle ALL dark mode things here
     @include lightmode();
@@ -15,6 +17,7 @@ body {
     transition: all 0.25s linear;
     margin: 0;
     padding: 0;
+    width: 100%;
     overflow-x: hidden;
     details {
       background-color: var(--faq-card-bg-color);

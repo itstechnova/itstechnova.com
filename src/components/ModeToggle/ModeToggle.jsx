@@ -7,7 +7,7 @@ import useToggleMode from "../../hooks/useToggleMode";
 import "react-toggle/style.css";
 import "./ModeToggle.scss";
 
-const ThemeToggle = () => {
+const ModeToggle = () => {
     const [mode, toggleMode] = useToggleMode();
 
     return (
@@ -31,4 +31,4 @@ const ThemeToggle = () => {
     );
 };
 
-export default ThemeToggle;
+export default ModeToggle;
