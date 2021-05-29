@@ -1,4 +1,5 @@
 import React from "react";
+import expand from "../../resources/images/icons/expand_card.svg";
 import "./ExpandableCard.scss";
 
 const ExpandableCard = (props) => {
@@ -6,7 +7,7 @@ const ExpandableCard = (props) => {
     <details className="card">
       <summary>
         <h1 className="question">{props.question}</h1>
-        <i className="chevron-down"></i>
+        <img src={expand} className="chevron-down" alt="expand card"/>
       </summary>
       <div className="answer">{props.children}</div>
     </details>
