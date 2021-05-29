@@ -2,7 +2,6 @@ import React from "react";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./About.scss";
 import about from "../../resources/strings/about";
-import logo from "../../resources/images/logo/logo.png";
 import prepareTile from "../../resources/images/graphics/prepare-tile.svg";
 import hackTile from "../../resources/images/graphics/hack-tile.svg";
 import connectTile from "../../resources/images/graphics/connect-tile.svg";
@@ -14,10 +13,6 @@ const About = () => (
                 <div className="about-text">
                     <h1>{about.title}</h1>
                     <p>{about.description1}</p>
-                    <p>{about.description2}</p>
-                </div>
-                <div className="about-graphic-container">
-                    <img className="about-graphic" src={logo} alt="logo" />
                 </div>
             </div>
             <div className="about-events">
