@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   @include lightmode();
   &.dark-mode {
@@ -20,6 +24,10 @@ body {
   }
   a {
     color: var(--text-color);
+  }
+  .learn-more-arrow,
+  .faq-arrow {
+    filter: brightness(var(--svg-brightness));
   }
 }
 

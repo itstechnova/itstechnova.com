@@ -5,6 +5,7 @@ import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
 import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
+import chevron from "../../resources/images/icons/learn_more.svg"
 
 const TextLoop = () => {
     const [mounted, setMounted] = useState(true);
@@ -56,6 +57,12 @@ const Landing = () => {
 
                 <div className="landing-graphic-container">
                     <img src={bridgeTile} alt="bridge tile" />
+                </div>
+
+                <div className="landing-learn-more-container">
+                    <a href="#about" className="learn-more-link">Learn more
+                    <img src={chevron} className="learn-more-arrow" alt="learn more" />
+                    </a>
                 </div>
             </div>
         </SectionWrapper>
