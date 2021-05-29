@@ -1,26 +1,36 @@
 @import "../../constants";
 .nav {
   &-container {
-    width: 100%;
-    background-color: $nav-bar-color;
+    background-color: rebeccapurple;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 7vh;
+    align-items: flex-start;
+    height: 74px;
     position: fixed;
     top: 0;
     z-index: 2;
-    transition: top 0.4s;
+    padding: 0 20px;
+    width: 100%;
+    @include phone {
+      height: 64px;
+    }
   }
 
   &-content {
-    width: 1440px;
-    padding: 0 20px;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     font-size: $text-small;
+    @include phone {
+      justify-content: space-between;
+      .mobile {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 
   &-links {
@@ -32,11 +42,37 @@
   &-link {
     text-decoration: none;
     padding: 20px;
-    color: $text-dark;
     font-weight: 500;
     &:hover {
       opacity: 0.5;
-      transition: linear 0.4s;
+      transition: linear 0.2s;
+    }
+    @include tablet {
+      padding: 5px;
+    }
+  }
+
+  &-desktop-links {
+    display: block;
+    @include phone {
+      display: none;
+    }
+  }
+
+  &-mobile-links {
+    display: none;
+    @include phone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 100;
+      background-color: $light-pink;
+      padding: 20px;
+      width: 100%;
     }
   }
 }
@@ -50,4 +86,37 @@
     img {
         height: 40px;
     }
+    @include tablet {
+      padding: 0 7px 0 0;
+    }
+}
+
+.mlh-banner {
+  max-height: 180px;
+  margin-right: 50px;
+  margin-left: 10px;
+  overflow-x: visible;
+  @include tablet {
+    margin-right: 10px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  opacity: 1;
+  display: none;
+  width: 30px;
+  padding-right: 40px;
+  padding-left: 20px;
+  @include phone {
+    display: block;
+  }
+  z-index: 1000;
+}
+
+.toggle {
+  display: flex;
+  justify-content: flex-end;
 }
