@@ -15,9 +15,7 @@
     align-self: flex-start;
     @include tablet {
       margin-bottom: 2rem;
-      font-size: $text-medium;
-      text-align: center;
-      align-self: center;
+      font-size: $text-large;
     }
   }
   &-questions {
