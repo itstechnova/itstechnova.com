@@ -33,7 +33,7 @@
 
 .landing {
   &-container {
-    min-height: 93vh;
+    height: 100vh;
     width: 100%;
     display: grid;
     grid-template-columns: 55% 45%;
@@ -43,6 +43,7 @@
       "landing-button landing-graphic";
 
     @include phone {
+      padding-top: 50px;
       grid-template-columns: 100%;
       grid-template-rows: auto auto auto;
       grid-template-areas:
@@ -51,6 +52,7 @@
         "landing-graphic";
     }
   }
+
   &-text {
     align-self: flex-end;
     justify-self: center;
@@ -129,6 +131,7 @@
     align-items: center;
     &:link {
       text-decoration: none;
+      font-weight: 400;
     }
     &:hover {
       animation: bounce-up-fast 1.5s linear infinite;

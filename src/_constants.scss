@@ -33,6 +33,7 @@ $text-logo: 45px;
 
 $accent-pink: #fd6a80;
 $accent-pink-focus: #c95566;
+$light-pink: #FFE4E1;
 $accent-purple: #7676e8;
 $background-light: #fffdfa;
 $background-dark: #19123c;
@@ -41,7 +42,6 @@ $text-muted: #c4c4c4;
 $text-dark: #19123c;
 $grey: #c4c4c4;
 $light-grey: #e5e9f2;
-$nav-bar-color: #f0efef;
 $light-blue: #C0CBF2;
 $dark-blue: #7D92DB;
 
@@ -50,6 +50,7 @@ $dark-blue: #7D92DB;
     --background-color: #fffdfa;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
+    --header-footer-color: #f0efef;
 }
 
 @mixin darkmode() {
@@ -57,37 +58,33 @@ $dark-blue: #7D92DB;
     --background-color: #19123c;
     --faq-card-bg-color: #7D92DB;
     --svg-brightness: 100;
+    --header-footer-color: #3D3D75;
 }
 
 // Breakpoints
 
 $width-xsm-max: 390px;
-$width-sm-max: 540px;
+$width-sm-max: 560px;
 $width-md-max: 900px;
 $width-lg-max: 1435px;
 
-$height-xsm-max: 470px;
-$height-sm-max: 550px;
-$height-md-max: 580px;
-$height-lg-max: 600px;
-
 @mixin small-phone {
-    @media (max-width: #{$width-xsm-max}), (max-height: #{$height-xsm-max}) {
+    @media (max-width: #{$width-xsm-max}) {
         @content;
     }
 }
 @mixin phone {
-    @media (max-width: #{$width-sm-max}), (max-height: #{$height-sm-max}) {
+    @media (max-width: #{$width-sm-max}) {
         @content;
     }
 }
 @mixin tablet {
-    @media (max-width: #{$width-md-max}), (max-height: #{$height-md-max}) {
+    @media (max-width: #{$width-md-max}) {
         @content;
     }
 }
 @mixin desktop {
-    @media (max-width: #{$width-lg-max}), (max-height: #{$height-lg-max}) {
+    @media (max-width: #{$width-lg-max}) {
         @content;
     }
 }

@@ -38,7 +38,7 @@ const TextLoop = () => {
 
 const Landing = () => {
     return (
-        <SectionWrapper id="landing">
+        <SectionWrapper id="landing" paddingTop="0">
             <div className="landing-container">
                 <div className="landing-text">
                     <h4>
