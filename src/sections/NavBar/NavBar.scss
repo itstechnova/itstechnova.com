@@ -4,16 +4,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 74px;
     position: fixed;
     top: 0;
     z-index: 2;
+    padding: 0 20px;
   }
 
   &-content {
     width: 1440px;
     padding: 0 20px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,4 +49,10 @@
     img {
         height: 40px;
     }
+}
+
+.mlh-banner {
+  max-height: 180px;
+  margin-right: 50px;
+  overflow-x: visible;
 }

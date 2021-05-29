@@ -2,6 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./NavBar.scss";
 import ModeToggle from "../../components/ModeToggle/ModeToggle";
+import mlhBanner from "../../resources/images/graphics/mlh-banner.svg";
 
 const NavBar = ({ routes, logoRoute }) => {
     return (
@@ -36,9 +37,9 @@ const NavBar = ({ routes, logoRoute }) => {
                             ))}
                         </div>
                     </div>
-                    <ModeToggle className="toggle"/>
+                    <ModeToggle className="toggle" />
                 </div>
-
+                <img className="mlh-banner" src={mlhBanner} alt="mlh-banner" />
             </div>
         </nav>
     );
