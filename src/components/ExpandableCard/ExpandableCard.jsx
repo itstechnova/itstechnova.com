@@ -5,7 +5,7 @@ const ExpandableCard = (props) => {
   return (
     <details className="card">
       <summary>
-        <span className="question">{props.question}</span>
+        <h1 className="question">{props.question}</h1>
         <i className="chevron-down"></i>
       </summary>
       <div className="answer">{props.children}</div>
