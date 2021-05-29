@@ -7,7 +7,7 @@ const ExpandableCard = (props) => {
     <details className="card">
       <summary>
         <h1 className="question">{props.question}</h1>
-        <img src={expand} className="chevron-down" alt="expand card"/>
+        <img src={expand} className="faq-arrow" alt="expand card"/>
       </summary>
       <div className="answer">{props.children}</div>
     </details>

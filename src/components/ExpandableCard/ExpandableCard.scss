@@ -40,13 +40,13 @@
   margin-top: 1rem;
 }
 
-.chevron-down {
+.faq-arrow {
   margin-right: 10px;
   transform-origin: center;
   transition: all 0.5s ease;
 }
 
-.card[open] > summary > .chevron-down {
+.card[open] > summary > .faq-arrow {
   transform: rotate(180deg);
 }
 
