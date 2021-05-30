@@ -1,31 +1,38 @@
 @import "../../constants.scss";
 
 .card {
-  background-color: $text-muted;
-  width: 600px;
+  display: block;
+  width: 40vw;
+  max-width: 590px;
   border-radius: 10px;
   padding: 1rem;
   font-family: $font-regular;
   &:hover {
     cursor: pointer;
   }
-  @include phone {
-    background-color: $light-blue;
-    width: 320px;
+  @include tablet {
+    width: 80vw;
   }
 }
 
 .card > summary {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   .question {
     font-size: $text-medium;
-    color: $text-dark;
+    font-family: "Quicksand";
     @include phone {
+      width: 13rem;
+    }
+    @include tablet {
       font-family: $font-bold;
+      font-weight: bolder;
       font-size: $text-small;
       display: inline-block;
-      width: 250px;
     }
+    margin-right: 2rem;
   }
 }
 
@@ -33,21 +40,14 @@
   margin-top: 1rem;
 }
 
-.chevron-down {
-  float: right;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  width: 15px;
-  height: 15px;
-  margin-top: 5px;
+.faq-arrow {
   margin-right: 10px;
-  transform: rotate(45deg);
   transform-origin: center;
   transition: all 0.5s ease;
 }
 
-.card[open] > summary > .chevron-down {
-  transform: rotate(225deg);
+.card[open] > summary > .faq-arrow {
+  transform: rotate(180deg);
 }
 
 @keyframes fadeIn {

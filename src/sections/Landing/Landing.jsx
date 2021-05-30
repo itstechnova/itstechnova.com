@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Typist from 'react-typist';
 import "./Landing.scss";
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
-import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
+import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
+import chevron from "../../resources/images/icons/learn_more.svg"
 
 const TextLoop = () => {
     const [mounted, setMounted] = useState(true);
@@ -36,23 +38,31 @@ const TextLoop = () => {
 
 const Landing = () => {
     return (
-        <SectionWrapper id="landing">
+        <SectionWrapper id="landing" paddingTop="0">
             <div className="landing-container">
-                <div className="landing-content">
-                    <div className="landing-text">
-                        <h4>
-                            <span className="landing-title">{landing.title1}</span>
-                            {landing.title2}
-                        </h4>
-                        <TextLoop />
-                        <h4>{landing.description}</h4>
-                        <h4>{landing.dates}</h4>
-                        <a className="button" href={socials.mailingList}>
-                            {landing.applyCTA}
-                        </a>
-                    </div>
-                    <div className="landing-graphic" />
+                <div className="landing-text">
+                    <h4>
+                        <span className="landing-title">{landing.title1}</span>
+                        {landing.title2}
+                    </h4>
+                    <TextLoop />
+                    <h4>{landing.description}</h4>
+                    <h4>{landing.dates}</h4>
+                </div>
+                <div className="landing-button-container">
+                    <a className="button" href={socials.mailingList}>
+                        {landing.applyCTA}
+                    </a>
+                </div>
 
+                <div className="landing-graphic-container">
+                    <img src={bridgeTile} alt="bridge tile" />
+                </div>
+
+                <div className="landing-learn-more-container">
+                    <a href="#about" className="learn-more-link">Learn more
+                    <img src={chevron} className="learn-more-arrow" alt="learn more" />
+                    </a>
                 </div>
             </div>
         </SectionWrapper>

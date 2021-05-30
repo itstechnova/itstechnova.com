@@ -1,64 +1,123 @@
 @import "../../constants";
 
+@keyframes bounce-up {
+    0% {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-down {
+    0% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(5px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+}
+
 .about {
-  &-container {
-    min-height: 93vh;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 40%;
-  }
-
-  &-text {
-    padding: 20px, 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: $font-regular;
-    font-size: $text-medium;
-    width: 65%;
-  }
-
-  &-title {
-    font-size: $text-logo;
-    font-family: $font-logo;
-    @include tablet {
-      font-size: $text-large;
+    &-container {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
     }
-  }
 
-  &-slogan {
-    font-size: $text-xxlarge;
-    font-family: "Quicksand";
-    padding-bottom: 10px;
-    text-align: left;
-    @include desktop {
-      font-size: 58px;
+    &-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 40%;
+        @include phone {
+            flex-direction: column;
+        }
     }
-    @include tablet {
-      font-size: $text-large;
+
+    &-text {
+        padding: 20px, 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: $font-regular;
+        font-size: $text-medium;
+        p {
+            margin-top: 15px;
+        }
+        @include phone {
+            width: 100%;
+            p {
+                margin-top: 10px;
+            }
+        }
     }
-  }
 
-  &-graphic-container {
-    height: 100%;
-    width: 35%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+    &-events {
+        margin-top: 30px;
+        display: grid;
+        text-align: center;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 70px auto auto;
+        grid-template-areas:
+            "prep-title hack-title connect-title"
+            "prep-image hack-image connect-image"
+            "prep-caption hack-caption connect-caption";
 
-  &-graphic {
-    width: 80%;
-  }
+        img {
+            align-self: flex-end;
+            justify-self: center;
+            width: 80%;
+            margin-top: 20px;
+            //animation: bounce 3s linear infinite;
+        }
+
+        @include tablet {
+            grid-template-columns: 100%;
+            grid-template-rows: 70px auto auto auto auto auto auto auto auto;
+            grid-template-areas:
+                "prep-title"
+                "prep-image"
+                "prep-caption"
+                "hack-title"
+                "hack-image"
+                "hack-caption"
+                "connect-title"
+                "connect-image"
+                "connect-caption";
+        }
+    }
+
+    &-caption {
+        margin: 20px;
+        width: 90%;
+        justify-self: center;
+    }
+}
+
+.prep-image {
+    animation: bounce-up 3s linear infinite;
+}
+.hack-image {
+    animation: bounce-down 3s linear infinite;
+}
+.connect-image {
+    animation: bounce-up 3s linear infinite;
 }
 
 .button-smaller-container {
@@ -66,10 +125,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
 }
 .button-smaller {
-    margin-top: 20px;
     padding: 15px 30px;
     display: flex;
     justify-content: center;

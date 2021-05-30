@@ -5,7 +5,7 @@ const landing = {
     sloganHack: "Hack with Us",
     sloganConnect: "Connect with Us",
     description: "University of Waterloo's First Women in Tech Hackathon",
-    dates: "August 27-29, 2021 • Virtual Event",
+    dates: "August 24-29, 2021 • Virtual Event",
     comingSoon: "Coming Summer 2021",
     applyCTA: "Apply Now!",
     sponsor: "Interested in Sponsoring?",

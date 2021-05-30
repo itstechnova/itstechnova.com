@@ -1,31 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { debounce } from '../../util/debounce';
 import "./NavBar.scss";
 import ModeToggle from "../../components/ModeToggle/ModeToggle";
+import mlhBanner from "../../resources/images/graphics/mlh-banner.svg";
+import cross from "../../resources/images/icons/cross.svg";
+import hamburger from "../../resources/images/icons/hamburger.svg";
 
 const NavBar = ({ routes, logoRoute }) => {
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [visible, setVisible] = useState(true);
-
-    const handleScroll = debounce(() => {
-        const currentScrollPos = window.pageYOffset;
-
-        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
-
-        setPrevScrollPos(currentScrollPos);
-    }, 100);
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-
-    }, [prevScrollPos, visible, handleScroll]);
+    const [showNav, setShowNav] = useState(false);
 
     return (
         <nav>
-            <div className="nav-container" style={{ top: visible ? '0' : '-7vh' }} >
+            <div className="nav-container" >
                 <div className="nav-content">
                     <div className="nav-links">
                         <Link
@@ -39,7 +25,7 @@ const NavBar = ({ routes, logoRoute }) => {
                         >
                             <img src={logoRoute.logoSrc} alt="logo" />
                         </Link>
-                        <div>
+                        <div className="nav-desktop-links">
                             {routes.map((route) => (
                                 <Link
                                     className="nav-link"
@@ -55,9 +41,36 @@ const NavBar = ({ routes, logoRoute }) => {
                             ))}
                         </div>
                     </div>
-                    <ModeToggle className="toggle"/>
-                </div>
+                    <div className="mobile">
+                        <ModeToggle className="toggle" />
+                        <div className="mobile-menu" onClick={() => setShowNav(!showNav)}>
+                            {showNav ? (
+                                <img className="nav-x" src={cross} alt="cross" />
+                            ) : (
+                                <img className="nav-hamburger" src={hamburger} alt="hamburger menu" />
+                            )}
+                        </div>
+                    </div>
 
+                </div>
+                <img className="mlh-banner" src={mlhBanner} alt="mlh-banner" />
+                {showNav && <div className="nav-mobile-links">
+                    {routes.map((route) => (
+                        <Link
+                            className="nav-link"
+                            activeClass="active"
+                            to={`/#${route.sectionId}`}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            onClick={() => setShowNav(false)}
+                        >
+                            {route.label}
+                        </Link>
+                    ))}
+                </div>
+}
             </div>
         </nav>
     );
