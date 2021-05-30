@@ -4,7 +4,7 @@ import "./Story.scss";
 import ourStoryStrings from "../../resources/strings/story";
 import wieImg from "../../resources/images/logo/wie.svg";
 import wicsImg from "../../resources/images/logo/wics.svg";
-//import Stories from "../../components/Stories/Stories";
+import Stories from "../../components/Stories/Stories";
 
 
 const Story = () => (
@@ -13,6 +13,8 @@ const Story = () => (
             <h2 className="sub-title">{ourStoryStrings.title}</h2>
             <p className="sub-title-desc">{ourStoryStrings.description}</p>
 
+            <Stories/>
+            
             <h5>{ourStoryStrings.affiliatedTitle}</h5>
             <div className="affiliation-wrapper">
                 <div className="flip-card-wics">
