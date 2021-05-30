@@ -3,30 +3,90 @@
 .our-sponsors {
   &-container {
     display: inline-block;
-    margin-left: 1ch;
-    height: 92vh;
     text-align: left;
     @include phone {
       height: auto;
-      padding: 2rem;
+      //padding: 2rem;
     }
   }
   &-title {
-    font-family: $font-title;
-    font-size: $text-xlarge;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @include phone {
       margin-bottom: 2rem;
-      font-size: $text-medium;
-      text-align: center;
+      text-align: left;
     }
   }
-  &-silver {
-    width: 33%;
-    margin-left: 0.25rem;
+
+  &-logos {
+    padding: 20px;
+    border-radius: 25px;
   }
+
+  &-silver {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      width: 30%;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+      }
+    }
+    @include tablet {
+      flex-direction: column;
+      a {
+        width: 70%;
+      }
+    }
+    @include phone {
+      flex-direction: column;
+      a {
+        width: 100%;
+      }
+    }
+  }
+
   &-bronze {
-    width: 20%;
-    margin-left: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      width: 15%;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+      }
+    }
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+      a {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    @include phone {
+      align-items: center;
+      flex-direction: column;
+      a {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
