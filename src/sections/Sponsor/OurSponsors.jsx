@@ -14,7 +14,7 @@ import zynga from "../../resources/images/sponsors/bronze/zynga.png";
 const OurSponsors = () => (
     <SectionWrapper id="our-sponsors">
         <div className="our-sponsors-container">
-            <h1 className="our-sponsors-title">Our Sponsors</h1>
+            <h2 className="our-sponsors-title">Our Sponsors</h2>
             <div className="our-sponsors-logos">
                 <div className="our-sponsors-silver">
                     <img src={google} alt="Google" />

@@ -3,7 +3,6 @@
 .our-sponsors {
   &-container {
     display: inline-block;
-    margin-left: 1ch;
     text-align: left;
     @include phone {
       height: auto;
@@ -43,6 +42,8 @@
   }
   &-bronze {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     img {
       width: 15%;
