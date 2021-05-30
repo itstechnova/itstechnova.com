@@ -1,0 +1,82 @@
+.carosuel-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 28px;
+    margin-bottom: 24px;
+}
+
+.stories-image{
+    grid-column-start: 1;
+    width: 30%;
+}
+
+.speech-wrapper {
+    grid-column-start: 2;
+}
+
+.speech-bubble{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.background-bubble{
+    display: inline;
+    margin-right: -5px;
+    margin-top: 50px;
+}
+
+.bubble-text {
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color:  #DFE5FA;
+    width: 90%;
+}
+
+.quote-name-role{
+    font-weight: bold;
+}
+.progress-bar {
+   background-color:  #C0CBF2;
+   height: 10px;
+   border-radius: 5px;
+   width: 65%;
+}
+
+.progress-score {
+    
+}
+
+#progress-made {
+    background-color: #7676E8;
+   height: 10px;
+   width: 33%;
+   border-radius: 5px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 6%;
+  margin-right: 15px;
+}
+
+// .carosuel-controls-wrapper{
+//     display: grid;
+//     columns: 12;
+//     grid-column-gap: 25px;
+// }
+
+.carosuel-controls-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 55px;
+    align-items: center;
+    margin-top: 15px;
+}

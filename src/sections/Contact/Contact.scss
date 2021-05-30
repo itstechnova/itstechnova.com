@@ -6,11 +6,22 @@
 }
 
 .email-input{
-    width: 340px;
+    width: 320px;
     height: 40px;
     background: #E8EAFA;
     border-radius: 5px;
     border: none;
+    font-family: "Poppins";
+    padding-left: 10px;
+    @media (max-width: 600px) {
+        width: 250px;
+     }
+     @media (max-width: 500px) {
+        width: 200px;
+     }
+     @media (max-width: 450px) {
+        width: 170px;
+     }
 }
 
 .email-wrapper {
@@ -21,12 +32,21 @@
 .submit-wrapper{
     width: 40px;
     height: 33px;
-    margin-top: 1%;
-    left: 295px;
+    margin-top: 4px;
+    left: 285px;
     border-radius: 3px;
-    background-color: #C4C4C4;
+    background-color: #99ACEB;
     display: inline;
     position: absolute;
+    @media (max-width: 600px) {
+        left: 215px;
+     }
+     @media (max-width: 500px) {
+        left: 165px;
+     }
+     @media (max-width: 440px) {
+        left: 135px;
+     }
 }
 
 .submit-btn{
@@ -45,12 +65,15 @@
 .contact-row{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
 }
 
 .contact{
-    width: 50%;
+    min-width: 50%;
+    @media (max-width: 1045px) {
+       width: 100%;
+    }
 }
 
 .contact-links{
@@ -64,6 +87,8 @@
 }
 
 .contact-image{
+    width: 500px;
+    height: 50px;
 }
 
 .socials-row{
