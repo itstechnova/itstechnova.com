@@ -1,175 +1,167 @@
 import React from "react";
-//import styled from "styled-components";
+import { useState, useEffect, useRef } from 'react';
+import "./Stories.scss";
+import storyImg1 from "../../resources/images/Story1.svg";
+import storyImg2 from "../../resources/images/Story2.svg";
+import storyImg3 from "../../resources/images/Story3.svg";
+import speechBackground from "../../resources/images/speechBubble.svg";
+import controlLeftLight1 from "../../resources/images/icons/control-left-light-1.svg";
+//import controlLeftLight2 from "../../resources/images/icons/control-left-light-2.svg";
+import controlRightLight1 from "../../resources/images/icons/control-right-light-1.svg";
+//import controlRightLight2 from "../../resources/images/icons/control-right-light-2.svg";
+import ourStoryStrings from "../../resources/strings/story";
 
-// const AUTOPLAY_SLIDE_DURATION = 20000;
-// const STORIES_LENGTH = 3;
+const useIntersection = (ref) => {
 
+  const [isIntersecting, setIntersecting] = useState(false)
 
-// const ProgressBarTrack = styled.div`
-//   flex: 1;
-//   height: 5.54px;
-//   background: rgba(23, 60, 103, 0.31);
-// `;
+  const observer = new IntersectionObserver(
+    ([entry]) => setIntersecting(entry.isIntersecting)
+  )
 
-// // progress is in ms
-// const ProgressBarLine = styled.div<{
-//   startProgressAt,
-//   inView,
-//   isHovering,
-// }>`
-//   width: ${({ startProgressAt }) =>
-//     (100 * startProgressAt) / AUTOPLAY_SLIDE_DURATION}%;
-//   height: 5.54px;
-//   background: ${({ theme }) => theme.globalConstants.color.aquaSecondary};
-//   ${({ inView, isHovering, startProgressAt }) =>
-//     inView && !isHovering
-//       ? `@keyframes progress-${startProgressAt} {
-//       from {
-//         width: ${(100 * startProgressAt) / AUTOPLAY_SLIDE_DURATION}%;
-//       }
-//       to {
-//         width: 100%;
-//       }
-//     }
-//     animation: ${AUTOPLAY_SLIDE_DURATION - startProgressAt}ms
-//       progress-${startProgressAt} linear infinite;
-      
-//     animation-play-state: running; `
-//       : `animation-play-state: paused;`}
-//   @media (prefers-reduced-motion) {
-//     animation: none;
-//   }
-// `;
+  useEffect(() => {
+    observer.observe(ref.current)
+    // Remove the observer as soon as the component is unmounted
+    return () => { observer.disconnect() }
+  }, [observer, ref])
 
-// const NavContainer = styled(Flex)`
-//   margin: 20px 0;
-//   margin-left: 350px;
-//   > :not(:first-child) {
-//     margin-left: 36.85px;
-//   }
-//   ${({ theme }) => theme.mediaQueries.medium`
-//     margin-left: 200px;
-//     > :not(:first-child) {
-//       margin-left: 18px;
-//     }
-//   `};
-//   @media (max-width: 550px) {
-//     margin-left: 0;
-//     > :not(:first-child) {
-//       margin-left: 14px;
-//     }
-//   }
-// `;
+  return isIntersecting
+}
 
-
-
-// const CarouselItem = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   &:not(:first-child) {
-//     margin-left: -100%;
-//   }
-//   &.carousel-slide * .showcase-text {
-//     opacity: 0;
-//     transition-duration: 0.7s;
-//   }
-//   &.carousel-slide * .showcase-logo {
-//     opacity: 0;
-//     transition-property: all;
-//     transition-duration: 0.7s;
-//     margin-top: -125px;
-//     ${({ theme }) => theme.mediaQueries.tablet`
-//       margin-top: -75px;
-//     `};
-//     @media (max-width: 550px) {
-//       margin-top: -50px;
-//     }
-//   }
-//   &.carousel-slide-visible * .showcase-text {
-//     opacity: 1;
-//     transition-delay: 0.7s;
-//   }
-//   &.carousel-slide-visible * .showcase-logo {
-//     opacity: 1;
-//     transition-property: opacity;
-//     transition-delay: 0.7s;
-//     margin-top: 0;
-//   }
-//   &.carousel-slide-visible {
-//     z-index: 3;
-//   }
-//   &:focus {
-//     outline: none;
-//   }
-//   &:focus-visible {
-//     outline: initial;
-//   }
-// `;
-
-// const CarouselItemsContainer = styled(Flex)`
-//   width: 100%;
-//   height: 100%;
-//   position: relative;
-//   margin-bottom: 50px;
-//   ${({ theme }) => theme.mediaQueries.tablet`
-//     margin-bottom: 35px;
-//   `};
-//   @media (max-width: 550px) {
-//     margin-bottom: 45px;
-//   }
-// `;
-
-// const CarouselContainer = styled.div`
-//   height: 100%;
-//   padding-top: 22px;
-//   ${({ theme }) => theme.mediaQueries.medium`
-//     padding: 40px 0;
-//   `};
-//   @media (max-width: 550px) {
-//     padding: 30px 0 0 0;
-//   }
-// `;
-
-// const Container = styled.div``;
-
-// const getNext = (currentSlide) =>
-//   (currentSlide + 1) % STORIES_LENGTH;
-// const getPrevious = (currentSlide) =>
-//   (currentSlide - 1 + STORIES_LENGTH) % STORIES_LENGTH;
+var storyInfo = {
+  "1": {
+    quote: ourStoryStrings.quote1Text,
+    name: ourStoryStrings.quote1Name,
+    role: ourStoryStrings.quote1Role,
+    image: storyImg1,
+  },
+  "2": {
+    quote: ourStoryStrings.quote2Text,
+    name: ourStoryStrings.quote2Name,
+    role: ourStoryStrings.quote2Role,
+    image: storyImg2,
+  },
+  "3": {
+    quote: ourStoryStrings.quote3Text,
+    name: ourStoryStrings.quote3Name,
+    role: ourStoryStrings.quote3Role,
+    image: storyImg3,
+  }
+}
 
 function Stories () {
-  // const [currentSlide, setCurrentSlide] = useState(0);
-  // const [currentProgress, setCurrentProgress] = useState<number>(0);
-  // const [autoplayStart, setAutoplayStart] = useState<number>(0);
+  const autoPlayRef = useRef()
+  var ref = useRef();
 
-  // // we have isHoveringBuffer because we need to delay the first rerender of the progress bar
-  // const [isHovering, setIsHovering] = useState<boolean>(false);
-  // const [isHoveringBuffer, setIsHoveringBuffer] = useState<boolean>(false);
+  const isVisible = useIntersection(ref);
+  console.log("isVisible:" + isVisible)
 
-  // const autoplay = useRef<NodeJS.Timeout | null>(null);
-  // const handlers = useSwipeable({
-  //   onSwipedLeft: () => setCurrentSlide(getNext(currentSlide)),
-  //   onSwipedRight: () => setCurrentSlide(getPrevious(currentSlide)),
-  // });
-  // const [ref, isInView] = useInView();
+  const [state, setState] = useState({
+    story: 1,
+    quote: ourStoryStrings.quote1Text,
+    name: ourStoryStrings.quote1Name,
+    role: ourStoryStrings.quote1Role,
+    image: storyImg1,
+  })  
+  
+  useEffect(() => {
+    autoPlayRef.current = nextSlide
+  })
 
-  // const setAutoplay = useCallback(
-  //   (duration) => {
-  //     autoplay.current = setTimeout(() => {
-  //       setCurrentSlide(getNext);
-  //       if (currentProgress !== 0) setCurrentProgress(0);
-  //       setAutoplay(AUTOPLAY_SLIDE_DURATION);
-  //     }, duration);
-  //   },
-  //   [currentProgress]
-  // );
+  useEffect(() => {
+
+    const play = () => {
+      autoPlayRef.current()
+    }
+
+    let interval = null
+
+    if (isVisible) {
+      interval = setInterval(play, 4000)
+    }
+
+    return () => {
+      if (isVisible) {
+        clearInterval(interval)
+      }
+    }
+  }, [isVisible])
+
+  
+
+  const nextSlide = () => {
+    var slide = state.story;
+    var newSlide = String(slide + 1);
+    if (slide+1 > 3) {
+      newSlide = "1";
+    }
+    console.log(newSlide);
+    console.log(storyInfo);
+    console.log(storyInfo[newSlide]);
+    console.log(slide);
+    setState({story: Number(newSlide), quote: storyInfo[newSlide].quote,
+        name: storyInfo[newSlide].name,
+        role: storyInfo[newSlide].role,
+       image: storyInfo[newSlide].image})
+  };
 
 
+  //setInterval(nextSlide(state.story), 5000);
 
+  var progessBar = document.getElementById("progress-made");
+  const progressMade = (state.story /3) *100;
+  console.log(progressMade);
+  if (progessBar) {
+    progessBar.style.width = `${progressMade}%`;
+  }
+  
 
   return (
     <div>
+    <div className="carosuel-wrapper" ref={ref} id="carosel">
+    <img className="stories-image" alt="" src={state.image} />
+
+    <div className="speech-wrapper">
+      <div className="speech-bubble">
+        <img className="background-bubble" alt="" src={speechBackground} />
+        <div className="bubble-text">
+          <p>" {state.quote} "</p>
+          <p className="quote-name-role">{state.name}, {state.role}</p>
+        </div>
+        
+      </div>
       
+      <div className="carosuel-controls-wrapper" >
+        <div className="progress-bar">
+          <div id="progress-made">
+          </div>
+        </div>
+
+        <p className="progress-score">
+            {state.story} / 3
+        </p>
+        <div className="controls">
+          <img src={controlLeftLight1} alt="" />
+          <img onClick={()=> nextSlide()} alt="" src={controlRightLight1} />
+        </div>
+      </div>
+    
+
+    </div>
+    </div>
+    
+    {/* <div className="carosuel-controls-wrapper">
+      <div className="progress-bar">
+        <div id="progress-made">
+        </div>
+      </div>
+
+      <div className="controls">
+        
+      </div>
+
+    </div> */}
+
     
     </div>
   );

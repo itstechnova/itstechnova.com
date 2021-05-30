@@ -17,76 +17,81 @@
 
 .flip-card-wics{
     margin-top: 16px;
-    width: 40%;
-    text-align: center;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    width: 400px;
+    height: 270px;
+    perspective: 1000px;
 }
 
 .flip-card-inner-wics{
-    transition: transform 0.8s;
+    transition: transform 0.6s;
+    text-align: center;
+    position: relative;
     width: 100%;
+    height: 100%;
     transform-style: preserve-3d;
 }
 
-.flip-card-wics:hover .flip-card-inner-wics {
+.flip-card-wics:hover .flip-card-inner-wics{
     transform: rotateY(180deg);
 }
 
 .wics-front, .wics-back {
     position: absolute;
     width: 100%;
-    min-height: 200px;
+    height: 100%;
     border-radius: 10px;
-    border: 2px black solid;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FEB5AA;
 }
 
 .wics-back {
   transform: rotateY(180deg);
-  display: flex !important;
-    justify-content: center;
-    flex-direction: column;
+ 
 }
 
 .flip-card-wie{
-    border-radius: 10px;
     margin-top: 16px;
-    width: 40%;
-    text-align: center;
-    height: 100%;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    width: 400px;
+    height: 270px;
+    perspective: 1000px;
 }
 
 .flip-card-inner-wie{
+    transition: transform 0.6s;
     text-align: center;
-    min-height: 100%;
-    transition: transform 0.8s;
+    position: relative;
+    width: 100%;
+    height: 100%;
     transform-style: preserve-3d;
 }
 
-.flip-card-wie:hover .flip-card-inner-wie {
+.flip-card-wie:hover .flip-card-inner-wie{
     transform: rotateY(180deg);
 }
 
 .wie-front, .wie-back {
     position: absolute;
     width: 100%;
+    height: 100%;
     border-radius: 10px;
-    border: 2px black solid;
-    min-height: 200px;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FEB5AA;
 }
 
 .wie-back {
-
   transform: rotateY(180deg);
-  display: flex !important;
-  justify-content: center;
-  flex-direction: column;
+ 
 }
-
 .affiliation-image {
     height: 150px;
     width: 250px;
