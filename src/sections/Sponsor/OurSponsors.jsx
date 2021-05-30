@@ -14,23 +14,26 @@ import zynga from "../../resources/images/sponsors/bronze/zynga.png";
 const OurSponsors = () => (
     <SectionWrapper id="our-sponsors">
         <div className="our-sponsors-container">
-            <h2 className="our-sponsors-title">Our Sponsors</h2>
-            <div>
-                <img className="our-sponsors-silver" src={google} alt="Google"/>
-                <img className="our-sponsors-silver" src={wish} alt="Wish"/>
-                <img className="our-sponsors-silver" src={scotiabank} alt="Scotiabank"/>
+            <h1 className="our-sponsors-title">Our Sponsors</h1>
+            <div className="our-sponsors-logos">
+                <div className="our-sponsors-silver">
+                    <img src={google} alt="Google" />
+                    <img src={wish} alt="Wish" />
+                    <img src={scotiabank} alt="Scotiabank" />
+                </div>
+                <div className="our-sponsors-bronze">
+                    <img src={amazon} alt="Amazon" />
+                    <img src={facebook} alt="facebook" />
+                    <img src={hrt} alt="HRT" />
+                    <img src={splunk} alt="Splunk" />
+                    <img src={zynga} alt="Zynga" />
+                </div>
             </div>
-            <div> 
-                <img className="our-sponsors-bronze" src={amazon} alt="Amazon"/>
-                <img className="our-sponsors-bronze" src={facebook} alt="facebook"/>
-                <img className="our-sponsors-bronze" src={hrt} alt="HRT"/>
-                <img className="our-sponsors-bronze" src={splunk} alt="Splunk"/>
-                <img className="our-sponsors-bronze" src={zynga} alt="Zynga"/>
-            </div>
-            
-            
+
+
+
         </div>
-       
+
     </SectionWrapper>
 );
 

@@ -4,7 +4,6 @@
   &-container {
     display: inline-block;
     margin-left: 1ch;
-    height: 92vh;
     text-align: left;
     @include phone {
       height: auto;
@@ -12,21 +11,55 @@
     }
   }
   &-title {
-    font-family: $font-title;
-    font-size: $text-xlarge;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @include phone {
       margin-bottom: 2rem;
-      font-size: $text-medium;
-      text-align: center;
     }
   }
+  &-logos {
+    //background-color: rgba(95, 85, 85, 0.2);
+    padding: 20px;
+  }
   &-silver {
-    width: 33%;
-    margin-left: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 30%;
+    }
+    @include tablet {
+      flex-direction: column;
+      img {
+        width: 70%;
+      }
+    }
+    @include phone {
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+    }
   }
   &-bronze {
-    width: 20%;
-    margin-left: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 15%;
+    }
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+      img {
+        width: 30%;
+      }
+    }
+    @include phone {
+      align-items: center;
+      flex-direction: column;
+      img {
+        width: 50%;
+      }
+    }
   }
 }
