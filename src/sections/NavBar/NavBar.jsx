@@ -45,9 +45,9 @@ const NavBar = ({ routes, logoRoute }) => {
                         <ModeToggle className="toggle" />
                         <div className="mobile-menu" onClick={() => setShowNav(!showNav)}>
                             {showNav ? (
-                                <img className="menu-icon" src={cross} alt="cross" />
+                                <img className="nav-x" src={cross} alt="cross" />
                             ) : (
-                                <img className="menu-icon" src={hamburger} alt="hamburger menu" />
+                                <img className="nav-hamburger" src={hamburger} alt="hamburger menu" />
                             )}
                         </div>
                     </div>
@@ -69,7 +69,8 @@ const NavBar = ({ routes, logoRoute }) => {
                             {route.label}
                         </Link>
                     ))}
-                </div>}
+                </div>
+}
             </div>
         </nav>
     );
