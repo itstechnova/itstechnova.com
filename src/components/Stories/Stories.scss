@@ -1,3 +1,5 @@
+@import "../../constants";
+
 .carosuel-wrapper{
     display: flex;
     flex-direction: row;
@@ -28,13 +30,17 @@
 }
 
 .bubble-text {
-    padding: 16px 16px 16px 16px;
+    padding: 20px 60px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-radius: 30px;
     background-color:  #DFE5FA;
     width: 90%;
+    color: $text-dark;
+    p {
+        margin-bottom: 10px;
+    }
 }
 
 .quote-name-role{
