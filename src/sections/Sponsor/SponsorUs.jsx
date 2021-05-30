@@ -1,6 +1,7 @@
 import React from "react";
 //import Carousel from 'react-bootstrap/Carousel';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
+import Stories from "../../components/Stories/Stories";
 import bee from "../../resources/images/graphics/bee.svg";
 import leaf from "../../resources/images/graphics/leaf.svg";
 import "./SponsorUs.scss";
@@ -26,6 +27,7 @@ const SponsorUs = () => (
                 </div>
             </div>
             <h2 className="sponsor-us-showcase">Sponsor Showcase</h2>
+            <Stories />
         </div>
     </SectionWrapper>
 );

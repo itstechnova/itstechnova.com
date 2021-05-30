@@ -1,3 +1,5 @@
+@import "../../constants";
+
 .story-container {
     padding-left: 5%;
     padding-right: 5%;
@@ -46,6 +48,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #FEB5AA;
+    color: $text-dark;
 }
 
 .wics-back {
@@ -55,6 +58,7 @@
 
 .flip-card-wie{
     margin-top: 16px;
+    margin-bottom: 30px;
     width: 400px;
     height: 270px;
     perspective: 1000px;
@@ -85,6 +89,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #FEB5AA;
+    color: $text-dark;
 }
 
 .wie-back {
