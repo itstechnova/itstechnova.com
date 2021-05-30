@@ -1,69 +1,112 @@
 @import "../../constants";
 
-// .sponsor-us-container {
-//   height: 92vh;
-//   display: flex;
-//   align-items: flex-start;
-//   justify-content: flex-start;
-// }
+@keyframes rotate {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes bounce-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
 
 .sponsor-us {
   &-container {
-    display: inline-block;
-    margin-left: 1ch;
-    height: 92vh;
     text-align: left;
     @include phone {
       height: auto;
-      padding: 2rem;
     }
   }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    @include phone {
+      flex-direction: column;
+    }
+  }
+
+  &-text {
+    width: 50%;
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &-images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    padding-top: 40px;
+    @include phone {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .leaves {
+      width: 50%;
+      padding-top: 60px;
+      animation: rotate 5s linear infinite;
+      @include phone {
+        content: url("../../resources/images/graphics/balloon-and-bee.svg");
+        width: 80%;
+        padding-top: 0;
+        animation: bounce-up 3s linear infinite;
+      }
+    }
+    .bee {
+      width: 25%;
+      animation: bounce-up 3s linear infinite;
+      @include phone {
+        display: none;
+      }
+    }
+  }
+
   &-title {
-    font-family: $font-title;
-    font-size: $text-xlarge;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     @include phone {
-      margin-bottom: 2rem;
-      font-size: $text-medium;
-      text-align: center;
     }
   }
+
   &-description {
-    font-family: $font-regular;
-    font-size: $text-xlarge;
-    width: 70%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    p {
+      margin-bottom: 1rem;
+    }
     @include phone {
-      margin-bottom: 2rem;
-      font-size: $text-medium;
-      text-align: center;
+      width: 100%;
+      p {
+        margin-bottom: 0.5rem;
+      }
     }
   }
   &-image {
     width: 30%;
   }
-  &-button {
-    background-color: #7676e8;
-    border-radius: 1rem;
-    font-family: $font-regular;
-    font-size: $text-small;
-    color: white;
-    border: 0em;
-    padding: 0.75em;
-    @include phone {
-      font-size: $text-small;
-      text-align: center;
-    }
-  }
   &-showcase {
-    font-family: $font-title;
-    font-size: $text-large;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 3rem;
     @include phone {
       margin-bottom: 2rem;
-      font-size: $text-medium;
-      text-align: center;
     }
   }
   &-carousel {
