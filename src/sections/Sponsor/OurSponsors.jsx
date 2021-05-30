@@ -17,16 +17,32 @@ const OurSponsors = () => (
             <h2 className="our-sponsors-title">Our Sponsors</h2>
             <div className="our-sponsors-logos">
                 <div className="our-sponsors-silver">
-                    <img src={google} alt="Google" />
-                    <img src={wish} alt="Wish" />
-                    <img src={scotiabank} alt="Scotiabank" />
+                    <a href="https://about.google/">
+                        <img src={google} alt="Google" />
+                    </a>
+                    <a href="https://www.wish.com/careers?hide_login_modal=true">
+                        <img src={wish} alt="Wish" />
+                    </a>
+                    <a href="https://www.scotiabank.com/ca/en/about.html">
+                        <img src={scotiabank} alt="Scotiabank" />
+                    </a>
                 </div>
                 <div className="our-sponsors-bronze">
-                    <img src={amazon} alt="Amazon" />
-                    <img src={facebook} alt="facebook" />
-                    <img src={hrt} alt="HRT" />
-                    <img src={splunk} alt="Splunk" />
-                    <img src={zynga} alt="Zynga" />
+                    <a href="https://www.aboutamazon.com/">
+                        <img src={amazon} alt="Amazon" />
+                    </a>
+                    <a href="https://about.facebook.com/">
+                        <img src={facebook} alt="facebook" />
+                    </a>
+                    <a href="https://www.hudsonrivertrading.com/">
+                        <img src={hrt} alt="hrt" />
+                    </a>
+                    <a href="https://www.splunk.com/">
+                        <img src={splunk} alt="splunk" />
+                    </a>
+                    <a href="https://www.zynga.com/">
+                        <img src={zynga} alt="zynga" />
+                    </a>
                 </div>
             </div>
 

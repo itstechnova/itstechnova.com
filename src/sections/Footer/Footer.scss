@@ -5,6 +5,9 @@
         font-family: $font-logo;
         font-size: 24px;
         font-weight: 600;
+        @include phone {
+            font-size: 20px;
+        }
     }
     &-container {
         height: 118px;
@@ -15,6 +18,12 @@
         justify-content: center;
         p {
             padding-top: 5px;
+            @include phone {
+                font-size: 16px;
+            }
+        }
+        @include phone {
+            height: 114px;
         }
     }
     &-logo-container {

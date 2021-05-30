@@ -11,7 +11,6 @@ const TextLoop = () => {
     const [mounted, setMounted] = useState(true);
 
     useEffect(() => {
-        console.log("Count: " + mounted);
         setMounted(true);
     }, [mounted]);
 

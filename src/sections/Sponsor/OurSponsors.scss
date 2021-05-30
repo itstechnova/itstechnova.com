@@ -6,36 +6,46 @@
     text-align: left;
     @include phone {
       height: auto;
-      padding: 2rem;
+      //padding: 2rem;
     }
   }
   &-title {
     margin-bottom: 2rem;
     @include phone {
       margin-bottom: 2rem;
+      text-align: left;
     }
   }
+
   &-logos {
-    //background-color: rgba(95, 85, 85, 0.2);
     padding: 20px;
   }
+
   &-silver {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    img {
+    a {
       width: 30%;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+      }
     }
     @include tablet {
       flex-direction: column;
-      img {
+      a {
         width: 70%;
       }
     }
     @include phone {
       flex-direction: column;
-      img {
+      a {
         width: 100%;
       }
     }
@@ -45,21 +55,35 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    img {
+    a {
       width: 15%;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+      }
     }
     @include tablet {
       align-items: center;
       flex-direction: column;
-      img {
+      a {
         width: 30%;
+        img {
+          width: 100%;
+        }
       }
     }
     @include phone {
       align-items: center;
       flex-direction: column;
-      img {
+      a {
         width: 50%;
+        img {
+          width: 100%;
+        }
       }
     }
   }
