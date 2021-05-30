@@ -23,7 +23,8 @@ const useIntersection = (ref) => {
     observer.observe(ref.current)
     // Remove the observer as soon as the component is unmounted
     return () => { observer.disconnect() }
-  }, [observer, ref])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return isIntersecting
 }
@@ -95,10 +96,6 @@ function Stories () {
     if (slide+1 > 3) {
       newSlide = "1";
     }
-    console.log(newSlide);
-    console.log(storyInfo);
-    console.log(storyInfo[newSlide]);
-    console.log(slide);
     setState({story: Number(newSlide), quote: storyInfo[newSlide].quote,
         name: storyInfo[newSlide].name,
         role: storyInfo[newSlide].role,
@@ -149,18 +146,6 @@ function Stories () {
 
     </div>
     </div>
-    
-    {/* <div className="carosuel-controls-wrapper">
-      <div className="progress-bar">
-        <div id="progress-made">
-        </div>
-      </div>
-
-      <div className="controls">
-        
-      </div>
-
-    </div> */}
 
     
     </div>

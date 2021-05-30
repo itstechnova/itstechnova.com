@@ -32,7 +32,8 @@ function Contact() {
         return () => {
             window.removeEventListener("resize", handleResize)
         }
-    }, [updateWindowDimensions])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     //console.log(state.screenWidth)
 
