@@ -5,8 +5,9 @@
   width: 40vw;
   max-width: 590px;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 24px 32px;
   font-family: $font-regular;
+  font-weight: 400;
   &:hover {
     cursor: pointer;
   }
@@ -22,13 +23,12 @@
   justify-content: space-between;
   .question {
     font-size: $text-medium;
-    font-family: "Quicksand";
+    font-family: $font-regular;
+    font-weight: 400;
     @include phone {
       width: 13rem;
     }
     @include tablet {
-      font-family: $font-bold;
-      font-weight: bolder;
       font-size: $text-small;
       display: inline-block;
     }
@@ -38,6 +38,9 @@
 
 .answer {
   margin-top: 1rem;
+  @include tablet {
+    font-size: $text-small;
+  }
 }
 
 .faq-arrow {

@@ -10,7 +10,7 @@
   &-title {
     font-family: $font-title;
     font-size: $text-xlarge;
-    margin-bottom: 3rem;
+    margin-bottom: 40px;
     align-self: flex-start;
     @include tablet {
       margin-bottom: 2rem;
@@ -26,7 +26,7 @@
   }
   &-left-col > *,
   &-right-col > * {
-    margin-bottom: 1rem;
+    margin-bottom: 24px;
   }
   &-left-col > :nth-last-child(1),
   &-right-col > :nth-last-child(1) {
@@ -43,6 +43,13 @@
     > a {
       font-family: $font-bold;
       font-weight: bold;
+    }
+  }
+  &-bubble {
+    justify-content: center;
+    margin-top: 38px;
+    @include phone {
+      width: 150px;
     }
   }
 }
