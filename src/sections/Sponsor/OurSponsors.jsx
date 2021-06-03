@@ -1,5 +1,4 @@
 import React from "react";
-import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./OurSponsors.scss";
 /*
 import google from "../../resources/images/sponsors/silver/google.png";

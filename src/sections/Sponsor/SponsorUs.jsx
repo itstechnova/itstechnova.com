@@ -8,7 +8,7 @@ import "./SponsorUs.scss";
 import OurSponsors from "./OurSponsors";
 
 const SponsorUs = () => (
-    <SectionWrapper id="sponsor-us">
+    <SectionWrapper id="sponsor">
         <div className="sponsor-us-container">
             <div className="sponsor-us-content">
                 <div className="sponsor-us-text">
