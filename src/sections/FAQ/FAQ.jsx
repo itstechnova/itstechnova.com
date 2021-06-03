@@ -1,6 +1,8 @@
 import React from "react";
 import ExpandableCard from "../../components/ExpandableCard/ExpandableCard";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
+import speech from "../../resources/images/graphics/speech.svg";
+
 import "./FAQ.scss";
 
 const FAQ = () => (
@@ -55,8 +57,10 @@ const FAQ = () => (
       </div>
 
       <div className="faq-contact">
-        If you have any other questions, feel free to reach out to us at{" "}
-        <a href="mailto:hello@itstechnova.org">hello@itstechnova.org</a>
+        <p>If you have any other questions, feel free to reach out to us at{" "}
+          <a href="mailto:hello@itstechnova.org">hello@itstechnova.org</a>
+        </p>
+        <img src={speech} alt="speech bubble"></img>
       </div>
     </div>
   </SectionWrapper>
