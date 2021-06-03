@@ -81,7 +81,7 @@ useEffect (() => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [state])
-  })  
+
   
   useEffect(() => {
     autoPlayRef.current = nextSlide
