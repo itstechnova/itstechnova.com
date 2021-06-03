@@ -1,27 +1,22 @@
+@import "../../constants";
+
 .contact-container {
-    height: 92vh;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 40px 0;
     text-align: left;
 }
 
 .email-input{
-    width: 320px;
-    height: 40px;
+    min-width: 328px;
+    height: 48px;
     background: #E8EAFA;
     border-radius: 5px;
     border: none;
     font-family: "Poppins";
     padding-left: 10px;
-    @media (max-width: 600px) {
-        width: 250px;
-     }
-     @media (max-width: 500px) {
-        width: 200px;
-     }
-     @media (max-width: 450px) {
-        width: 170px;
-     }
+    @include phone {
+        min-width: 200px;
+        width: 90%;
+    }
 }
 
 .email-wrapper {
@@ -30,23 +25,22 @@
 }
 
 .submit-wrapper{
-    width: 40px;
-    height: 33px;
-    margin-top: 4px;
-    left: 285px;
+    width: 47px;
+    height: 39px;
+    margin-top: 5px;
+    left: 287px;
     border-radius: 3px;
     background-color: #99ACEB;
     display: inline;
     position: absolute;
-    @media (max-width: 600px) {
-        left: 215px;
-     }
-     @media (max-width: 500px) {
-        left: 165px;
-     }
-     @media (max-width: 440px) {
-        left: 135px;
-     }
+
+    &:hover {
+        opacity: 0.7;
+    }
+    @include phone {
+        left: auto;
+        right: 8%;
+    }
 }
 
 .submit-btn{
@@ -65,20 +59,50 @@
 .contact-row{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.contact-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    img {
+        width: 100%;
+    }
+    @include tablet {
+        padding: 20px 0;
+        width: 100%;
+        justify-content: flex-start;
+        img {
+            width: 60%;
+        }
+    }
+    @include phone {
+        padding: 20px 0;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .contact{
-    min-width: 50%;
-    @media (max-width: 1045px) {
+    min-width: 500px;
+    width: 50%;
+    @include tablet {
        width: 100%;
+    }
+    @include phone {
+        min-width: 0;
     }
 }
 
 .contact-links{
-    color: black;
-    font-size: 14px;
     text-decoration: none;
 }
 
@@ -86,10 +110,6 @@
     text-decoration: underline;
 }
 
-.contact-image{
-    width: 500px;
-    height: 50px;
-}
 
 .socials-row{
     max-width: 300px;
@@ -97,6 +117,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    img {
+        padding: 10px 0;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .links-row{
@@ -105,6 +131,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    a {
+        font-family: "Poppins";
+    }
 }
 
 .team-title {

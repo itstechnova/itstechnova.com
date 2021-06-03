@@ -81,7 +81,8 @@ useEffect (() => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [state])
-
+  })  
+  
   useEffect(() => {
     autoPlayRef.current = nextSlide
   })
@@ -113,6 +114,7 @@ useEffect (() => {
     if (slide+1 > 3) {
       newSlide = "1";
     }
+
     setState({...state, story: Number(newSlide), quote: storyInfo[newSlide].quote,
         name: storyInfo[newSlide].name,
         role: storyInfo[newSlide].role,
@@ -125,7 +127,7 @@ useEffect (() => {
     if (slide-1 < 1) {
       newSlide = "1";
     }
-    setState({...state, story: Number(newSlide), quote: storyInfo[newSlide].quote,
+    setState({story: Number(newSlide), quote: storyInfo[newSlide].quote,
         name: storyInfo[newSlide].name,
         role: storyInfo[newSlide].role,
        image: storyInfo[newSlide].image})
@@ -142,6 +144,7 @@ useEffect (() => {
   }
   
   console.log("sreenwidth", state.screenWidth)
+
 
   return (
     <div>
@@ -169,6 +172,7 @@ useEffect (() => {
         </p>
         <div className="controls">
           <img onClick={()=> prevSlide()} src={controlLeftLight1} alt="" />
+
           <img onClick={()=> nextSlide()} alt="" src={controlRightLight1} />
         </div>
       </div>

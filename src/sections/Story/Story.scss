@@ -1,6 +1,5 @@
- 
+
 .story-container {
-    height: 92vh;
     padding-left: 5%;
     padding-right: 5%;
     text-align: left;
@@ -70,6 +69,7 @@
     background-color: #FEB5AA;
     padding-left: 15px;
     padding-right: 15px;
+    color: $text-dark;
 }
 
 .wics-back {
@@ -126,8 +126,8 @@
     background-color: #FEB5AA;
     padding-left: 15px;
     padding-right: 15px;
+    color: $text-dark;
 }
-
 
 .wie-back {
   transform: rotateY(180deg);

@@ -15,22 +15,41 @@ const OurSponsors = () => (
     <SectionWrapper id="our-sponsors">
         <div className="our-sponsors-container">
             <h2 className="our-sponsors-title">Our Sponsors</h2>
-            <div>
-                <img className="our-sponsors-silver" src={google} alt="Google"/>
-                <img className="our-sponsors-silver" src={wish} alt="Wish"/>
-                <img className="our-sponsors-silver" src={scotiabank} alt="Scotiabank"/>
+            <div className="our-sponsors-logos">
+                <div className="our-sponsors-silver">
+                    <a href="https://about.google/">
+                        <img src={google} alt="Google" />
+                    </a>
+                    <a href="https://www.wish.com/careers?hide_login_modal=true">
+                        <img src={wish} alt="Wish" />
+                    </a>
+                    <a href="https://www.scotiabank.com/ca/en/about.html">
+                        <img src={scotiabank} alt="Scotiabank" />
+                    </a>
+                </div>
+                <div className="our-sponsors-bronze">
+                    <a href="https://www.aboutamazon.com/">
+                        <img src={amazon} alt="Amazon" />
+                    </a>
+                    <a href="https://about.facebook.com/">
+                        <img src={facebook} alt="facebook" />
+                    </a>
+                    <a href="https://www.hudsonrivertrading.com/">
+                        <img src={hrt} alt="hrt" />
+                    </a>
+                    <a href="https://www.splunk.com/">
+                        <img src={splunk} alt="splunk" />
+                    </a>
+                    <a href="https://www.zynga.com/">
+                        <img src={zynga} alt="zynga" />
+                    </a>
+                </div>
             </div>
-            <div> 
-                <img className="our-sponsors-bronze" src={amazon} alt="Amazon"/>
-                <img className="our-sponsors-bronze" src={facebook} alt="facebook"/>
-                <img className="our-sponsors-bronze" src={hrt} alt="HRT"/>
-                <img className="our-sponsors-bronze" src={splunk} alt="Splunk"/>
-                <img className="our-sponsors-bronze" src={zynga} alt="Zynga"/>
-            </div>
-            
-            
+
+
+
         </div>
-       
+
     </SectionWrapper>
 );
 

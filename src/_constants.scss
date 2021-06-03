@@ -50,9 +50,10 @@ $dark-blue: #7D92DB;
     --background-color: #fffdfa;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
-    --header-footer-color: #f0efef;
+    --header-footer-color: #FFE4E1;
     --x-icon: url("./resources/images/icons/cross.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
+    --sponsor-logos: #FFF0EF;
 }
 
 @mixin darkmode() {
@@ -63,6 +64,8 @@ $dark-blue: #7D92DB;
     --header-footer-color: #3D3D75;
     --x-icon: url("./resources/images/icons/cross-light.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
+    --sponsor-logos: #FFFDFA;
+
 }
 
 // Breakpoints

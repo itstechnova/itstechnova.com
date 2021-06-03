@@ -1,3 +1,4 @@
+
 .carosuel-wrapper{
     display: flex;
     flex-direction: row;
@@ -51,6 +52,10 @@
     border-radius: 30px;
     background-color:  #DFE5FA;
     width: 90%;
+    color: $text-dark;
+    p {
+        margin-bottom: 10px;
+    }
 }
 
 .quote-name-role{

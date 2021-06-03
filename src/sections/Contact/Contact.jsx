@@ -21,10 +21,10 @@ function Contact() {
     })
 
     const updateWindowDimensions = () => {
-        setState({...state, screenWidth: window.innerWidth});
+        setState({ ...state, screenWidth: window.innerWidth });
     }
 
-    useEffect (() => {
+    useEffect(() => {
         function handleResize() {
             updateWindowDimensions();
         }
@@ -48,9 +48,9 @@ function Contact() {
         console.log("here");
         const isValidEmail = state.email && validateEmailAddress(state.email);
 
-        if(!isValidEmail){
-            setState({...state, error: true, success:false});
-            setTimeout(() => {setState({...state,email: "", error:false}) }, 5000)
+        if (!isValidEmail) {
+            setState({ ...state, error: true, success: false });
+            setTimeout(() => { setState({ ...state, email: "", error: false }) }, 5000)
             return;
         }
 
@@ -66,7 +66,7 @@ function Contact() {
             "body": `entry.1170762674=${state.email}`
         })
         setState({ ...state, email: "", success: true, error: false })
-        setTimeout(() => {setState({...state,email: "", success:false}) }, 5000)
+        setTimeout(() => { setState({ ...state, email: "", success: false }) }, 5000)
     }
 
     console.log(state);
@@ -74,50 +74,48 @@ function Contact() {
     const contactInfo = () => {
         return (
             <div className="contact">
-                        <h2 className="sub-title">{contact.title}</h2>
-                        <div className="email-wrapper">
-
-                            <input className="email-input" placeholder="Enter your email address for updates" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
-                            <div className="submit-wrapper" onClick={e => submitEmail()}>
-                                <div className="wrapper">
-                                    <img src={arrow} className="submit-btn" alt="email submit"/>
-                                </div>
-                            </div>
-
+                <h1 className="sub-title">{contact.title}</h1>
+                <div className="email-wrapper">
+                {state.screenWidth >= 400 ? 
+                <input className="email-input" placeholder="Enter your email address for updates" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
+                : <input className="email-input" placeholder="Enter your email address" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />}
+                    <div className="submit-wrapper" onClick={e => submitEmail()}>
+                        <div className="wrapper">
+                            <img src={arrow} className="submit-btn" alt="email submit" />
                         </div>
-
-                        {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
-                        {state.error && <p> Please enter a valid email.</p>}
-
-                        <div className="socials-row">
-                            <img src={mail} alt="mail" />
-                            <img src={ig} alt="ig" />
-                            <img src={linkedin} alt="linkedin" />
-                            <img src={facebook} alt="facebook" />
-                            <img src={twitter} alt="twitter" />
-                        </div>
-
-                        <div className="links-row">
-                            <a className="contact-links" href={contact.href1}>{contact.link1}</a>
-                            <a className="contact-links" href={contact.href2}>{contact.link2}</a>
-                            <a className="contact-links" href={contact.href3}>{contact.link3}</a>
-                            <a className="contact-links" href={contact.href4}>{contact.link4}</a>
-                        </div>
-
                     </div>
+                </div>
+
+                {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
+                {state.error && <p> Please enter a valid email.</p>}
+                <div className="socials-row">
+                    <img src={mail} alt="mail" />
+                    <img src={ig} alt="ig" />
+                    <img src={linkedin} alt="linkedin" />
+                    <img src={facebook} alt="facebook" />
+                    <img src={twitter} alt="twitter" />
+                </div>
+
+                <div className="links-row">
+                    <a className="contact-links" href={contact.href1}>{contact.link1}</a>
+                    <a className="contact-links" href={contact.href2}>{contact.link2}</a>
+                    <a className="contact-links" href={contact.href3}>{contact.link3}</a>
+                    <a className="contact-links" href={contact.href4}>{contact.link4}</a>
+                </div>
+
+            </div>
         )
     }
 
     return (
         <SectionWrapper id="contact">
             <div className="contact-container">
-                {state.screenWidth >= 1045 ? 
                 <div className="contact-row">
                     {contactInfo()}
-                    <img classname="contact-image" alt="" src={contactImage} width="300" height="150" />
-                </div> : <div> {contactInfo()} <img classname="contact-image" alt="" src={contactImage} width="300" height="150" /> </div>}
-                
-
+                    <div className="contact-image-container">
+                        <img alt="" src={contactImage} />
+                    </div>
+                </div>
             </div>
         </SectionWrapper>
     );
