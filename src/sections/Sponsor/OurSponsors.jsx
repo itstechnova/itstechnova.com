@@ -16,20 +16,14 @@ import wie from "../../resources/images/logo/wie.svg";
 import wics from "../../resources/images/logo/wics.svg";
 
 const OurSponsors = () => (
-        <div className="our-sponsors-container">
-            <h2 className="our-sponsors-title">Our Sponsors</h2>
-            <div className="our-sponsors-logos">
-                <div className="our-sponsors-silver">
-                    <a href="https://www.aboutamazon.com/">
-                        <img src={amazon} alt="Amazon" />
-                    </a>
-                    <a href="http://wics.uwaterloo.ca/">
-                        <img src={wics} alt="wics" />
-                    </a>
-                    <a href="https://uwaterloo.ca/women-in-engineering/">
-                        <img src={wie} alt="wie" />
-                    </a>
-                    {/*
+    <div className="our-sponsors-container">
+        <h2 className="our-sponsors-title">Our Sponsors</h2>
+        <div className="our-sponsors-logos">
+            <div className="our-sponsors-silver">
+                <a href="https://www.aboutamazon.com/">
+                    <img src={amazon} alt="Amazon" />
+                </a>
+                {/*
                     <a href="https://about.google/">
                         <img src={google} alt="Google" />
                     </a>
@@ -40,9 +34,9 @@ const OurSponsors = () => (
                         <img src={scotiabank} alt="Scotiabank" />
                     </a>
                     */}
-                </div>
-                <div className="our-sponsors-bronze">
-                    {/*
+            </div>
+            <div className="our-sponsors-bronze">
+                {/*
                     <a href="https://www.aboutamazon.com/">
                         <img src={amazon} alt="Amazon" />
                     </a>
@@ -59,9 +53,18 @@ const OurSponsors = () => (
                         <img src={zynga} alt="zynga" />
                     </a>
                     */}
-                </div>
             </div>
         </div>
+        <h2 className="our-sponsors-title">Our Partners</h2>
+        <div className="our-sponsors-partners">
+            <a href="http://wics.uwaterloo.ca/">
+                <img src={wics} alt="wics" />
+            </a>
+            <a href="https://uwaterloo.ca/women-in-engineering/">
+                <img src={wie} alt="wie" />
+            </a>
+        </div>
+    </div>
 );
 
 export default OurSponsors;
