@@ -88,7 +88,6 @@ function Contact() {
 
                 {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
                 {state.error && <p> Please enter a valid email.</p>}
-
                 <div className="socials-row">
                     <img src={mail} alt="mail" />
                     <img src={ig} alt="ig" />

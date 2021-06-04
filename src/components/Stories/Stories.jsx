@@ -5,6 +5,7 @@ import storyImg1 from "../../resources/images/Story1.svg";
 import storyImg2 from "../../resources/images/Story2.svg";
 import storyImg3 from "../../resources/images/Story3.svg";
 import speechBackground from "../../resources/images/speechBubble.svg";
+import speechBackgroundMobile from "../../resources/images/speechPoint2.svg";
 import controlLeftLight1 from "../../resources/images/icons/control-left-light-1.svg";
 //import controlLeftLight2 from "../../resources/images/icons/control-left-light-2.svg";
 import controlRightLight1 from "../../resources/images/icons/control-right-light-1.svg";
@@ -63,7 +64,24 @@ function Stories () {
     name: ourStoryStrings.quote1Name,
     role: ourStoryStrings.quote1Role,
     image: storyImg1,
+    screenWidth: window.innerWidth,
   })  
+  
+  const updateWindowDimensions = () => {
+    setState({...state, screenWidth: window.innerWidth});
+}
+
+useEffect (() => {
+    function handleResize() {
+        updateWindowDimensions();
+    }
+    window.addEventListener("resize", handleResize);
+    return () => {
+        window.removeEventListener("resize", handleResize)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [state])
+
   
   useEffect(() => {
     autoPlayRef.current = nextSlide
@@ -78,7 +96,7 @@ function Stories () {
     let interval = null
 
     if (isVisible) {
-      interval = setInterval(play, 4000)
+      interval = setInterval(play, 20000)
     }
 
     return () => {
@@ -94,6 +112,19 @@ function Stories () {
     var slide = state.story;
     var newSlide = String(slide + 1);
     if (slide+1 > 3) {
+      newSlide = "1";
+    }
+
+    setState({...state, story: Number(newSlide), quote: storyInfo[newSlide].quote,
+        name: storyInfo[newSlide].name,
+        role: storyInfo[newSlide].role,
+       image: storyInfo[newSlide].image})
+  };
+
+  const prevSlide = () => {
+    var slide = state.story;
+    var newSlide = String(slide - 1);
+    if (slide-1 < 1) {
       newSlide = "1";
     }
     setState({story: Number(newSlide), quote: storyInfo[newSlide].quote,
@@ -112,6 +143,8 @@ function Stories () {
     progessBar.style.width = `${progressMade}%`;
   }
   
+  console.log("sreenwidth", state.screenWidth)
+
 
   return (
     <div>
@@ -120,7 +153,7 @@ function Stories () {
 
     <div className="speech-wrapper">
       <div className="speech-bubble">
-        <img className="background-bubble" alt="" src={speechBackground} />
+        {state.screenWidth &&state.screenWidth <=800 ? <img className="background-bubble2" alt="" src={speechBackgroundMobile} /> : <img className="background-bubble" alt="" src={speechBackground} />}
         <div className="bubble-text">
           <p>" {state.quote} "</p>
           <p className="quote-name-role">{state.name}, {state.role}</p>
@@ -138,7 +171,8 @@ function Stories () {
             {state.story} / 3
         </p>
         <div className="controls">
-          <img src={controlLeftLight1} alt="" />
+          <img onClick={()=> prevSlide()} src={controlLeftLight1} alt="" />
+
           <img onClick={()=> nextSlide()} alt="" src={controlRightLight1} />
         </div>
       </div>

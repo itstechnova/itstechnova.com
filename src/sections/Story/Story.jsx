@@ -15,7 +15,7 @@ const Story = () => (
 
             <Stories/>
             
-            <h5>{ourStoryStrings.affiliatedTitle}</h5>
+            <h5 className="affiliated-title">{ourStoryStrings.affiliatedTitle}</h5>
             <div className="affiliation-wrapper">
                 <div className="flip-card-wics">
                     <div className="flip-card-inner-wics">
@@ -24,7 +24,7 @@ const Story = () => (
                             <img className="affiliation-image" alt="" src={wicsImg}/>
                         </div>
                         <div className="wics-back">
-                            <p>
+                            <p className="wics-text">
                                 {ourStoryStrings.wicsDescription}
                             </p>
                         </div>
@@ -37,7 +37,7 @@ const Story = () => (
                             <img className="affiliation-image" alt="" src={wieImg}/>
                         </div>
                         <div className="wie-back">
-                            <p>
+                            <p className="wie-text">
                                 {ourStoryStrings.wieDescription}
                             </p>
                         </div>
