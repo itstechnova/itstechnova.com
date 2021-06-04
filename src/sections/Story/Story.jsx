@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./Story.scss";
 import ourStoryStrings from "../../resources/strings/story";
-import wieImg from "../../resources/images/logo/wie.svg";
+//import wieImg from "../../resources/images/logo/wie.svg";
 import wicsImg from "../../resources/images/logo/wics.svg";
 import Stories from "../../components/Stories/Stories";
 
@@ -20,7 +20,6 @@ const Story = () => (
                 <div className="flip-card-wics">
                     <div className="flip-card-inner-wics">
                         <div className="wics-front">
-                            <h5 className="affiliation-Title">{ourStoryStrings.wicsTitle}</h5>
                             <img className="affiliation-image" alt="" src={wicsImg}/>
                         </div>
                         <div className="wics-back">
@@ -30,10 +29,10 @@ const Story = () => (
                         </div>
                     </div>
                 </div>
+                {/*
                 <div className="flip-card-wie">
                     <div className="flip-card-inner-wie">
                         <div className="wie-front">
-                            <h5 className="affiliation-Title">{ourStoryStrings.wieTitle}</h5>
                             <img className="affiliation-image" alt="" src={wieImg}/>
                         </div>
                         <div className="wie-back">
@@ -43,6 +42,7 @@ const Story = () => (
                         </div>
                     </div> 
                 </div>
+                */}
             </div>
         </div>
     </SectionWrapper>
