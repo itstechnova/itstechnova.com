@@ -45,6 +45,9 @@
 
   &-text {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     @include phone {
       width: 100%;
     }
@@ -61,6 +64,15 @@
       justify-content: center;
       align-items: center;
     }
+    .plant-and-bee {
+      width: 80%;
+      animation: bounce-up 3s linear infinite;
+      @include phone {
+        content: url("../../resources/images/graphics/balloon-and-bee.svg");
+        padding-top: 0;
+      }
+    }
+    /*
     .leaves {
       width: 50%;
       padding-top: 60px;
@@ -79,23 +91,24 @@
         display: none;
       }
     }
+    */
   }
 
   &-title {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     @include phone {
     }
   }
 
   &-description {
-    margin-bottom: 2rem;
+    margin-bottom: 8px;
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
     @include phone {
       width: 100%;
       p {
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
       }
     }
   }

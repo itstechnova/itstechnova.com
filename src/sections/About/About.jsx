@@ -42,9 +42,11 @@ const About = () => (
                 </div>
             </div >
             <div className="button-smaller-container">
+                {/*
                 <a className="button-smaller" href={about.scheduleLink}>
                     {about.scheduleCTA}
                 </a>
+                */}
             </div>
         </div>
     </SectionWrapper >
