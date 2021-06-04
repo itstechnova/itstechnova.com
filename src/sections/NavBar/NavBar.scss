@@ -116,7 +116,9 @@
   z-index: 1000;
 }
 
-.toggle {
-  display: flex;
-  justify-content: flex-end;
+.mobile {
+  margin-right: 80px;
+  @include phone {
+    margin-right: 0;
+  }
 }
