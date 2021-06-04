@@ -2,7 +2,6 @@
 
 .our-sponsors {
   &-container {
-    display: inline-block;
     text-align: left;
     @include phone {
       height: auto;
@@ -10,9 +9,8 @@
     }
   }
   &-title {
-    margin-bottom: 2rem;
+    margin: 40px 0;
     @include phone {
-      margin-bottom: 2rem;
       text-align: left;
     }
   }
@@ -22,13 +20,13 @@
     border-radius: 25px;
   }
 
-  &-silver {
+  &-silver, &-partners {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     a {
-      width: 30%;
+      width: 25%;
       img {
         width: 100%;
       }
@@ -50,6 +48,13 @@
         width: 100%;
       }
     }
+  }
+
+  &-partners {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    justify-content: space-evenly;
   }
 
   &-bronze {
