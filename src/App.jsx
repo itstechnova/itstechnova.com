@@ -4,7 +4,6 @@ import NavBar from "./sections/NavBar/NavBar";
 import About from "./sections/About/About";
 import Story from "./sections/Story/Story";
 import SponsorUs from "./sections/Sponsor/SponsorUs";
-import OurSponsors from "./sections/Sponsor/OurSponsors";
 import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
@@ -16,7 +15,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
     { label: nav.about, sectionId: "about" },
-    { label: nav.sponsor, sectionId: "sponsor-us" },
+    { label: nav.sponsor, sectionId: "sponsor" },
     { label: nav.faq, sectionId: "faq" },
     { label: nav.contact, sectionId: "contact" },
 ];
@@ -46,7 +45,6 @@ const App = () => {
                         <About />
                         <Story />
                         <SponsorUs />
-                        <OurSponsors />
                         <FAQ />
                         <Contact />
                         <Footer />
