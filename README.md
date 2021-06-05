@@ -50,6 +50,7 @@ Unfortunately the free plan does not allow for adding team members.
 - Always write a descriptive commit message in the following format: `ticket#: description`
 - Write a detailed, but not overly detailed description of the feature or bug fixes when creating a PR
 - AVOID pushing directly to dev and main
+- Please make sure your PR passes the build tests! You can see any warnings or errors by running ```yarn build```
 
 #### Other Tips
 

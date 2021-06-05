@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    min-height: 92vh;
     align-items: center;
   }
   &-title {
@@ -34,16 +33,21 @@
     margin-bottom: 0;
   }
   &-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 2.125rem;
-    font-family: $font-regular;
-    font-size: $text-small;
+    margin-top: 40px;
     @include phone {
       width: 300px;
     }
     > a {
       font-family: $font-bold;
       font-weight: bold;
+    }
+    > img {
+      max-width: 276px;
+      padding-top: 40px;
     }
   }
 }
