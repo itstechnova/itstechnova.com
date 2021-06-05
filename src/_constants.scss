@@ -35,6 +35,7 @@ $accent-pink: #fd6a80;
 $accent-pink-focus: #c95566;
 $light-pink: #FFE4E1;
 $accent-purple: #7676e8;
+$accent-purple-focus: #6363d3;
 $background-light: #fffdfa;
 $background-dark: #19123c;
 $text-light: #fffdfa;
@@ -50,10 +51,12 @@ $dark-blue: #7D92DB;
     --background-color: #fffdfa;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
-    --header-footer-color: #FFE4E1;
+    --header-color: #fffdfa;
+    --footer-color: #FFE4E1;
     --x-icon: url("./resources/images/icons/cross.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
     --sponsor-logos: #FFF0EF;
+    --nav-shadow-color: #e5e9f2;
 }
 
 @mixin darkmode() {
@@ -61,11 +64,12 @@ $dark-blue: #7D92DB;
     --background-color: #19123c;
     --faq-card-bg-color: #7D92DB;
     --svg-brightness: 100;
-    --header-footer-color: #3D3D75;
+    --header-color: #3D3D75;
+    --footer-color: #3D3D75;
     --x-icon: url("./resources/images/icons/cross-light.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
     --sponsor-logos: #FFFDFA;
-
+    --nav-shadow-color: #19123c;
 }
 
 // Breakpoints

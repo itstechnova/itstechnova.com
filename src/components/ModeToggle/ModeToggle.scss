@@ -16,46 +16,52 @@
     top: 4.5px;
 }
 
-.light-icon, .dark-icon {
+.light-icon,
+.dark-icon {
     height: 15px;
-}
-
-.mode-toggle.react-toggle--checked .react-toggle-track {
-    background-color: $accent-pink;
-}
-
-.mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background-color: $accent-pink-focus;
 }
 
 .mode-toggle.react-toggle .react-toggle-track {
     background-color: $accent-pink;
 }
 
-.mode-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background-color: $accent-pink-focus;
-}
-
-.mode-toggle.react-toggle--checked .react-toggle-thumb {
-    border-color: $accent-pink;
-}
-
-.mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-thumb {
-    border-color: $accent-pink-focus;
-}
-
 .mode-toggle.react-toggle .react-toggle-thumb {
     border-color: $accent-pink;
 }
 
-.mode-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-thumb {
+.mode-toggle.react-toggle:hover:not(.react-toggle--disabled)
+    .react-toggle-track {
+    background-color: $accent-pink-focus;
+}
+
+.mode-toggle.react-toggle:hover:not(.react-toggle--disabled)
+    .react-toggle-thumb {
     border-color: $accent-pink-focus;
+}
+
+.mode-toggle.react-toggle--checked .react-toggle-track {
+    background-color: $accent-purple;
+}
+
+.mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
+    .react-toggle-track {
+    background-color: $accent-purple-focus;
+}
+
+.mode-toggle.react-toggle--checked .react-toggle-thumb {
+    border-color: $accent-purple;
+}
+
+.mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
+    .react-toggle-thumb {
+    border-color: $accent-purple-focus;
 }
 
 .mode-toggle.react-toggle--focus .react-toggle-thumb {
     box-shadow: none;
 }
 
-.mode-toggle.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+.mode-toggle.react-toggle:active:not(.react-toggle--disabled)
+    .react-toggle-thumb {
     box-shadow: none;
 }

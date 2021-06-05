@@ -24,17 +24,6 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    details {
-        background-color: var(--faq-card-bg-color);
-    }
-    .nav-container {
-        background-color: var(--header-footer-color);
-        transition: all 0.25s linear;
-    }
-    .nav-link {
-        color: var(--text-color);
-        transition: all 0.25s linear;
-    }
     a {
         color: var(--text-color);
         transition: all 0.25s linear;
@@ -44,15 +33,21 @@ body {
     }
     .nav {
         &-container {
-            background-color: var(--header-footer-color);
+            background-color: var(--header-color);
             transition: all 0.25s linear;
+            -webkit-box-shadow: 0px 1px 40px 1px var(--nav-shadow-color);
+            -moz-box-shadow: 0px 1px 40px 1px var(--nav-shadow-color);
+            box-shadow: 0px 1px 40px 1px var(--nav-shadow-color);
         }
         &-link {
             color: var(--text-color);
             transition: all 0.25s linear;
         }
         &-mobile-links {
-            background-color: var(--header-footer-color);
+            background-color: var(--header-color);
+            -webkit-box-shadow: 0px 1px 40px 1px var(--nav-shadow-color);
+            -moz-box-shadow: 0px 1px 40px 1px var(--nav-shadow-color);
+            box-shadow: 0px 1px 40px 1px var(--nav-shadow-color);
         }
         &-x {
             content: var(--x-icon);
@@ -61,19 +56,16 @@ body {
             content: var(--hamburger-icon);
         }
     }
-    a {
-        color: var(--text-color);
-        transition: all 0.25s linear;
-    }
     .learn-more-arrow,
     .faq-arrow {
         filter: brightness(var(--svg-brightness));
     }
     .footer-container {
-        background-color: var(--header-footer-color);
+        background-color: var(--footer-color);
         transition: all 0.25s linear;
     }
-    .our-sponsors-logos, .our-sponsors-partners {
+    .our-sponsors-logos,
+    .our-sponsors-partners {
         background-color: var(--sponsor-logos);
     }
 }
