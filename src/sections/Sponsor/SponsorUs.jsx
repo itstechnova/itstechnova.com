@@ -1,13 +1,14 @@
 import React from "react";
 //import Carousel from 'react-bootstrap/Carousel';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import Stories from "../../components/Stories/Stories";
-import bee from "../../resources/images/graphics/bee.svg";
-import leaf from "../../resources/images/graphics/leaf.svg";
+import Button from "../../components/Button/Button";
+//import Stories from "../../components/Stories/Stories";
+import plantAndBee from "../../resources/images/graphics/plant-and-bee.svg";
 import "./SponsorUs.scss";
+import OurSponsors from "./OurSponsors";
 
 const SponsorUs = () => (
-    <SectionWrapper id="sponsor-us">
+    <SectionWrapper id="sponsor">
         <div className="sponsor-us-container">
             <div className="sponsor-us-content">
                 <div className="sponsor-us-text">
@@ -19,15 +20,15 @@ const SponsorUs = () => (
                             <a href="mailto:sponsors@itstechnova.org">sponsors@itstechnova.org</a>
                         </p>
                     </div>
-                    <button className="button-smaller">Join as a Sponsor</button>
+                    <Button label="Join as a Sponsor" link="mailto:sponsors@itstechnova.org" />
                 </div>
                 <div className="sponsor-us-images">
-                    <img className="leaves" src={leaf} alt="leaves" />
-                    <img className="bee" src={bee} alt="bee" />
+                    <img className="plant-and-bee" src={plantAndBee} alt="plant and bee" />
                 </div>
             </div>
-            <h2 className="sponsor-us-showcase">Sponsor Showcase</h2>
-            <Stories />
+            <h2 className="sponsor-us-showcase"> </h2>
+            {/*<Stories />*/}
+            <OurSponsors />
         </div>
     </SectionWrapper>
 );

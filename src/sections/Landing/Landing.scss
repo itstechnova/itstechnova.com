@@ -155,7 +155,7 @@ h4 {
 
 .button {
     margin-top: 20px;
-    width: 200px; //165
+    width: 165px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -171,7 +171,7 @@ h4 {
     grid-area: landing-button;
     @include phone {
         font-size: 16px;
-        width: 176px; //156
+        width: 136px;
         height: 48px;
     }
 
