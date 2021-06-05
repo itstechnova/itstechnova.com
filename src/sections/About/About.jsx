@@ -41,11 +41,11 @@ const About = () => (
                     <p>{about.connectCaption}</p>
                 </div>
             </div >
-            <div className="button-smaller-container">
+            {/* <div className="button-smaller-container">
                 <a className="button-smaller" href={about.scheduleLink}>
                     {about.scheduleCTA}
                 </a>
-            </div>
+            </div> */}
         </div>
     </SectionWrapper >
 );
