@@ -18,8 +18,9 @@
     }
   }
   &-questions {
+    width: 100%;
+    justify-content: space-around;
     display: flex;
-    gap: 1rem;
     @include tablet {
       flex-direction: column;
     }
@@ -31,6 +32,9 @@
   &-left-col > :nth-last-child(1),
   &-right-col > :nth-last-child(1) {
     margin-bottom: 0;
+    @include tablet {
+      margin-bottom: 24px;
+    }
   }
   &-contact {
     text-align: center;
