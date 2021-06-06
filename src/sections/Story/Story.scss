@@ -4,6 +4,9 @@
     padding-left: 5%;
     padding-right: 5%;
     text-align: left;
+    h5 {
+        padding: 40px 0;
+    }
 }
 
 .sub-title-desc {
@@ -13,13 +16,41 @@
 .affiliation-wrapper{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    justify-content: space-evenly;
+    height: 400px;
+    h5 {
+        padding: 0;
+    }
+    p {
+        padding: 40px;
+    }
 }
 
 .flip-card-wics{
     margin-top: 16px;
+    margin-right: 16px;
     width: 400px;
     height: 270px;
+    @media (max-width: 1300px) {
+        width: 350px;
+     }
+     @media (max-width: 1150px) {
+        width: 270px;
+        height: 330px;
+     }
+     @media (max-width: 800px) {
+        width: 350px;
+     }
+     @media (max-width: 580px) {
+        font-size: 16px;
+        width: 270px;
+         height: 240px;
+     }
     perspective: 1000px;
 }
 
@@ -47,7 +78,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #FEB5AA;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $light-pink;
     color: $text-dark;
 }
 
@@ -58,9 +91,23 @@
 
 .flip-card-wie{
     margin-top: 16px;
-    margin-bottom: 30px;
     width: 400px;
     height: 270px;
+    @media (max-width: 1300px) {
+        width: 350px;
+     }
+     @media (max-width: 1150px) {
+        width: 270px;
+        height: 330px;
+     }
+     @media (max-width: 800px) {
+        width: 350px;
+     }
+     @media (max-width: 580px) {
+        font-size: 16px;
+        width: 270px;
+         height: 240px;
+     }
     perspective: 1000px;
 }
 
@@ -88,7 +135,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #FEB5AA;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $light-pink;
     color: $text-dark;
 }
 
@@ -104,4 +153,10 @@
 .affiliation-Title {
     margin-top: 8px;
     font-size: 20px;
+}
+
+.affiliated-title{
+    @media (max-width: 580px) {
+        font-size: 24px;
+     }
 }

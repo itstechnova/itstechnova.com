@@ -1,7 +1,8 @@
 import React from "react";
 import ExpandableCard from "../../components/ExpandableCard/ExpandableCard";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import Bubble from "../../resources/images/graphics/speech-bubble.svg";
+import speech from "../../resources/images/graphics/speech.svg";
+
 import "./FAQ.scss";
 
 const FAQ = () => (
@@ -36,8 +37,8 @@ const FAQ = () => (
         <div className="faq-right-col">
           <ExpandableCard question={"What if it's my first hackathon?"}>
             No worries! We have our Prepare with Us event to get you up to speed
-            so you're ready to hack during the weekend! Additionally, mentors
-            are available to help guide you through your projects.
+            so you're ready to hack during the weekend! Additionally, mentors are
+            available to help guide you through your projects.
           </ExpandableCard>
           <ExpandableCard question={"Why is this event women only?"}>
             Women are underrepresented in this field and although progress has
@@ -56,10 +57,11 @@ const FAQ = () => (
       </div>
 
       <div className="faq-contact">
-        If you have any other questions, feel free to reach out to us at{" "}
-        <a href="mailto:hello@itstechnova.org">hello@itstechnova.org</a>
+        <p>If you have any other questions, feel free to reach out to us at{" "}
+          <a href="mailto:hello@itstechnova.org">hello@itstechnova.org</a>
+        </p>
+        <img src={speech} alt="speech bubble"></img>
       </div>
-      <img className="faq-bubble" src={Bubble} alt="Speech Bubble graphic" />
     </div>
   </SectionWrapper>
 );

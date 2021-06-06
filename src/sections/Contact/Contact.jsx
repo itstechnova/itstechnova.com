@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
+import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
+
 import "./Contact.scss";
 import arrow from "../../resources/images/icons/submit.svg";
 import contactImage from "../../resources/images/contact.svg";
@@ -10,6 +12,7 @@ import linkedin from "../../resources/images/socials/linkedinFill.svg";
 import facebook from "../../resources/images/socials/facebookFill.svg";
 import twitter from "../../resources/images/socials/twitterFill.svg";
 import contact from "../../resources/strings/contact";
+import socials from "../../resources/strings/socials";
 
 function Contact() {
 
@@ -88,13 +91,12 @@ function Contact() {
 
                 {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
                 {state.error && <p> Please enter a valid email.</p>}
-
                 <div className="socials-row">
-                    <img src={mail} alt="mail" />
-                    <img src={ig} alt="ig" />
-                    <img src={linkedin} alt="linkedin" />
-                    <img src={facebook} alt="facebook" />
-                    <img src={twitter} alt="twitter" />
+                    <SocialMediaLink src={mail} link={socials.email} />
+                    <SocialMediaLink src={ig} link={socials.instagram} />
+                    <SocialMediaLink src={linkedin} link={socials.linkedin} />
+                    <SocialMediaLink src={facebook} link={socials.facebook} />
+                    <SocialMediaLink src={twitter} link={socials.twitter} />
                 </div>
 
                 <div className="links-row">
