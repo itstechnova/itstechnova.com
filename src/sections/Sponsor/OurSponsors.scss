@@ -23,7 +23,7 @@
   &-silver, &-partners {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     a {
       width: 25%;
@@ -54,7 +54,6 @@
     margin-top: 20px;
     padding: 20px;
     border-radius: 25px;
-    justify-content: space-evenly;
   }
 
   &-bronze {

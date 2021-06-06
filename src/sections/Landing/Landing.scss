@@ -15,6 +15,21 @@
     }
 }
 
+@keyframes bounce-up-mobile {
+    0% {
+        transform: translateY(2px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-2px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(2px);
+        opacity: 1;
+    }
+}
+
 @keyframes bounce-up-fast {
     30% {
         transform: translateY(-20px);
@@ -36,21 +51,38 @@
         height: 100vh;
         width: 100%;
         display: grid;
-        grid-template-columns: 57% 45%;
+        grid-template-columns: minmax(480px, 57%) 43%;
         grid-template-rows: auto auto 10%;
         grid-template-areas:
             "landing-text landing-graphic"
             "landing-button landing-graphic"
             "landing-learn-more landing-learn-more";
-
-        @include phone {
+        
+        @include tablet {
+            height: 90vh;
+            grid-template-columns: 57% 43%;
+        }
+        @include tablet {
+            height: 85vh;
             padding-top: 50px;
             grid-template-columns: 100%;
-            grid-template-rows: auto auto auto;
+            grid-template-rows: 30% 15% 45%;
             grid-template-areas:
                 "landing-text"
                 "landing-button"
                 "landing-graphic"
+        }
+        @include phone {
+            height: 80vh;
+            grid-template-rows: 34% 15% 50%;
+            grid-template-areas:
+                "landing-text"
+                "landing-button"
+                "landing-graphic";
+        }
+        @include small-phone {
+            height: 95vh;
+            grid-template-rows: 34% 15% 45%;
         }
     }
 
@@ -64,11 +96,23 @@
         font-family: $font-regular;
         font-size: $text-medium;
         width: 100%;
+        min-width: 500px;
         grid-area: landing-text;
         text-align: left;
+        @include tablet {
+            min-width: 0;
+        }
         @include phone {
             align-items: center;
             text-align: center;
+        }
+    }
+    &-description {
+        @include phone {
+            width: 250px;
+            h4 {
+                font-size: 15px;
+            }
         }
     }
 
@@ -79,19 +123,26 @@
             font-size: $text-large;
         }
         @include phone {
-            font-size: 18px;
+            font-size: 24px;
         }
     }
 
     &-slogan {
         font-size: $text-xxlarge;
         font-family: "Quicksand";
+        &-bold {
+            font-family: "Quicksand Bold";
+        }
         padding-bottom: 10px;
         @include desktop {
             font-size: 58px;
         }
         @include tablet {
-            font-size: $text-large;
+            font-size: $text-xlarge;
+            padding-bottom: 0px;
+        }
+        @include phone {
+            font-size: 36px;
         }
         @include small-phone {
             font-size: 30px;
@@ -103,26 +154,36 @@
         img {
             margin-left: 30px;
             animation: bounce-up 3s linear infinite;
-            @include phone {
+            @include tablet {
                 margin-left: 0;
+                width: 50%;
+                animation: none;
+            }
+            @include tablet {
+                width: 80%;
             }
         }
         grid-area: landing-graphic;
     }
 
     &-button-container {
+        grid-area: landing-button;
+        height: auto;
         @include phone {
             justify-self: center;
         }
     }
-}
 
-.landing-learn-more-container {
-    grid-area: landing-learn-more;
-    display: flex;
-    justify-content: center;
-    @include phone {
-        display: none;
+    &-learn-more-container {
+        grid-area: landing-learn-more;
+        display: flex;
+        justify-content: center;
+        @include tablet {
+            align-items: flex-end;
+        }
+        @include tablet {
+            display: none;
+        }
     }
 }
 
@@ -154,7 +215,7 @@ h4 {
 }
 
 .button {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 200px;
     height: 60px;
     padding: 0 10px;
@@ -169,13 +230,12 @@ h4 {
     border-style: none;
     text-decoration: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    grid-area: landing-button;
     @include phone {
         font-size: 16px;
-        width: 136px;
+        width: 200px;
         height: 48px;
+        margin-top: 20px;
     }
-
     &:hover,
     &:focus {
         opacity: 0.7;

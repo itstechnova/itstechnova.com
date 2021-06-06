@@ -48,15 +48,15 @@ $dark-blue: #7D92DB;
 
 @mixin lightmode() {
     --text-color: #19123c;
-    --background-color: #fffdfa;
+    --background-color: #FFFAF3;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
-    --header-color: #fffdfa;
+    --header-color: #FFFAF3;
     --footer-color: #FFE4E1;
     --x-icon: url("./resources/images/icons/cross.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
-    --sponsor-logos: #FFF0EF;
-    --nav-shadow-color: #e5e9f2;
+    --sponsor-logos: transparent;
+    --nav-shadow-color: rgba(196, 196, 196, 0.58);
 }
 
 @mixin darkmode() {
@@ -68,14 +68,14 @@ $dark-blue: #7D92DB;
     --footer-color: #3D3D75;
     --x-icon: url("./resources/images/icons/cross-light.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
-    --sponsor-logos: #FFFDFA;
+    --sponsor-logos: rgba(196, 196, 196, 0.58);
     --nav-shadow-color: #19123c;
 }
 
 // Breakpoints
 
-$width-xsm-max: 390px;
-$width-sm-max: 560px;
+$width-xsm-max: 340px;
+$width-sm-max: 600px;
 $width-md-max: 900px;
 $width-lg-max: 1435px;
 

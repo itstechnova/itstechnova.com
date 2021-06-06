@@ -57,7 +57,8 @@ body {
         }
     }
     .learn-more-arrow,
-    .faq-arrow {
+    .faq-arrow,
+    .controls {
         filter: brightness(var(--svg-brightness));
     }
     .footer-container {

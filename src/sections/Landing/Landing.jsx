@@ -18,11 +18,11 @@ const TextLoop = () => {
         <div>
             {mounted ? (
                 <Typist className="landing-slogan" onTypingDone={() => setMounted(false)}>
-                    <span><span style={{ fontWeight: "700" }}>Prepare</span> With Us</span>
+                    <span><span className="landing-slogan-bold">Prepare</span> With Us</span>
                     <Typist.Backspace count={20} delay={800} />
-                    <span><span style={{ fontWeight: "700" }}>Hack</span> With Us</span>
+                    <span><span className="landing-slogan-bold">Hack</span> With Us</span>
                     <Typist.Backspace count={17} delay={800} />
-                    <span><span style={{ fontWeight: "700" }}>Connect</span> With Us</span>
+                    <span><span className="landing-slogan-bold">Connect</span> With Us</span>
                     <Typist.Backspace count={20} delay={800} />
                 </Typist>
             ) : (
@@ -45,8 +45,10 @@ const Landing = () => {
                         {landing.title2}
                     </h4>
                     <TextLoop />
-                    <h4>{landing.description}</h4>
-                    <h4>{landing.dates}</h4>
+                    <div className="landing-description">
+                        <h4>{landing.description}</h4>
+                        <h4>{landing.dates}</h4>
+                    </div>
                 </div>
                 <div className="landing-button-container">
                     <a className="button" href={socials.mailingList}>
