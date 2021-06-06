@@ -2,48 +2,67 @@
 
 .card {
   display: block;
-  width: 40vw;
+  position: relative;
+  width: 35vw;
   max-width: 590px;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 24px 32px;
   font-family: $font-regular;
+  font-weight: 400;
   &:hover {
     cursor: pointer;
   }
   @include tablet {
-    width: 80vw;
+    width: 70vw;
   }
 }
 
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 .card > summary {
-  list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  &:focus {
+    outline: none;
+  }
   .question {
     font-size: $text-medium;
-    font-family: "Quicksand";
+    font-family: $font-regular;
+    font-weight: 400;
+    margin-right: 1rem;
     @include phone {
-      width: 13rem;
+      width: 80%;
     }
     @include tablet {
-      font-family: $font-bold;
-      font-weight: bolder;
       font-size: $text-small;
-      display: inline-block;
     }
-    margin-right: 2rem;
   }
 }
 
 .answer {
   margin-top: 1rem;
+  @include tablet {
+    font-size: $text-small;
+  }
 }
 
 .faq-arrow {
-  margin-right: 10px;
   transform-origin: center;
   transition: all 0.5s ease;
+  // do not allow user to select arrow
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  @include tablet {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
 }
 
 .card[open] > summary > .faq-arrow {
@@ -58,6 +77,7 @@
     opacity: 1;
   }
 }
+
 .card[open] .answer {
   animation: fadeIn 0.4s ease;
 }
