@@ -25,13 +25,13 @@
     p {
         padding: 40px;
         @include phone {
-            padding: 16px;
+            padding: 16px 25px;
         }
     }
 }
 
 .flip-card-wics{
-    margin-top: 16px;
+    //margin-top: 16px;
     //margin-right: 16px;
     width: 50%;
     @include tablet {
