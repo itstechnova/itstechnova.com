@@ -25,6 +25,9 @@ details > summary::-webkit-details-marker {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  &:focus {
+    outline: none;
+  }
   .question {
     font-size: $text-medium;
     font-family: $font-regular;
