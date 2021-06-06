@@ -96,7 +96,7 @@ useEffect (() => {
     let interval = null
 
     if (isVisible) {
-      interval = setInterval(play, 20000)
+      interval = setInterval(play, 7000)
     }
 
     return () => {
@@ -172,7 +172,6 @@ useEffect (() => {
         </p>
         <div className="controls">
           <img onClick={()=> prevSlide()} src={controlLeftLight1} alt="" />
-
           <img onClick={()=> nextSlide()} alt="" src={controlRightLight1} />
         </div>
       </div>

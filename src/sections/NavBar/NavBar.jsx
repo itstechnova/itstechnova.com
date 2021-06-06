@@ -69,7 +69,7 @@ const NavBar = ({ routes, logoRoute }) => {
                         </Link>
                     ))}
                 </div>
-}
+                }
             </div>
         </nav>
     );

@@ -35,6 +35,7 @@ $accent-pink: #fd6a80;
 $accent-pink-focus: #c95566;
 $light-pink: #FFE4E1;
 $accent-purple: #7676e8;
+$accent-purple-focus: #6363d3;
 $background-light: #fffdfa;
 $background-dark: #19123c;
 $text-light: #fffdfa;
@@ -47,13 +48,15 @@ $dark-blue: #7D92DB;
 
 @mixin lightmode() {
     --text-color: #19123c;
-    --background-color: #fffdfa;
+    --background-color: #FFFAF3;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
-    --header-footer-color: #FFE4E1;
+    --header-color: #FFFAF3;
+    --footer-color: #FFE4E1;
     --x-icon: url("./resources/images/icons/cross.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
-    --sponsor-logos: #FFF0EF;
+    --sponsor-logos: transparent;
+    --nav-shadow-color: rgba(196, 196, 196, 0.58);
 }
 
 @mixin darkmode() {
@@ -61,17 +64,18 @@ $dark-blue: #7D92DB;
     --background-color: #19123c;
     --faq-card-bg-color: #7D92DB;
     --svg-brightness: 100;
-    --header-footer-color: #3D3D75;
+    --header-color: #3D3D75;
+    --footer-color: #3D3D75;
     --x-icon: url("./resources/images/icons/cross-light.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
-    --sponsor-logos: #FFFDFA;
-
+    --sponsor-logos: rgba(196, 196, 196, 0.58);
+    --nav-shadow-color: #19123c;
 }
 
 // Breakpoints
 
-$width-xsm-max: 390px;
-$width-sm-max: 560px;
+$width-xsm-max: 340px;
+$width-sm-max: 600px;
 $width-md-max: 900px;
 $width-lg-max: 1435px;
 

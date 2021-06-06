@@ -68,7 +68,6 @@
       width: 80%;
       animation: bounce-up 3s linear infinite;
       @include phone {
-        content: url("../../resources/images/graphics/balloon-and-bee.svg");
         padding-top: 0;
       }
     }

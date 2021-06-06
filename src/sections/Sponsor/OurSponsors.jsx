@@ -6,9 +6,9 @@ import wish from "../../resources/images/sponsors/silver/wish.png";
 import scotiabank from "../../resources/images/sponsors/silver/scotiabank.png";
 */
 import amazon from "../../resources/images/sponsors/bronze/amazon.png";
+import hrt from "../../resources/images/sponsors/bronze/hrt.png";
 /*
 import facebook from "../../resources/images/sponsors/bronze/facebook.png";
-import hrt from "../../resources/images/sponsors/bronze/hrt.png";
 import splunk from "../../resources/images/sponsors/bronze/splunk.png";
 import zynga from "../../resources/images/sponsors/bronze/zynga.png";
 */
@@ -22,6 +22,9 @@ const OurSponsors = () => (
             <div className="our-sponsors-silver">
                 <a href="https://www.aboutamazon.com/">
                     <img src={amazon} alt="Amazon" />
+                </a>
+                <a href="https://www.hudsonrivertrading.com/">
+                    <img src={hrt} alt="hrt" />
                 </a>
                 {/*
                     <a href="https://about.google/">
