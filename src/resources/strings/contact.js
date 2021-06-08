@@ -7,7 +7,7 @@ const contact = {
     link3: "Code of Conduct",
     href3: "",
     link4: "WiCS",
-    href4: "",
+    href4: "https://cs.uwaterloo.ca/wics",
 };
 
 export default contact;
