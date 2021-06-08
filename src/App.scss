@@ -27,6 +27,9 @@ body {
     a {
         color: var(--text-color);
         transition: all 0.25s linear;
+        &:hover {
+            opacity: 0.7;
+        }
     }
     details {
         background-color: var(--faq-card-bg-color);

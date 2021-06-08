@@ -60,7 +60,7 @@ const OurSponsors = () => (
         </div>
         <h2 className="our-sponsors-title">Our Partners</h2>
         <div className="our-sponsors-partners">
-            <a href="http://wics.uwaterloo.ca/">
+            <a href="https://cs.uwaterloo.ca/wics">
                 <img src={wics} alt="wics" />
             </a>
             <a href="https://uwaterloo.ca/women-in-engineering/">
