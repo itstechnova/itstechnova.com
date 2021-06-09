@@ -24,9 +24,11 @@
       flex-direction: column;
     }
   }
-  &-left-col > *,
-  &-right-col > * {
-    margin-bottom: 1rem;
+  &-left-col,
+  &-right-col {
+    > * {
+      margin-bottom: 1rem;
+    }
   }
   &-left-col > :nth-last-child(1),
   &-right-col > :nth-last-child(1) {
