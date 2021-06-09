@@ -2,43 +2,69 @@
 
 .card {
   display: block;
-  position: relative;
   width: 35vw;
   max-width: 590px;
-  border-radius: 10px;
   padding: 24px 32px;
+  background-color: var(--faq-card-bg-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: inherit;
   font-family: $font-regular;
   font-weight: 400;
-  &:hover {
-    cursor: pointer;
-  }
+  font-size: inherit;
+  text-align: left;
   @include tablet {
-    width: 70vw;
+    width: 100%;
   }
 }
 
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.card > summary {
+.summary {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  &:focus {
-    outline: none;
+}
+
+.question {
+  font-size: $text-medium;
+  font-family: $font-regular;
+  font-weight: 400;
+  margin-right: 1rem;
+  @include phone {
+    width: 80%;
   }
-  .question {
-    font-size: $text-medium;
-    font-family: $font-regular;
-    font-weight: 400;
-    margin-right: 1rem;
-    @include phone {
-      width: 80%;
-    }
-    @include tablet {
-      font-size: $text-small;
-    }
+  @include tablet {
+    font-size: $text-small;
+  }
+}
+
+.faq-arrow {
+  transform-origin: center;
+  transition: all 0.25s ease-in-out;
+  @include tablet {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  &[aria-expanded="true"] {
+    transform: rotate(180deg);
+  }
+  // do not allow user to select arrow
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.answer-container {
+  overflow: hidden;
+  max-height: calc(1000rem / 16);
+  transition: max-height 1s ease-in-out;
+  &[aria-expanded="true"] {
+    max-height: 0px;
+    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
   }
 }
 
@@ -47,37 +73,4 @@ details > summary::-webkit-details-marker {
   @include tablet {
     font-size: $text-small;
   }
-}
-
-.faq-arrow {
-  transform-origin: center;
-  transition: all 0.5s ease;
-  // do not allow user to select arrow
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  @include tablet {
-    position: absolute;
-    top: 32px;
-    right: 32px;
-  }
-}
-
-.card[open] > summary > .faq-arrow {
-  transform: rotate(180deg);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.card[open] .answer {
-  animation: fadeIn 0.4s ease;
 }
