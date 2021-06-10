@@ -1,7 +1,6 @@
 @import "../../constants";
 .nav {
   &-container {
-    background-color: rebeccapurple;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -9,41 +8,41 @@
     position: fixed;
     top: 0;
     z-index: 2;
-    padding: 0 20px;
     width: 100%;
-    @include phone {
-      height: 64px;
-    }
   }
 
   &-content {
+    margin-left: 100px;
     height: 100%;
-    width: 100%;
+    width: $width-lg-max;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    font-size: $text-small;
+    @include tablet {
+      margin: 0 30px;
+    }
     @include phone {
       justify-content: space-between;
-      .mobile {
-        display: flex;
-        align-items: center;
-      }
     }
+  }
+  
+  &-links-container {
+    display: flex;
   }
 
   &-links {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 10px;
+    padding-right: 10px;
   }
 
   &-link {
     text-decoration: none;
-    padding: 20px;
     font-weight: 500;
+    font-size: 16px;
+    padding: 0 15px;
     &:hover {
       opacity: 0.5;
       transition: linear 0.2s;
@@ -79,7 +78,6 @@
 }
 
 .logo-link {
-  padding: 0 50px;
   &:hover {
     opacity: 0.7;
     transition: linear 0.4s;
@@ -94,11 +92,10 @@
 
 .mlh-banner {
   max-height: 180px;
-  margin-right: 50px;
-  margin-left: 10px;
+  padding-right: 40px;
   overflow-x: visible;
   @include tablet {
-    margin-right: 10px;
+    //right: 10px;
   }
   @include phone {
     display: none;
@@ -109,7 +106,6 @@
   opacity: 1;
   display: none;
   width: 30px;
-  padding-right: 40px;
   padding-left: 20px;
   @include phone {
     display: block;
@@ -118,8 +114,13 @@
 }
 
 .mobile {
-  margin-right: 80px;
+  margin-right: 20px;
+  @include tablet {
+    margin-right: -10px;
+  }
   @include phone {
     margin-right: 0;
+    display: flex;
+    align-items: center;
   }
 }
