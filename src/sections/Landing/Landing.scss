@@ -50,9 +50,9 @@
     &-container {
         height: 90vh;
         width: 100%;
-        display: grid;
-        grid-template-columns: minmax(480px, 57%) 43%;
-        grid-template-rows: auto auto 10%;
+        display: inline-grid;
+        grid-template-columns: minmax(480px, 57%) 46%;
+        grid-template-rows: 60% 35% 5%;
         grid-template-areas:
             "landing-text landing-graphic"
             "landing-button landing-graphic"
@@ -70,27 +70,29 @@
         @include phone {
             height: 85vh;
             grid-template-columns: auto;
-            grid-template-rows: 34% 15% 40%;
+            grid-template-rows: min-content min-content min-content;
             grid-template-areas:
+                "landing-graphic"
                 "landing-text"
-                "landing-button"
-                "landing-graphic";
+                "landing-button";
         }
         @include small-phone {
             height: 95vh;
-            grid-template-rows: 34% 15% 45%;
         }
     }
 
     &-text {
         align-self: flex-end;
-        justify-self: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-self: flex-start;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "text-title"
+            "text-slogan"
+            "text-description"
+            "text-dates"; 
         font-family: $font-regular;
-        font-size: $text-medium;
         width: 100%;
         min-width: 500px;
         grid-area: landing-text;
@@ -101,14 +103,44 @@
         @include phone {
             align-items: center;
             text-align: center;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+            "text-slogan"
+            "text-dates"
+            "text-description"; 
+        }
+    }
+
+    &-description-mobile {
+        display: none;
+        @include phone {
+            display: block;
+            grid-area: text-description;
+            font-weight: 600;
+            text-align: center;
+            justify-self: center;
+            width: 280px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        @include small-phone {
+            font-size: 14px;
         }
     }
     &-description {
+        grid-area: text-description;
         @include phone {
-            width: 250px;
-            h4 {
-                font-size: 15px;
-            }
+            display: none;
+        }
+    }
+    &-dates {
+        grid-area: text-dates;
+        @include phone {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        @include small-phone {
+            font-size: 14px;
         }
     }
 
@@ -122,23 +154,48 @@
             font-size: 24px;
         }
     }
+    &-title-mobile {
+        font-family: $font-logo;
+        font-size: 20px;
+    }
+
+    &-logo-text {
+        grid-area: text-title;
+        @include phone {
+            display: none;
+        }
+    }
+    
+    &-logo-text-mobile {
+        display: none;
+        @include phone {
+            grid-area: landing-text-top;
+            display: block;
+            align-self: flex-end;
+            margin: 40px 0 20px 0;
+        }
+        @include small-phone {
+            margin: 30px 0 20px 0;
+        }
+    }
+    
 
     &-slogan {
+        grid-area: text-slogan;
         font-size: $text-xxlarge;
         font-family: "Quicksand";
         &-bold {
             font-family: "Quicksand Bold";
         }
-        padding-bottom: 10px;
         @include desktop {
             font-size: 58px;
         }
         @include tablet {
             font-size: $text-xlarge;
-            padding-bottom: 0px;
         }
         @include phone {
             font-size: 36px;
+            margin-top: 15px;
         }
         @include small-phone {
             font-size: 30px;
@@ -147,7 +204,10 @@
 
     &-graphic-container {
         align-self: center;
-        padding-top: 28px;
+        padding-top: 50px;
+        @include phone {
+            padding-top: 60px;
+        }
         img {
             margin-left: 30px;
             animation: bounce-up-landing 3s linear infinite;
@@ -208,15 +268,19 @@
 }
 
 h4 {
-    line-height: $text-large;
     margin-top: 5px;
     @include phone {
         line-height: 24px;
+        margin-top: 10px;
+    }
+    @include small-phone {
+        line-height: 21px;
+        margin-top: 5px;
     }
 }
 
 .button {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 200px;
     height: 60px;
     padding: 0 10px;
@@ -235,7 +299,7 @@ h4 {
         font-size: 16px;
         width: 200px;
         height: 48px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     &:hover,
     &:focus {

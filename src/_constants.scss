@@ -11,8 +11,8 @@ $text-small: 18px;
 $text-medium: 24px;
 $text-large: 36px;
 $text-xlarge: 64px;
-$text-xxlarge: 86px;
-$text-logo: 45px;
+$text-xxlarge: 72px;
+$text-logo: 36px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
     @font-face {
@@ -77,6 +77,7 @@ $dark-blue: #7D92DB;
 $width-xsm-max: 340px;
 $width-sm-max: 650px;
 $width-md-max: 900px;
+$width-mld-max: 1250px;
 $width-lg-max: 1435px;
 
 @mixin small-phone {
@@ -95,7 +96,7 @@ $width-lg-max: 1435px;
     }
 }
 @mixin desktop {
-    @media (max-width: #{$width-lg-max}) {
+    @media (max-width: #{$width-mld-max}) {
         @content;
     }
 }

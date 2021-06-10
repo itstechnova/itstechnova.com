@@ -18,11 +18,11 @@ const TextLoop = () => {
         <div>
             {mounted ? (
                 <Typist className="landing-slogan" onTypingDone={() => setMounted(false)}>
-                    <span><span className="landing-slogan-bold">Prepare</span> With Us</span>
+                    <span><span className="landing-slogan-bold">{landing.prepare}</span>{landing.sloganEnd}</span>
                     <Typist.Backspace count={20} delay={800} />
-                    <span><span className="landing-slogan-bold">Hack</span> With Us</span>
+                    <span><span className="landing-slogan-bold">{landing.hack}</span>{landing.sloganEnd}</span>
                     <Typist.Backspace count={17} delay={800} />
-                    <span><span className="landing-slogan-bold">Connect</span> With Us</span>
+                    <span><span className="landing-slogan-bold">{landing.connect}</span>{landing.sloganEnd}</span>
                     <Typist.Backspace count={20} delay={800} />
                 </Typist>
             ) : (
@@ -40,15 +40,18 @@ const Landing = () => {
         <SectionWrapper id="landing" paddingTop="0">
             <div className="landing-container">
                 <div className="landing-text">
-                    <h4>
+                    <h4 className="landing-logo-text">
                         <span className="landing-title">{landing.title1}</span>
                         {landing.title2}
                     </h4>
                     <TextLoop />
-                    <div className="landing-description">
-                        <h4>{landing.description}</h4>
-                        <h4>{landing.dates}</h4>
-                    </div>
+                    <h4 className="landing-description">
+                        {landing.description}</h4>
+                    <h4 className="landing-dates">{landing.dates}</h4>
+                    <h4 className="landing-description-mobile">
+                        <span className="landing-title-mobile">{landing.title1}</span>
+                        <span>{landing.title2}: </span> {landing.description}
+                    </h4>
                 </div>
                 <div className="landing-button-container">
                     <a className="button" href={socials.mailingList}>

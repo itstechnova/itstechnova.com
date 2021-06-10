@@ -100,12 +100,10 @@ h3 {
 
 h4 {
     font-family: "Poppins";
-    font-size: $text-medium;
+    font-size: 18px;
+    line-height: 27px;
     font-weight: 400;
     margin: 0;
-    @include tablet {
-        font-size: 20px;
-    }
     @include phone {
         font-size: 16px;
     }
