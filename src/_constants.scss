@@ -51,12 +51,12 @@ $dark-blue: #7D92DB;
     --background-color: #FFFAF3;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
-    --header-color: #FFFAF3;
-    --footer-color: #FFE4E1;
+    --header-color: #FFD5CF;
+    --footer-color: #FFD5CF;
     --x-icon: url("./resources/images/icons/cross.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
     --sponsor-logos: transparent;
-    --nav-shadow-color: rgba(196, 196, 196, 0.58);
+    --nav-shadow-color: #FFD5CF;
 }
 
 @mixin darkmode() {
