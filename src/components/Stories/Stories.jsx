@@ -125,7 +125,7 @@ useEffect (() => {
     var slide = state.story;
     var newSlide = String(slide - 1);
     if (slide-1 < 1) {
-      newSlide = "1";
+      newSlide = "3";
     }
     setState({story: Number(newSlide), quote: storyInfo[newSlide].quote,
         name: storyInfo[newSlide].name,
