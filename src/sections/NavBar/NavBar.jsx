@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./NavBar.scss";
 import ModeToggle from "../../components/ModeToggle/ModeToggle";
-import mlhBanner from "../../resources/images/graphics/mlh-banner.svg";
+//import mlhBanner from "../../resources/images/graphics/mlh-banner.svg";
 import cross from "../../resources/images/icons/cross.svg";
 import hamburger from "../../resources/images/icons/hamburger.svg";
 
