@@ -3,7 +3,7 @@ import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./Story.scss";
 import ourStoryStrings from "../../resources/strings/story";
 //import wieImg from "../../resources/images/logo/wie.svg";
-import wicsImg from "../../resources/images/logo/wics.svg";
+import wicsImg from "../../resources/images/logo/wics.png";
 import Stories from "../../components/Stories/Stories";
 
 

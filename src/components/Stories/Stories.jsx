@@ -4,12 +4,13 @@ import "./Stories.scss";
 import storyImg1 from "../../resources/images/Story1.svg";
 import storyImg2 from "../../resources/images/Story2.svg";
 import storyImg3 from "../../resources/images/Story3.svg";
+import storyImg4 from "../../resources/images/Story4.svg";
 import speechBackground from "../../resources/images/speechBubble.svg";
 import speechBackgroundMobile from "../../resources/images/speechPoint2.svg";
 import controlLeftLight1 from "../../resources/images/icons/control-left-light-1.svg";
-//import controlLeftLight2 from "../../resources/images/icons/control-left-light-2.svg";
+import controlLeftDark from "../../resources/images/icons/control-left-dark-1.svg";
 import controlRightLight1 from "../../resources/images/icons/control-right-light-1.svg";
-//import controlRightLight2 from "../../resources/images/icons/control-right-light-2.svg";
+import controlRightDark from "../../resources/images/icons/control-right-dark-1.svg";
 import ourStoryStrings from "../../resources/strings/story";
 
 const useIntersection = (ref) => {
@@ -35,19 +36,25 @@ var storyInfo = {
     quote: ourStoryStrings.quote1Text,
     name: ourStoryStrings.quote1Name,
     role: ourStoryStrings.quote1Role,
-    image: storyImg1,
+    image: storyImg3,
   },
   "2": {
     quote: ourStoryStrings.quote2Text,
     name: ourStoryStrings.quote2Name,
     role: ourStoryStrings.quote2Role,
-    image: storyImg2,
+    image: storyImg1,
   },
   "3": {
     quote: ourStoryStrings.quote3Text,
     name: ourStoryStrings.quote3Name,
     role: ourStoryStrings.quote3Role,
-    image: storyImg3,
+    image: storyImg2,
+  },
+  "4": {
+    quote: ourStoryStrings.quote4Text,
+    name: ourStoryStrings.quote4Name,
+    role: ourStoryStrings.quote4Role,
+    image: storyImg4,
   }
 }
 
@@ -124,7 +131,7 @@ function Stories() {
     setResetTimer(true);
     var slide = state.story;
     var newSlide = String(slide + 1);
-    if (slide + 1 > 3) {
+    if (slide+1 > 4) {
       newSlide = "1";
     }
 
@@ -155,8 +162,8 @@ function Stories() {
   //setInterval(nextSlide(state.story), 5000);
 
   var progessBar = document.getElementById("progress-made");
-  const progressMade = (state.story / 3) * 100;
-  //console.log(progressMade);
+  const progressMade = (state.story /4) *100;
+  console.log(progressMade);
   if (progessBar) {
     progessBar.style.width = `${progressMade}%`;
   }
@@ -178,23 +185,15 @@ function Stories() {
             </div>
 
           </div>
+        </div>
 
-          <div className="carosuel-controls-wrapper" >
-            <div className="progress-bar">
-              <div id="progress-made">
-              </div>
-            </div>
-
-            <p className="progress-score">
-              {state.story} / 3
+        <p className="progress-score">
+            {state.story} / 4
         </p>
-            <div className="controls">
-              <img onClick={() => prevSlide()} src={controlLeftLight1} alt="" />
-              <img onClick={() => nextSlide()} alt="" src={controlRightLight1} />
-            </div>
-          </div>
+        <div className="controls">
+          <img onClick={()=> prevSlide()} src={window.localStorage.getItem("mode") ==="light" ? controlLeftLight1: controlLeftDark} alt="" />
 
-
+          <img onClick={()=> nextSlide()} alt="" src={window.localStorage.getItem("mode") ==="light" ? controlRightLight1 : controlRightDark} />
         </div>
       </div>
 
