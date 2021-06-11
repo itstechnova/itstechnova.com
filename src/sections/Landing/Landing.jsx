@@ -6,6 +6,7 @@ import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
 import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
 import chevron from "../../resources/images/icons/learn_more.svg"
+import Button from "../../components/Button/Button";
 
 const TextLoop = () => {
     const [mounted, setMounted] = useState(true);
@@ -54,9 +55,7 @@ const Landing = () => {
                     </h4>
                 </div>
                 <div className="landing-button-container">
-                    <a className="button" href={socials.mailingList}>
-                        {landing.applyCTA}
-                    </a>
+                    <Button link={socials.mailingList} label={landing.applyCTA} />
                 </div>
 
                 <div className="landing-graphic-container">
