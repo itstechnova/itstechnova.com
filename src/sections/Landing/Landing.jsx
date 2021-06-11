@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Typist from 'react-typist';
 import "./Landing.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
 import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
 import chevron from "../../resources/images/icons/learn_more.svg"
+import Button from "../../components/Button/Button";
 
 const TextLoop = () => {
     const [mounted, setMounted] = useState(true);
@@ -18,11 +18,11 @@ const TextLoop = () => {
         <div>
             {mounted ? (
                 <Typist className="landing-slogan" onTypingDone={() => setMounted(false)}>
-                    <span><span style={{ fontWeight: "700" }}>Prepare</span> With Us</span>
+                    <span><span className="landing-slogan-bold">{landing.prepare}</span>{landing.sloganEnd}</span>
                     <Typist.Backspace count={20} delay={800} />
-                    <span><span style={{ fontWeight: "700" }}>Hack</span> With Us</span>
+                    <span><span className="landing-slogan-bold">{landing.hack}</span>{landing.sloganEnd}</span>
                     <Typist.Backspace count={17} delay={800} />
-                    <span><span style={{ fontWeight: "700" }}>Connect</span> With Us</span>
+                    <span><span className="landing-slogan-bold">{landing.connect}</span>{landing.sloganEnd}</span>
                     <Typist.Backspace count={20} delay={800} />
                 </Typist>
             ) : (
@@ -40,18 +40,24 @@ const Landing = () => {
         <SectionWrapper id="landing" paddingTop="0">
             <div className="landing-container">
                 <div className="landing-text">
-                    <h4>
+                    <h4 className="landing-logo-text">
+                        <span className="landing-title">{landing.title1}</span>
+                        {landing.title2}
+                    </h4>
+                    <h4 className="landing-logo-text-mobile">
                         <span className="landing-title">{landing.title1}</span>
                         {landing.title2}
                     </h4>
                     <TextLoop />
-                    <h4>{landing.description}</h4>
-                    <h4>{landing.dates}</h4>
+                    <h4 className="landing-description">
+                        {landing.description}</h4>
+                    <h4 className="landing-dates">{landing.dates}</h4>
+                    <h4 className="landing-description-mobile">
+                        {landing.description}
+                    </h4>
                 </div>
                 <div className="landing-button-container">
-                    <a className="button" href={socials.mailingList}>
-                        {landing.applyCTA}
-                    </a>
+                    <Button link={landing.appLink} label={landing.applyCTA} />
                 </div>
 
                 <div className="landing-graphic-container">

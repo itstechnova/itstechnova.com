@@ -11,8 +11,8 @@ $text-small: 18px;
 $text-medium: 24px;
 $text-large: 36px;
 $text-xlarge: 64px;
-$text-xxlarge: 86px;
-$text-logo: 45px;
+$text-xxlarge: 72px;
+$text-logo: 36px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
     @font-face {
@@ -31,10 +31,11 @@ $text-logo: 45px;
 
 // Color Scheme
 
-$accent-pink: #fd6a80;
+$accent-pink: #FF6078;
 $accent-pink-focus: #c95566;
 $light-pink: #FFE4E1;
 $accent-purple: #7676e8;
+$accent-purple-focus: #6363d3;
 $background-light: #fffdfa;
 $background-dark: #19123c;
 $text-light: #fffdfa;
@@ -47,13 +48,15 @@ $dark-blue: #7D92DB;
 
 @mixin lightmode() {
     --text-color: #19123c;
-    --background-color: #fffdfa;
+    --background-color: #FFFAF3;
     --faq-card-bg-color: #C0CBF2;
     --svg-brightness: 0;
-    --header-footer-color: #FFE4E1;
+    --header-color: #FFD5CF;
+    --footer-color: #FFD5CF;
     --x-icon: url("./resources/images/icons/cross.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
-    --sponsor-logos: #FFF0EF;
+    --sponsor-logos: transparent;
+    --nav-shadow-color: #FFD5CF;
 }
 
 @mixin darkmode() {
@@ -61,18 +64,20 @@ $dark-blue: #7D92DB;
     --background-color: #19123c;
     --faq-card-bg-color: #7D92DB;
     --svg-brightness: 100;
-    --header-footer-color: #3D3D75;
+    --header-color: #3D3D75;
+    --footer-color: #3D3D75;
     --x-icon: url("./resources/images/icons/cross-light.svg");
     --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
-    --sponsor-logos: #FFFDFA;
-
+    --sponsor-logos: #C0CBF2;
+    --nav-shadow-color: #19123c;
 }
 
 // Breakpoints
 
-$width-xsm-max: 390px;
-$width-sm-max: 560px;
+$width-xsm-max: 340px;
+$width-sm-max: 650px;
 $width-md-max: 900px;
+$width-mld-max: 1250px;
 $width-lg-max: 1435px;
 
 @mixin small-phone {
@@ -91,7 +96,7 @@ $width-lg-max: 1435px;
     }
 }
 @mixin desktop {
-    @media (max-width: #{$width-lg-max}) {
+    @media (max-width: #{$width-mld-max}) {
         @content;
     }
 }

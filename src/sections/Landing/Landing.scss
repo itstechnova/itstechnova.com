@@ -1,16 +1,31 @@
 @import "../../constants";
 
-@keyframes bounce-up {
+@keyframes bounce-up-landing {
     0% {
-        transform: translateY(5px);
+        transform: translateY(50px);
         opacity: 1;
     }
     50% {
-        transform: translateY(-5px);
-        opacity: 0.8;
+        transform: translateY(30px);
+        opacity: 0.7;
     }
     100% {
-        transform: translateY(5px);
+        transform: translateY(50px);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-up-mobile {
+    0% {
+        transform: translateY(4px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-4px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(4px);
         opacity: 1;
     }
 }
@@ -33,42 +48,100 @@
 
 .landing {
     &-container {
-        height: 100vh;
+        height: 90vh;
         width: 100%;
-        display: grid;
-        grid-template-columns: 57% 45%;
-        grid-template-rows: auto auto 10%;
+        display: inline-grid;
+        grid-template-columns: minmax(480px, 57%) 46%;
+        grid-template-rows: 60% 35% 5%;
         grid-template-areas:
             "landing-text landing-graphic"
             "landing-button landing-graphic"
             "landing-learn-more landing-learn-more";
-
-        @include phone {
+        @include tablet {
+            height: 95vh;
             padding-top: 50px;
-            grid-template-columns: 100%;
-            grid-template-rows: auto auto auto;
+            grid-template-columns: 300px auto;
+            grid-template-rows: minmax(250px, 35%) 50% 50px;
             grid-template-areas:
-                "landing-text"
-                "landing-button"
+                "landing-text landing-text"
+                "landing-button landing-graphic"
+                "landing-learn-more landing-learn-more"; 
+        }
+        @include phone {
+            height: 85vh;
+            grid-template-columns: auto;
+            grid-template-rows: min-content min-content min-content;
+            grid-template-areas:
                 "landing-graphic"
+                "landing-text"
+                "landing-button";
+        }
+        @include small-phone {
+            height: 95vh;
         }
     }
 
     &-text {
         align-self: flex-end;
-        justify-self: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-self: flex-start;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "text-title"
+            "text-slogan"
+            "text-description"
+            "text-dates"; 
         font-family: $font-regular;
-        font-size: $text-medium;
         width: 100%;
+        min-width: 500px;
         grid-area: landing-text;
         text-align: left;
+        @include tablet {
+            min-width: 0;
+        }
         @include phone {
             align-items: center;
             text-align: center;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+            "text-title"
+            "text-slogan"
+            "text-dates"
+            "text-description"; 
+        }
+    }
+
+    &-description-mobile {
+        display: none;
+        @include phone {
+            display: block;
+            grid-area: text-description;
+            font-weight: 600;
+            text-align: center;
+            justify-self: center;
+            width: 270px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        @include small-phone {
+            font-size: 14px;
+        }
+    }
+    &-description {
+        grid-area: text-description;
+        @include phone {
+            display: none;
+        }
+    }
+    &-dates {
+        grid-area: text-dates;
+        @include phone {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        @include small-phone {
+            font-size: 14px;
         }
     }
 
@@ -79,19 +152,55 @@
             font-size: $text-large;
         }
         @include phone {
-            font-size: 18px;
+            font-size: 24px;
         }
     }
+    &-title-mobile {
+        font-family: $font-logo;
+        font-size: 20px;
+    }
+
+    &-logo-text {
+        grid-area: text-title;
+        @include phone {
+            display: none;
+        }
+    }
+    
+    &-logo-text-mobile {
+        display: none;
+        @include phone {
+            .landing-title {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: $font-logo;
+            }
+            grid-area: text-title;
+            display: block;
+            align-self: flex-end;
+            margin: 20px 0 0 0;
+        }
+        @include small-phone {
+            margin: 30px 0 20px 0;
+        }
+    }
+    
 
     &-slogan {
+        grid-area: text-slogan;
         font-size: $text-xxlarge;
         font-family: "Quicksand";
-        padding-bottom: 10px;
+        &-bold {
+            font-family: "Quicksand Bold";
+        }
         @include desktop {
             font-size: 58px;
         }
         @include tablet {
-            font-size: $text-large;
+            font-size: $text-xlarge;
+        }
+        @include phone {
+            font-size: 36px;
         }
         @include small-phone {
             font-size: 30px;
@@ -100,29 +209,48 @@
 
     &-graphic-container {
         align-self: center;
+        padding-top: 50px;
+        @include phone {
+            padding-top: 60px;
+        }
         img {
             margin-left: 30px;
-            animation: bounce-up 3s linear infinite;
-            @include phone {
+            animation: bounce-up-landing 3s linear infinite;
+            @include tablet {
                 margin-left: 0;
+                width: 100%;
+                animation: bounce-up-mobile 3s linear infinite;
+            }
+            @include phone {
+                width: 90%;
+                max-height: 300px;
             }
         }
         grid-area: landing-graphic;
     }
 
     &-button-container {
+        grid-area: landing-button;
+        height: auto;
+        align-self: flex-start;
+        justify-self: flex-start;
+        padding-top: 20px;
         @include phone {
             justify-self: center;
         }
     }
-}
 
-.landing-learn-more-container {
-    grid-area: landing-learn-more;
-    display: flex;
-    justify-content: center;
-    @include phone {
-        display: none;
+    &-learn-more-container {
+        grid-area: landing-learn-more;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        @include tablet {
+            align-items: flex-start;
+        }
+        @include phone {
+            display: none;
+        }
     }
 }
 
@@ -146,39 +274,13 @@
 }
 
 h4 {
-    line-height: $text-large;
     margin-top: 5px;
     @include phone {
         line-height: 24px;
+        margin-top: 10px;
     }
-}
-
-.button {
-    margin-top: 20px;
-    width: 165px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $accent-pink;
-    color: $text-light;
-    font-size: $text-small;
-    font-family: "Quicksand Bold";
-    border-radius: 10px;
-    border-style: none;
-    text-decoration: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    grid-area: landing-button;
-    @include phone {
-        font-size: 16px;
-        width: 136px;
-        height: 48px;
-    }
-
-    &:hover,
-    &:focus {
-        opacity: 0.7;
-        transform: translateY(-5px);
-        transition: 0.1s linear;
+    @include small-phone {
+        line-height: 21px;
+        margin-top: 5px;
     }
 }

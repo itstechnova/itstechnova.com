@@ -24,6 +24,7 @@
 }
 
 .submit-wrapper{
+    cursor: pointer;
     width: 47px;
     height: 39px;
     margin-top: 5px;
@@ -32,7 +33,6 @@
     background-color: #99ACEB;
     display: inline;
     position: absolute;
-
     &:hover {
         opacity: 0.7;
     }
@@ -108,7 +108,6 @@
 .contact-links:hover {
     text-decoration: underline;
 }
-
 
 .socials-row{
     max-width: 300px;

@@ -5,6 +5,7 @@ import about from "../../resources/strings/about";
 import prepareTile from "../../resources/images/graphics/prepare-tile.svg";
 import hackTile from "../../resources/images/graphics/hack-tile.svg";
 import connectTile from "../../resources/images/graphics/connect-tile.svg";
+import Button from "../../components/Button/Button";
 
 const About = () => (
     <SectionWrapper id="about" >
@@ -42,11 +43,7 @@ const About = () => (
                 </div>
             </div >
             <div className="button-smaller-container">
-                {/*
-                <a className="button-smaller" href={about.scheduleLink}>
-                    {about.scheduleCTA}
-                </a>
-                */}
+                <Button link={about.scheduleLink} label={about.scheduleCTA} />
             </div>
         </div>
     </SectionWrapper >

@@ -80,7 +80,7 @@ function Contact() {
                 <h1 className="sub-title">{contact.title}</h1>
                 <div className="email-wrapper">
                 {state.screenWidth >= 400 ? 
-                <input className="email-input" placeholder="Enter your email address for updates" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
+                <input className="email-input" placeholder="Enter your email to stay connected" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
                 : <input className="email-input" placeholder="Enter your email address" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />}
                     <div className="submit-wrapper" onClick={e => submitEmail()}>
                         <div className="wrapper">

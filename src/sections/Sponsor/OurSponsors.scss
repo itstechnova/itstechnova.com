@@ -20,13 +20,13 @@
     border-radius: 25px;
   }
 
-  &-silver, &-partners {
+  &-gold {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     a {
-      width: 25%;
+      width: 60%;
       img {
         width: 100%;
       }
@@ -50,18 +50,57 @@
     }
   }
 
+  &-silver, &-partners {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+      }
+    }
+    @include tablet {
+      flex-direction: column;
+      a {
+        margin-top: 20px;
+        width: 50%;
+      }
+    }
+    @include phone {
+      flex-direction: column;
+      a {
+        width: 70%;
+      }
+    }
+  }
+
   &-partners {
     margin-top: 20px;
     padding: 20px;
     border-radius: 25px;
-    justify-content: space-evenly;
+    a {
+      width: 30%;
+    }
+    @include phone {
+      a {
+        width: 70%;
+      }
+    }
   }
 
   &-bronze {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     a {
       width: 15%;
       img {
