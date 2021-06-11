@@ -178,7 +178,7 @@ function Stories() {
       <div className="speech-bubble">
         {state.screenWidth &&state.screenWidth <=800 ? <img className="background-bubble2" alt="" src={speechBackgroundMobile} /> : <img className="background-bubble" alt="" src={speechBackground} />}
         <div className="bubble-text">
-          <p>" {state.quote} "</p>
+          <p>"{state.quote}"</p>
           <p className="quote-name-role">{state.name}, {state.role}</p>
         </div>
         
