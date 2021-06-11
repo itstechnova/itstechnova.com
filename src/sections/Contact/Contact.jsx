@@ -99,12 +99,12 @@ function Contact() {
                     <SocialMediaLink src={twitter} link={socials.twitter} />
                 </div>
 
-                <div className="links-row">
+                {/* <div className="links-row">
                     <a className="contact-links" href={contact.href1}>{contact.link1}</a>
                     <a className="contact-links" href={contact.href2}>{contact.link2}</a>
                     <a className="contact-links" href={contact.href3}>{contact.link3}</a>
                     <a className="contact-links" href={contact.href4}>{contact.link4}</a>
-                </div>
+                </div> */}
 
             </div>
         )
