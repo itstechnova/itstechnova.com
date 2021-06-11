@@ -8,9 +8,7 @@ import storyImg4 from "../../resources/images/Story4.svg";
 import speechBackground from "../../resources/images/speechBubble.svg";
 import speechBackgroundMobile from "../../resources/images/speechPoint2.svg";
 import controlLeftLight1 from "../../resources/images/icons/control-left-light-1.svg";
-import controlLeftDark from "../../resources/images/icons/control-left-dark-1.svg";
 import controlRightLight1 from "../../resources/images/icons/control-right-light-1.svg";
-import controlRightDark from "../../resources/images/icons/control-right-dark-1.svg";
 import ourStoryStrings from "../../resources/strings/story";
 
 const useIntersection = (ref) => {

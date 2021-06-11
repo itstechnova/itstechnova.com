@@ -38,15 +38,16 @@ function Story () {
             
             <h5 className="affiliated-title">{ourStoryStrings.affiliatedTitle}</h5>
 
-<div className="affiliation-wrapper-desktop"> 
+            <div className="affiliation-wrapper-desktop"> 
 
             <img className="affiliation-image-desktop" alt="" src={wicsImg}/>
+
             <div className="wics-desc"> 
                 <p>
                     {ourStoryStrings.wicsDescription}
                 </p>
                 <p>
-                    <a href="https://cs.uwaterloo.ca/wics" target="_blank">View Website</a>
+                    <a href="https://cs.uwaterloo.ca/wics" rel="noreferrer" target="_blank">View Website</a>
                 </p>
             </div>
             </div>
