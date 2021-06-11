@@ -75,7 +75,7 @@
     @include phone {
       flex-direction: column;
       a {
-        width: 50%;
+        width: 70%;
       }
     }
   }
@@ -86,6 +86,11 @@
     border-radius: 25px;
     a {
       width: 30%;
+    }
+    @include phone {
+      a {
+        width: 70%;
+      }
     }
   }
 
