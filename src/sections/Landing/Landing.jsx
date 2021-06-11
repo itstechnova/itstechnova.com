@@ -44,13 +44,16 @@ const Landing = () => {
                         <span className="landing-title">{landing.title1}</span>
                         {landing.title2}
                     </h4>
+                    <h4 className="landing-logo-text-mobile">
+                        <span className="landing-title">{landing.title1}</span>
+                        {landing.title2}
+                    </h4>
                     <TextLoop />
                     <h4 className="landing-description">
                         {landing.description}</h4>
                     <h4 className="landing-dates">{landing.dates}</h4>
                     <h4 className="landing-description-mobile">
-                        <span className="landing-title-mobile">{landing.title1}</span>
-                        <span>{landing.title2}: </span> {landing.description}
+                        {landing.description}
                     </h4>
                 </div>
                 <div className="landing-button-container">

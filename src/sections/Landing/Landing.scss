@@ -105,6 +105,7 @@
             text-align: center;
             grid-template-rows: auto auto auto;
             grid-template-areas:
+            "text-title"
             "text-slogan"
             "text-dates"
             "text-description"; 
@@ -119,7 +120,7 @@
             font-weight: 600;
             text-align: center;
             justify-self: center;
-            width: 280px;
+            width: 270px;
             font-size: 14px;
             font-weight: 400;
         }
@@ -169,10 +170,15 @@
     &-logo-text-mobile {
         display: none;
         @include phone {
-            grid-area: landing-text-top;
+            .landing-title {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: $font-logo;
+            }
+            grid-area: text-title;
             display: block;
             align-self: flex-end;
-            margin: 40px 0 20px 0;
+            margin: 20px 0 0 0;
         }
         @include small-phone {
             margin: 30px 0 20px 0;
@@ -195,7 +201,6 @@
         }
         @include phone {
             font-size: 36px;
-            margin-top: 15px;
         }
         @include small-phone {
             font-size: 30px;
