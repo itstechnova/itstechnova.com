@@ -14,9 +14,8 @@ const SponsorUs = () => (
                 <div className="sponsor-us-text">
                     <h1 className="sponsor-us-title">Sponsor Us</h1>
                     <div className="sponsor-us-description">
-                        <p>Support more than 200 young women in the next steps
-                of their journey by sponsoring the next generation of leaders</p>
-                        <p>Interested in sponsoring? Email us at{" "}
+                        <p>Support more than 250 young women+ in the next step of their journey in technology!</p>
+                        <p>Interested in joining us as a sponsor? Email us at:{" "}
                             <a href="mailto:sponsors@itstechnova.org">sponsors@itstechnova.org</a>
                         </p>
                     </div>

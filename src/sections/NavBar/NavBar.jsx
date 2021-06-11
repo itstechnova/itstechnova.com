@@ -54,7 +54,7 @@ const NavBar = ({ routes, logoRoute }) => {
                         </div>
                     </div>
                 </div>
-                <img className="mlh-banner" src={mlhBanner} alt="mlh-banner" />
+                {/*<img className="mlh-banner" src={mlhBanner} alt="mlh-banner" />*/}
                 {showNav && <div className="nav-mobile-links">
                     {routes.map((route) => (
                         <Link

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Typist from 'react-typist';
 import "./Landing.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
 import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
 import chevron from "../../resources/images/icons/learn_more.svg"
@@ -55,7 +54,7 @@ const Landing = () => {
                     </h4>
                 </div>
                 <div className="landing-button-container">
-                    <Button link={socials.mailingList} label={landing.applyCTA} />
+                    <Button link={landing.appLink} label={landing.applyCTA} />
                 </div>
 
                 <div className="landing-graphic-container">

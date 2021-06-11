@@ -1,14 +1,15 @@
 const landing = {
+    appLink: "https://docs.google.com/forms/d/e/1FAIpQLSfQt5aOA7XQqE0rjVXfwKze1WBko2CeMMn1MKfloYW7-8yYhw/viewform",
     title1: "TechNova ",
     title2: "Presents",
     prepare: "Prepare",
     hack: "Hack",
     connect: "Connect",
     sloganEnd: " with Us",
-    description: "UWaterloo’s first global Women+ in Tech Hackathon",
-    dates: "August 24-29, 2021 • Virtual Event",
+    description: "University of Waterloo’s First Women+ in Tech Hackathon",
+    dates: "August 27-29, 2021 • Virtual Event",
     comingSoon: "Coming Summer 2021",
-    applyCTA: "Join our Mailing List",
+    applyCTA: "Apply Now!",
     sponsor: "Interested in Sponsoring?",
     emailUs: "Email us at ",
     email: "hacktechnova@gmail.com"
