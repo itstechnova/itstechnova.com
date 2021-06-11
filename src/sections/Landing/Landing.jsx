@@ -1,58 +1,76 @@
-import React from "react";
-import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
+import React, { useState, useEffect } from "react";
+import Typist from 'react-typist';
 import "./Landing.scss";
-import logo from "../../resources/images/logo/logo.png";
-import facebook from "../../resources/images/socials/facebook.svg";
-import instagram from "../../resources/images/socials/ig.svg";
-import linkedin from "../../resources/images/socials/linkedin.svg";
-import twitter from "../../resources/images/socials/twitter.svg";
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import socials from "../../resources/strings/socials";
 import landing from "../../resources/strings/landing";
+import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
+import chevron from "../../resources/images/icons/learn_more.svg"
 
-const Landing = () => (
-    <React.Fragment>
-        <div className="landing-container" id="landing">
-            <div className="landing-content">
-                <img className="landing-logo" src={logo} alt="logo" />
-                <span className="landing-title">{landing.title}</span>
+const TextLoop = () => {
+    const [mounted, setMounted] = useState(true);
 
+    useEffect(() => {
+        setMounted(true);
+    }, [mounted]);
+
+    return (
+        <div>
+            {mounted ? (
+                <Typist className="landing-slogan" onTypingDone={() => setMounted(false)}>
+                    <span><span className="landing-slogan-bold">{landing.prepare}</span>{landing.sloganEnd}</span>
+                    <Typist.Backspace count={20} delay={800} />
+                    <span><span className="landing-slogan-bold">{landing.hack}</span>{landing.sloganEnd}</span>
+                    <Typist.Backspace count={17} delay={800} />
+                    <span><span className="landing-slogan-bold">{landing.connect}</span>{landing.sloganEnd}</span>
+                    <Typist.Backspace count={20} delay={800} />
+                </Typist>
+            ) : (
                 <span className="landing-slogan">
-                    {landing.sloganPrepare}&nbsp;&nbsp;⭐&nbsp;&nbsp;{landing.sloganHack}
-                    &nbsp;&nbsp;⭐&nbsp;&nbsp;{landing.sloganConnect}
+                    {"n"}
                 </span>
+            )}
+        </div>
+    );
 
-                <div className="landing-description">
-                    <span>
-                        {landing.description1} <br />
-                    </span>
-                    <span>{landing.description2}</span>
-                    <span style={{ "font-weight": "bold" }}>
-                        {landing.descriptionBolded}
-                    </span>
-                    <span>{landing.description3}</span>
+}
+
+const Landing = () => {
+    return (
+        <SectionWrapper id="landing" paddingTop="0">
+            <div className="landing-container">
+                <div className="landing-text">
+                    <h4 className="landing-logo-text">
+                        <span className="landing-title">{landing.title1}</span>
+                        {landing.title2}
+                    </h4>
+                    <TextLoop />
+                    <h4 className="landing-description">
+                        {landing.description}</h4>
+                    <h4 className="landing-dates">{landing.dates}</h4>
+                    <h4 className="landing-description-mobile">
+                        <span className="landing-title-mobile">{landing.title1}</span>
+                        <span>{landing.title2}: </span> {landing.description}
+                    </h4>
                 </div>
-
-                <span className="landing-coming-soon">{landing.comingSoon}</span>
-
-                <div className="button-container">
+                <div className="landing-button-container">
                     <a className="button" href={socials.mailingList}>
-                        {landing.mailingListCTA}
+                        {landing.applyCTA}
                     </a>
                 </div>
 
-                <div className="socials">
-                    <SocialMediaLink src={instagram} link={socials.instagram} />
-                    <SocialMediaLink src={linkedin} link={socials.linkedin} />
-                    <SocialMediaLink src={facebook} link={socials.facebook} />
-                    <SocialMediaLink src={twitter} link={socials.twitter} />
+                <div className="landing-graphic-container">
+                    <img src={bridgeTile} alt="bridge tile" />
                 </div>
-                <span>{landing.sponsor}</span>
-                <span>
-                    {landing.emailUs} <a href={socials.email}>{landing.email}</a>
-                </span>
+
+                <div className="landing-learn-more-container">
+                    <a href="#about" className="learn-more-link">Learn more
+                    <img src={chevron} className="learn-more-arrow" alt="learn more" />
+                    </a>
+                </div>
             </div>
-        </div>
-    </React.Fragment>
-);
+        </SectionWrapper>
+    );
+};
 
 export default Landing;

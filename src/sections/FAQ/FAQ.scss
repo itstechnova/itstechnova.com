@@ -1,0 +1,58 @@
+@import "../../constants";
+
+.faq {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+  }
+  &-title {
+    font-family: $font-title;
+    font-size: $text-xlarge;
+    margin-bottom: 3rem;
+    align-self: flex-start;
+    @include tablet {
+      margin-bottom: 2rem;
+      font-size: $text-large;
+    }
+  }
+  &-questions {
+    display: flex;
+    gap: 1rem;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &-left-col,
+  &-right-col {
+    > * {
+      margin-bottom: 1rem;
+    }
+  }
+  &-left-col > :nth-last-child(1),
+  &-right-col > :nth-last-child(1) {
+    margin-bottom: 0;
+    @include tablet {
+      margin-bottom: 1rem;
+    }
+  }
+  &-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    @include phone {
+      width: 300px;
+    }
+    > a {
+      font-family: $font-bold;
+      font-weight: bold;
+    }
+    > img {
+      max-width: 276px;
+      padding-top: 40px;
+    }
+  }
+}

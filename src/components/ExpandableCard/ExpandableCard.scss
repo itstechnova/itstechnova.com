@@ -1,0 +1,76 @@
+@import "../../constants.scss";
+
+.card {
+  display: block;
+  width: 35vw;
+  max-width: 590px;
+  padding: 24px 32px;
+  background-color: var(--faq-card-bg-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: inherit;
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: inherit;
+  text-align: left;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.summary {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question {
+  font-size: $text-medium;
+  font-family: $font-regular;
+  font-weight: 400;
+  margin-right: 1rem;
+  @include phone {
+    width: 80%;
+  }
+  @include tablet {
+    font-size: $text-small;
+  }
+}
+
+.faq-arrow {
+  transform-origin: center;
+  transition: all 0.25s ease-in-out;
+  @include tablet {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  &[aria-expanded="true"] {
+    transform: rotate(180deg);
+  }
+  // do not allow user to select arrow
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.answer-container {
+  overflow: hidden;
+  max-height: calc(1000rem / 16);
+  transition: max-height 1s ease-in-out;
+  &[aria-expanded="true"] {
+    max-height: 0px;
+    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+  }
+}
+
+.answer {
+  margin-top: 1rem;
+  @include tablet {
+    font-size: $text-small;
+  }
+}

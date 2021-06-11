@@ -1,22 +1,127 @@
-.nav-container {
+@import "../../constants";
+.nav {
+  &-container {
     display: flex;
-    flex-direction: row;
-    background-color: #faf8ff;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 8vh;
-    list-style: none;
-    font-size: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    height: 64px;
     position: fixed;
     top: 0;
-}
+    z-index: 2;
+    width: 100%;
+  }
 
-.nav-link {
-    color: #7676e8;
+  &-content {
+    margin-left: 100px;
+    height: 100%;
+    width: $width-lg-max;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    @include tablet {
+      margin: 0 30px;
+    }
+    @include phone {
+      justify-content: space-between;
+    }
+  }
+  
+  &-links-container {
+    display: flex;
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  &-link {
     text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 15px;
+    &:hover {
+      opacity: 0.5;
+      transition: linear 0.2s;
+    }
+    @include tablet {
+      padding: 10px;
+    }
+  }
+
+  &-desktop-links {
+    display: block;
+    @include phone {
+      display: none;
+    }
+  }
+
+  &-mobile-links {
+    display: none;
+    @include phone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 100;
+      background-color: $light-pink;
+      padding: 20px;
+      width: 100%;
+    }
+  }
 }
 
-.nav-link:hover {
-    opacity: 0.5;
+.logo-link {
+  &:hover {
+    opacity: 0.7;
+    transition: linear 0.4s;
+  }
+  img {
+    height: 40px;
+  }
+  @include tablet {
+    padding: 0 10px 0 0;
+  }
+}
+
+.mlh-banner {
+  max-height: 180px;
+  padding-right: 40px;
+  overflow-x: visible;
+  @include tablet {
+    //right: 10px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  opacity: 1;
+  display: none;
+  width: 30px;
+  padding-left: 20px;
+  @include phone {
+    display: block;
+  }
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.mobile {
+  margin-right: 20px;
+  @include tablet {
+    margin-right: -10px;
+  }
+  @include phone {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+  }
 }

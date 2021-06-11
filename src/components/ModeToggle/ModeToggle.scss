@@ -1,0 +1,67 @@
+@import "../../constants";
+
+.mode-toggle {
+    zoom: 1.2;
+}
+
+.react-toggle-track-check {
+    margin: 0;
+    left: 6px;
+    top: 5px;
+}
+
+.react-toggle-track-x {
+    margin: 0;
+    right: 10px;
+    top: 4.5px;
+}
+
+.light-icon,
+.dark-icon {
+    height: 15px;
+}
+
+.mode-toggle.react-toggle .react-toggle-track {
+    background-color: $accent-purple;
+}
+
+.mode-toggle.react-toggle .react-toggle-thumb {
+    border-color: $accent-purple;
+}
+
+.mode-toggle.react-toggle:hover:not(.react-toggle--disabled)
+    .react-toggle-track {
+    background-color: $accent-purple-focus;
+}
+
+.mode-toggle.react-toggle:hover:not(.react-toggle--disabled)
+    .react-toggle-thumb {
+    border-color: $accent-purple-focus;
+}
+
+.mode-toggle.react-toggle--checked .react-toggle-track {
+    background-color: $accent-pink;
+}
+
+.mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
+    .react-toggle-track {
+    background-color: $accent-pink-focus;
+}
+
+.mode-toggle.react-toggle--checked .react-toggle-thumb {
+    border-color: $accent-pink;
+}
+
+.mode-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
+    .react-toggle-thumb {
+    border-color: $accent-pink-focus;
+}
+
+.mode-toggle.react-toggle--focus .react-toggle-thumb {
+    box-shadow: none;
+}
+
+.mode-toggle.react-toggle:active:not(.react-toggle--disabled)
+    .react-toggle-thumb {
+    box-shadow: none;
+}

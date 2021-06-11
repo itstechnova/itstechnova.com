@@ -1,0 +1,27 @@
+@import "../../constants";
+
+.section {
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    &-container {
+        width: $width-lg-max;
+        padding-top: 80px;
+        padding-bottom: 64px;
+        @include tablet {
+            width: 100%;
+        }
+        @include phone {
+            padding-top: 70px;
+        }
+    }
+    &-content {
+        padding: 0 100px;
+        @include tablet {
+            padding: 0 30px;
+        }
+    }
+}

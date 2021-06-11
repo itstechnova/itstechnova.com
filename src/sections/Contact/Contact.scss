@@ -1,0 +1,139 @@
+@import "../../constants";
+
+.contact-container {
+    text-align: left;
+}
+
+.email-input{
+    min-width: 328px;
+    height: 48px;
+    background: #E8EAFA;
+    border-radius: 5px;
+    border: none;
+    font-family: "Poppins";
+    padding-left: 10px;
+    @include phone {
+        min-width: 200px;
+        width: 90%;
+    }
+}
+
+.email-wrapper {
+    margin-top: 16px;
+    position: relative;
+}
+
+.submit-wrapper{
+    cursor: pointer;
+    width: 47px;
+    height: 39px;
+    margin-top: 5px;
+    left: 287px;
+    border-radius: 3px;
+    background-color: #99ACEB;
+    display: inline;
+    position: absolute;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include phone {
+        left: auto;
+        right: 8%;
+    }
+}
+
+.submit-btn{
+    width: 15px;
+    height: 15px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.contact-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    img {
+        width: 100%;
+    }
+    @include tablet {
+        padding: 20px 0;
+        width: 100%;
+        justify-content: flex-start;
+        img {
+            width: 60%;
+        }
+    }
+    @include phone {
+        padding: 20px 0;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.contact{
+    min-width: 500px;
+    width: 50%;
+    @include tablet {
+       width: 100%;
+    }
+    @include phone {
+        min-width: 0;
+    }
+}
+
+.contact-links{
+    text-decoration: none;
+}
+
+.contact-links:hover {
+    text-decoration: underline;
+}
+
+.socials-row{
+    max-width: 300px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+        padding: 10px 0;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.links-row{
+    max-width: 450px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+        font-family: "Poppins";
+    }
+}
+
+.team-title {
+    margin-top: 32px;
+}

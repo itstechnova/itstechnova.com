@@ -1,68 +1,102 @@
 // Font
-$font-logo: "Josefin Sans";
+
+$font-logo: "Lexend";
+$font-title: "Quicksand Bold";
 $font-bold: "Poppins Bold";
-$font-italic: "Poppins Italic";
 $font-regular: "Poppins";
 
 $text-xxsmall: 10px;
-$text-xsmall: 12px;
-$text-small: 14px;
-$text-medium: 16px;
-$text-large: 23px;
-$text-xlarge: 50px;
-$text-logo: 60px;
+$text-xsmall: 14px;
+$text-small: 18px;
+$text-medium: 24px;
+$text-large: 36px;
+$text-xlarge: 64px;
+$text-xxlarge: 72px;
+$text-logo: 36px;
 
 @mixin fontface($name, $file, $weight: normal, $style: normal) {
     @font-face {
         font-weight: $weight;
-        font-family: '#{$name}';
+        font-family: "#{$name}";
         font-style: $style;
-        src: url('./resources/fonts/#{$file}.ttf') format('truetype');
+        src: url("./resources/fonts/#{$file}.ttf") format("truetype");
     }
 }
 
-@include fontface('Josefin Sans', 'JosefinSans/static/JosefinSans-Regular'); 
-@include fontface('Poppins', 'Poppins/Poppins-Regular'); 
-@include fontface('Poppins Bold', 'Poppins/Poppins-Bold', bold);
-@include fontface('Poppins Italic', 'Poppins/Poppins-Italic');
+@include fontface("Lexend", "Lexend/Lexend-Medium");
+@include fontface("Quicksand", "Quicksand/static/Quicksand-Regular");
+@include fontface("Quicksand Bold", "Quicksand/static/Quicksand-Bold");
+@include fontface("Poppins", "Poppins/Poppins-Regular");
+@include fontface("Poppins Bold", "Poppins/Poppins-Medium");
 
-// Color
-$background-light: #ffffff;
-$accent-pink: #FC6D83;
+// Color Scheme
+
+$accent-pink: #fd6a80;
+$accent-pink-focus: #c95566;
+$light-pink: #FFE4E1;
 $accent-purple: #7676e8;
-$text-light: #ffffff;
-$text-muted: #6a6868;
-$text-dark: #333333;
+$accent-purple-focus: #6363d3;
+$background-light: #fffdfa;
+$background-dark: #19123c;
+$text-light: #fffdfa;
+$text-muted: #c4c4c4;
+$text-dark: #19123c;
+$grey: #c4c4c4;
+$light-grey: #e5e9f2;
+$light-blue: #C0CBF2;
+$dark-blue: #7D92DB;
+
+@mixin lightmode() {
+    --text-color: #19123c;
+    --background-color: #FFFAF3;
+    --faq-card-bg-color: #C0CBF2;
+    --svg-brightness: 0;
+    --header-color: #FFD5CF;
+    --footer-color: #FFD5CF;
+    --x-icon: url("./resources/images/icons/cross.svg");
+    --hamburger-icon: url("./resources/images/icons/hamburger.svg");
+    --sponsor-logos: transparent;
+    --nav-shadow-color: #FFD5CF;
+}
+
+@mixin darkmode() {
+    --text-color: #fffdfa;
+    --background-color: #19123c;
+    --faq-card-bg-color: #7D92DB;
+    --svg-brightness: 100;
+    --header-color: #3D3D75;
+    --footer-color: #3D3D75;
+    --x-icon: url("./resources/images/icons/cross-light.svg");
+    --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
+    --sponsor-logos: rgba(196, 196, 196, 0.58);
+    --nav-shadow-color: #19123c;
+}
 
 // Breakpoints
-$width-xsm-max: 390px;
-$width-sm-max: 540px;
-$width-md-max: 820px;
-$width-lg-max: 1300px;
 
-$height-xsm-max: 470px;
-$height-sm-max: 550px;
-$height-md-max: 580px;
-$height-lg-max: 600px;
-
+$width-xsm-max: 340px;
+$width-sm-max: 650px;
+$width-md-max: 900px;
+$width-mld-max: 1250px;
+$width-lg-max: 1435px;
 
 @mixin small-phone {
-    @media (max-width: #{$width-xsm-max}), (max-height: #{$height-xsm-max}) {
+    @media (max-width: #{$width-xsm-max}) {
         @content;
     }
 }
 @mixin phone {
-    @media (max-width: #{$width-sm-max}), (max-height: #{$height-sm-max}) {
+    @media (max-width: #{$width-sm-max}) {
         @content;
     }
 }
 @mixin tablet {
-    @media (max-width: #{$width-md-max}), (max-height: #{$height-md-max}) {
+    @media (max-width: #{$width-md-max}) {
         @content;
     }
 }
 @mixin desktop {
-    @media (max-width: #{$width-lg-max}), (max-height: #{$height-lg-max}) {
+    @media (max-width: #{$width-mld-max}) {
         @content;
     }
 }
