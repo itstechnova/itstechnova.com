@@ -148,7 +148,7 @@ function Stories() {
     var slide = state.story;
     var newSlide = String(slide - 1);
     if (slide - 1 < 1) {
-      newSlide = "3";
+      newSlide = "4";
     }
     setState({
       story: Number(newSlide), quote: storyInfo[newSlide].quote,
@@ -173,17 +173,22 @@ function Stories() {
 
   return (
     <div>
-      <div className="carosuel-wrapper" ref={ref} id="carosel">
-        <img className="stories-image" alt="" src={state.image} />
+    <div className="carosuel-wrapper" ref={ref} id="carosel">
+    <img className="stories-image" alt="" src={state.image} />
 
-        <div className="speech-wrapper">
-          <div className="speech-bubble">
-            {state.screenWidth && state.screenWidth <= 800 ? <img className="background-bubble2" alt="" src={speechBackgroundMobile} /> : <img className="background-bubble" alt="" src={speechBackground} />}
-            <div className="bubble-text">
-              <p>" {state.quote} "</p>
-              <p className="quote-name-role">{state.name}, {state.role}</p>
-            </div>
-
+    <div className="speech-wrapper">
+      <div className="speech-bubble">
+        {state.screenWidth &&state.screenWidth <=800 ? <img className="background-bubble2" alt="" src={speechBackgroundMobile} /> : <img className="background-bubble" alt="" src={speechBackground} />}
+        <div className="bubble-text">
+          <p>" {state.quote} "</p>
+          <p className="quote-name-role">{state.name}, {state.role}</p>
+        </div>
+        
+      </div>
+      
+      <div className="carosuel-controls-wrapper" >
+        <div className="progress-bar">
+          <div id="progress-made">
           </div>
         </div>
 
@@ -191,13 +196,17 @@ function Stories() {
             {state.story} / 4
         </p>
         <div className="controls">
-          <img onClick={()=> prevSlide()} src={window.localStorage.getItem("mode") ==="light" ? controlLeftLight1: controlLeftDark} alt="" />
+          <img onClick={()=> prevSlide()} src={controlLeftLight1} alt="" />
 
-          <img onClick={()=> nextSlide()} alt="" src={window.localStorage.getItem("mode") ==="light" ? controlRightLight1 : controlRightDark} />
+          <img onClick={()=> nextSlide()} alt="" src={controlRightLight1} />
         </div>
       </div>
+    
 
+    </div>
+    </div>
 
+    
     </div>
   );
 };
