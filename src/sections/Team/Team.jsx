@@ -57,15 +57,15 @@ const photos = [
     { hot: brittney, goof: brittney2, name: "Brittney Cheng", role: "Designer", linkedin: "https://www.linkedin.com/in/brittney-cheng/" },
     { hot: caroline, goof: caroline2, name: "Caroline Chen (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/itscarolinechen/" },
     { hot: celine, goof: celine2, name: "Celine Nguyen (she/her)", role: "Logistics Lead", linkedin: "https://www.linkedin.com/in/celineqnnguyen/" },
+    { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
     { hot: grace, goof: grace2, name: "Grace Nguyen (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/grace-nguyen-ba5028158/" },
+    { hot: jas, goof: jas2, name: "Jasmine Bal (she/her)", role: "Program Manager, Founder", linkedin: "https://www.linkedin.com/in/jasminekbal/" },
     { hot: kaylee, goof: kaylee2, name: "Kaylee Ainsworth (she/they)", role: "Marketing Coordinator, Junior Designer", linkedin: "http://linkedin.com/in/kaylee-ainsworth/" },
     { hot: kun, goof: kun2, name: "Kun Zhu (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/kun-zhu/" },
     { hot: lucy, goof: lucy2, name: "Lucy Shen (she/her)", role: "Finance Lead, Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/lucy-shen/" },
     { hot: prianka, goof: prianka2, name: "Prianka Hoque (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/prianka-hoque/" },
     { hot: sam, goof: sam2, name: "Samantha Kaiser (she/her)", role: "Finance Coordinator, Logistics Coordinator", linkedin: "https://www.linkedin.com/in/samanthakaiser03/" },
     { hot: zoey, goof: zoey2, name: "Zoey Vu (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/zoeyvu/" },
-    { hot: jas, goof: jas2, name: "Jasmine Bal (she/her)", role: "Program Manager, Founder", linkedin: "https://www.linkedin.com/in/jasminekbal/" },
-    { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
 ]
 
 const PhotoCard = (props) => {

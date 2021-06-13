@@ -1,5 +1,20 @@
 @import "../../constants";
 
+@keyframes bounce-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(30px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+}
+
 .contact-container {
     text-align: left;
 }
@@ -72,6 +87,7 @@
     width: 50%;
     img {
         width: 100%;
+        animation: bounce-up 3s linear infinite;
     }
     @include tablet {
         padding: 20px 0;
@@ -82,7 +98,7 @@
         }
     }
     @include phone {
-        padding: 20px 0;
+        padding: 0px 0 60px 0;
         width: 100%;
         img {
             width: 100%;

@@ -18,10 +18,12 @@
     }
   }
   &-questions {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
     gap: 1rem;
     @include tablet {
       flex-direction: column;
+      grid-template-columns: 100%;
     }
   }
   &-left-col,
@@ -33,9 +35,6 @@
   &-left-col > :nth-last-child(1),
   &-right-col > :nth-last-child(1) {
     margin-bottom: 0;
-    @include tablet {
-      margin-bottom: 1rem;
-    }
   }
   &-contact {
     display: flex;

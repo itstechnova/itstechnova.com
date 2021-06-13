@@ -34,19 +34,19 @@ var storyInfo = {
     quote: ourStoryStrings.quote1Text,
     name: ourStoryStrings.quote1Name,
     role: ourStoryStrings.quote1Role,
-    image: storyImg3,
+    image: storyImg1,
   },
   "2": {
     quote: ourStoryStrings.quote2Text,
     name: ourStoryStrings.quote2Name,
     role: ourStoryStrings.quote2Role,
-    image: storyImg1,
+    image: storyImg2,
   },
   "3": {
     quote: ourStoryStrings.quote3Text,
     name: ourStoryStrings.quote3Name,
     role: ourStoryStrings.quote3Role,
-    image: storyImg2,
+    image: storyImg3,
   },
   "4": {
     quote: ourStoryStrings.quote4Text,
