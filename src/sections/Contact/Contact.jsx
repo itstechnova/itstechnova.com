@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
+import Team from "../../sections/Team/Team";
 
 import "./Contact.scss";
 import arrow from "../../resources/images/icons/submit.svg";
@@ -120,6 +121,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
+            <Team />
         </SectionWrapper>
     );
 

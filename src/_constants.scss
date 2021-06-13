@@ -57,6 +57,7 @@ $dark-blue: #7D92DB;
     --hamburger-icon: url("./resources/images/icons/hamburger.svg");
     --sponsor-logos: transparent;
     --nav-shadow-color: #FFD5CF;
+    --image-shadow-color: #FF6078;
 }
 
 @mixin darkmode() {
@@ -70,6 +71,7 @@ $dark-blue: #7D92DB;
     --hamburger-icon: url("./resources/images/icons/hamburger-light.svg");
     --sponsor-logos: #C0CBF2;
     --nav-shadow-color: #19123c;
+    --image-shadow-color: #7676e8;
 }
 
 // Breakpoints
