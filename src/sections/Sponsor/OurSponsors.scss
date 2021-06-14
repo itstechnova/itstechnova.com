@@ -5,131 +5,121 @@
     text-align: left;
     @include phone {
       height: auto;
-      //padding: 2rem;
+    }
+    a {
+      &:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+      }
     }
   }
+
   &-title {
-    margin: 40px 0;
+    margin-top: 50px;
+    margin-bottom: 16px;
     @include phone {
       text-align: left;
     }
   }
 
   &-logos {
-    padding: 20px;
+    padding: 24px;
     border-radius: 25px;
-  }
-
-  &-gold {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     a {
-      width: 60%;
+      width: 90%;
+      align-self: center;
+      justify-self: center;
       img {
         width: 100%;
-      }
-      &:hover {
-        opacity: 0.5;
-        transform: translateY(-5px);
-        transition: 0.1s linear;
-      }
-    }
-    @include tablet {
-      flex-direction: column;
-      a {
-        width: 70%;
       }
     }
     @include phone {
-      flex-direction: column;
+      padding: 16px;
+    }
+    @include small-phone {
+      padding: 10px;
+    }
+  }
+
+  &-gold {
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
       a {
-        width: 100%;
+        max-width: 450px;
       }
     }
   }
 
-  &-silver, &-partners {
+  &-silver {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    a {
+      max-width: 350px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      a {
+        max-width: 300px;
+      }
+    }
+    @include phone {
+      margin-top: 20px; 
+    }
+  }
+
+  &-bronze {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    a {
+      max-width: 200px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      a {
+        max-width: 150px;
+      }
+    }
+    @include phone {
+      margin-top: 20px; 
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &-partners {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: 20px;
+    border-radius: 25px;
     a {
       width: 40%;
+      max-width: 300px;
+      padding: 0 20px;
       img {
         width: 100%;
       }
-      &:hover {
-        opacity: 0.5;
-        transform: translateY(-5px);
-        transition: 0.1s linear;
-      }
     }
     @include tablet {
-      flex-direction: column;
       a {
         margin-top: 20px;
         width: 50%;
       }
     }
     @include phone {
+      padding: 0 0 20px 0;
       flex-direction: column;
-      a {
-        width: 70%;
-      }
-    }
-  }
-
-  &-partners {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 25px;
-    a {
-      width: 30%;
-    }
-    @include phone {
-      a {
-        width: 70%;
-      }
-    }
-  }
-
-  &-bronze {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    a {
-      width: 15%;
-      img {
-        width: 100%;
-      }
-      &:hover {
-        opacity: 0.5;
-        transform: translateY(-5px);
-        transition: 0.1s linear;
-      }
-    }
-    @include tablet {
       align-items: center;
-      flex-direction: column;
+      justify-content: center;
       a {
-        width: 30%;
-        img {
-          width: 100%;
-        }
-      }
-    }
-    @include phone {
-      align-items: center;
-      flex-direction: column;
-      a {
-        width: 50%;
-        img {
-          width: 100%;
-        }
+        width: 80%;
+        max-width: 250px;
       }
     }
   }
