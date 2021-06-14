@@ -54,7 +54,7 @@ const photos = [
     { hot: ayla, goof: ayla2, name: "Ayla Orucevic (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/ayla/" },
     { hot: bernie, goof: bernie2, name: "Bernadette Cheng (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/bernadettecheng/" },
     { hot: bonnie, goof: bonnie2, name: "Bonnie Peng (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/bonniepeng/" },
-    { hot: brittney, goof: brittney2, name: "Brittney Cheng", role: "Designer", linkedin: "https://www.linkedin.com/in/brittney-cheng/" },
+    { hot: brittney, goof: brittney2, name: "Brittney Cheng (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/brittney-cheng/" },
     { hot: caroline, goof: caroline2, name: "Caroline Chen (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/itscarolinechen/" },
     { hot: celine, goof: celine2, name: "Celine Nguyen (she/her)", role: "Logistics Lead", linkedin: "https://www.linkedin.com/in/celineqnnguyen/" },
     { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
