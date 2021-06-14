@@ -2,8 +2,7 @@
 
 .card {
   display: block;
-  width: 35vw;
-  max-width: 590px;
+  width: 100%;
   padding: 24px 32px;
   background-color: var(--faq-card-bg-color);
   border: none;
@@ -16,6 +15,9 @@
   text-align: left;
   @include tablet {
     width: 100%;
+    padding: 16px 24px;
+    line-height: 24px;
+    font-size: 16px;
   }
 }
 
@@ -36,6 +38,7 @@
   }
   @include tablet {
     font-size: $text-small;
+    font-weight: 600;
   }
 }
 

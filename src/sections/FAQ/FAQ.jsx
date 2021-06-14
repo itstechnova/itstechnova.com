@@ -11,7 +11,7 @@ const FAQ = () => (
       <h1 className="faq-title">Frequently Asked Questions</h1>
       <div className="faq-questions">
         <div className="faq-left-col">
-          <ExpandableCard question={"What is a Hackathon?"}>
+          <ExpandableCard question={"What is a hackathon?"}>
             A hackathon is an event where students work together to build a technology-based solution to a problem. You can create an app, a website, a browser extension, whatever you’d like. The sky’s the limit, and we’ll be here to help along the way!
           </ExpandableCard>
           <ExpandableCard question={"Who can participate?"}>

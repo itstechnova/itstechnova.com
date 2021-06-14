@@ -24,16 +24,16 @@ import caroline2 from "../../resources/images/team/caroline2.png"
 import celine from "../../resources/images/team/celine.png"
 import celine2 from "../../resources/images/team/celine2.jpg"
 import faith from "../../resources/images/team/faith.jpeg"
-import faith2 from "../../resources/images/team/faith2.jpeg"
+import faith2 from "../../resources/images/team/faith2.png"
 import grace from "../../resources/images/team/grace.jpg"
 import grace2 from "../../resources/images/team/grace2.jpg"
-import jas from "../../resources/images/team/jas2.jpeg"
-import jas2 from "../../resources/images/team/jas.png"
+import jas from "../../resources/images/team/jas.jpg"
+import jas2 from "../../resources/images/team/jas2.jpg"
 import kaylee from "../../resources/images/team/kaylee.jpg"
 import kaylee2 from "../../resources/images/team/kaylee2.jpg"
 import kun from "../../resources/images/team/kun.jpg"
 import kun2 from "../../resources/images/team/kun2.jpg"
-import lucy from "../../resources/images/team/lucy.JPG"
+import lucy from "../../resources/images/team/lucy1.jpg"
 import lucy2 from "../../resources/images/team/lucy2.jpeg"
 import prianka from "../../resources/images/team/prianka.jpg"
 import prianka2 from "../../resources/images/team/prianka2.jpg"
@@ -57,15 +57,15 @@ const photos = [
     { hot: brittney, goof: brittney2, name: "Brittney Cheng", role: "Designer", linkedin: "https://www.linkedin.com/in/brittney-cheng/" },
     { hot: caroline, goof: caroline2, name: "Caroline Chen (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/itscarolinechen/" },
     { hot: celine, goof: celine2, name: "Celine Nguyen (she/her)", role: "Logistics Lead", linkedin: "https://www.linkedin.com/in/celineqnnguyen/" },
+    { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
     { hot: grace, goof: grace2, name: "Grace Nguyen (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/grace-nguyen-ba5028158/" },
+    { hot: jas, goof: jas2, name: "Jasmine Bal (she/her)", role: "Program Manager, Founder", linkedin: "https://www.linkedin.com/in/jasminekbal/" },
     { hot: kaylee, goof: kaylee2, name: "Kaylee Ainsworth (she/they)", role: "Marketing Coordinator, Junior Designer", linkedin: "http://linkedin.com/in/kaylee-ainsworth/" },
     { hot: kun, goof: kun2, name: "Kun Zhu (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/kun-zhu/" },
     { hot: lucy, goof: lucy2, name: "Lucy Shen (she/her)", role: "Finance Lead, Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/lucy-shen/" },
     { hot: prianka, goof: prianka2, name: "Prianka Hoque (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/prianka-hoque/" },
     { hot: sam, goof: sam2, name: "Samantha Kaiser (she/her)", role: "Finance Coordinator, Logistics Coordinator", linkedin: "https://www.linkedin.com/in/samanthakaiser03/" },
     { hot: zoey, goof: zoey2, name: "Zoey Vu (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/zoeyvu/" },
-    { hot: jas, goof: jas2, name: "Jasmine Bal (she/her)", role: "Program Manager, Founder", linkedin: "https://www.linkedin.com/in/jasminekbal/" },
-    { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
 ]
 
 const PhotoCard = (props) => {
