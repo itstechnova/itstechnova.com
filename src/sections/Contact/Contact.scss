@@ -90,7 +90,7 @@
         animation: bounce-up 3s linear infinite;
     }
     @include tablet {
-        padding: 20px 0;
+        padding: 0px 0 60px 0;
         width: 100%;
         justify-content: flex-start;
         img {
@@ -98,7 +98,6 @@
         }
     }
     @include phone {
-        padding: 0px 0 60px 0;
         width: 100%;
         img {
             width: 100%;
