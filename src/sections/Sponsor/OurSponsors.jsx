@@ -4,11 +4,14 @@ import "./OurSponsors.scss";
 import google from "../../resources/images/sponsors/silver/google.png";
 import wish from "../../resources/images/sponsors/silver/wish.png";
 */
-import scotiabank from "../../resources/images/sponsors/silver/scotiabank.png";
-import pagerduty from "../../resources/images/sponsors/silver/pagerduty.png";
-import amazon from "../../resources/images/sponsors/bronze/amazon.png";
-import hrt from "../../resources/images/sponsors/bronze/hrt.png";
-import zynga from "../../resources/images/sponsors/bronze/zynga.png";
+import scotiabank from "../../resources/images/sponsors/scotiabank.png";
+import pagerduty from "../../resources/images/sponsors/pagerduty.png";
+import amazon from "../../resources/images/sponsors/amazon.png";
+import hrt from "../../resources/images/sponsors/hrt.png";
+import zynga from "../../resources/images/sponsors/zynga.png";
+import cockroach from "../../resources/images/sponsors/cockroach.png";
+//import expo from "../../resources/images/sponsors/expo.png";
+
 /*
 import facebook from "../../resources/images/sponsors/bronze/facebook.png";
 import splunk from "../../resources/images/sponsors/bronze/splunk.png";
@@ -24,7 +27,13 @@ const OurSponsors = () => (
                 <a href="https://www.aboutamazon.com/">
                     <img src={amazon} alt="Amazon" />
                 </a>
+                <a href="https://www.cockroachlabs.com/careers/">
+                    <img src={cockroach} alt="Cockroach Labs" />
+                </a>
                 {/*
+                    <a href="https://www.cockroachlabs.com/careers/">
+                        <img src={expo} alt="Expo" />
+                    </a>
                     <a href="https://about.google/">
                         <img src={google} alt="Google" />
                     </a>

@@ -13,18 +13,18 @@ const NavBar = ({ routes, logoRoute }) => {
         <nav>
             <div className="nav-container" >
                 <div className="nav-content">
-                    <Link
-                        className="logo-link"
-                        activeClass="active"
-                        to={`/#${logoRoute.sectionId}`}
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                    >
-                        <img src={logoRoute.logoSrc} alt="logo" />
-                    </Link>
-                    <div className={"nav-links-container"}>
+                    <div className="nav-links-container">
+                        <Link
+                            className="logo-link"
+                            activeClass="active"
+                            to={`/#${logoRoute.sectionId}`}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            <img src={logoRoute.logoSrc} alt="logo" />
+                        </Link>
                         <div className="nav-links">
                             <div className="nav-desktop-links">
                                 {routes.map((route) => (
@@ -42,15 +42,15 @@ const NavBar = ({ routes, logoRoute }) => {
                                 ))}
                             </div>
                         </div>
-                        <div className="mobile">
-                            <ModeToggle className="toggle" />
-                            <div className="mobile-menu" onClick={() => setShowNav(!showNav)}>
-                                {showNav ? (
-                                    <img className="nav-x" src={cross} alt="cross" />
-                                ) : (
-                                    <img className="nav-hamburger" src={hamburger} alt="hamburger menu" />
-                                )}
-                            </div>
+                    </div>
+                    <div className="mobile">
+                        <ModeToggle className="toggle" />
+                        <div className="mobile-menu" onClick={() => setShowNav(!showNav)}>
+                            {showNav ? (
+                                <img className="nav-x" src={cross} alt="cross" />
+                            ) : (
+                                <img className="nav-hamburger" src={hamburger} alt="hamburger menu" />
+                            )}
                         </div>
                     </div>
                 </div>

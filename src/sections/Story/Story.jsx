@@ -47,7 +47,7 @@ function Story () {
                     {ourStoryStrings.wicsDescription}
                 </p>
                 <p>
-                    <a href="https://cs.uwaterloo.ca/wics" rel="noreferrer" target="_blank">View Website</a>
+                    <br /><a href="https://cs.uwaterloo.ca/wics" rel="noreferrer" target="_blank">Find out more about WiCS</a>
                 </p>
             </div>
             </div>

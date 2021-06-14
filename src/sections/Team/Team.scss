@@ -1,0 +1,77 @@
+@import "../../constants";
+
+.team {
+    &-container {
+        //height: 1000px;
+        h2 {
+            margin-top: 30px;
+        }
+    }
+
+    &-text {
+        padding: 2px 0 10px 0;
+        @include phone {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 60px;
+            align-self: flex-start;
+            width: 100%;
+        }
+        &-default {
+            display: block;
+            @include phone {
+                display: none;
+            }
+        }
+        &-mobile {
+            display: none;
+            @include phone {
+                display: block;
+            }
+        }
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            p {
+                text-align: left;
+                margin-left: 10px;
+            }
+            img {
+                width: 32px;
+                @include phone {
+                    width: 48px;
+                }
+            }
+        }
+    }
+
+    &-photos {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 20px;
+        align-items: flex-start;
+        @include tablet {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        @include phone {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include small-phone {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        img {
+            align-self: flex-start;
+            width: 100px;
+            height: 100px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            @include phone {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+    }
+}
