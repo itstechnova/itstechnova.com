@@ -60,11 +60,13 @@
     grid-template-columns: repeat(2, 1fr);
     a {
       max-width: 350px;
+      width: 60%;
     }
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
       a {
         max-width: 300px;
+        width: 90%;
       }
     }
     @include phone {
@@ -78,6 +80,7 @@
     grid-template-columns: repeat(2, 1fr);
     a {
       max-width: 200px;
+      width: 40%;
     }
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -88,6 +91,9 @@
     @include phone {
       margin-top: 20px; 
       grid-template-columns: repeat(3, 1fr);
+      a {
+        width: 100%;
+      }
     }
   }
 
