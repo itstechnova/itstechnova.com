@@ -10,7 +10,7 @@ import amazon from "../../resources/images/sponsors/amazon.png";
 import hrt from "../../resources/images/sponsors/hrt.png";
 import zynga from "../../resources/images/sponsors/zynga.png";
 import cockroach from "../../resources/images/sponsors/cockroach.png";
-import expo from "../../resources/images/sponsors/expo.png";
+//import expo from "../../resources/images/sponsors/expo.png";
 
 /*
 import facebook from "../../resources/images/sponsors/bronze/facebook.png";
