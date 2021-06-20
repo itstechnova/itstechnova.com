@@ -72,16 +72,16 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-bronze">
                 <a href="https://www.cockroachlabs.com/careers/">
-                        <img src={expo} alt="Expo" />
+                        <img src={expo} alt="Expo" style={{width:"120%"}}/>
                 </a>
                 <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
-                    <img src={hrt} alt="hrt" style={{width:"170%"}}/>
+                    <img src={hrt} alt="hrt" style={{width:"190%", marginRight:"100%"}}/>
                 </a>
                 <a href="https://www.ratio.city/careers">
-                        <img src={ratiocity} alt="Ratio.city" style={{width:"60%"}}/>
+                        <img src={ratiocity} alt="Ratio.city" style={{width:"70%"}}/>
                 </a>
                 <a href="https://www.zynga.com/jobs/careers/">
-                    <img src={zynga} alt="zynga" />
+                    <img src={zynga} alt="zynga" style={{width:"120%"}}/>
                 </a>
                 
                 {/*
