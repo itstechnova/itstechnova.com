@@ -77,7 +77,7 @@
   &-bronze {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     a {
       max-width: 200px;
       width: 40%;
@@ -90,7 +90,7 @@
     }
     @include phone {
       margin-top: 20px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       a {
         width: 100%;
       }
