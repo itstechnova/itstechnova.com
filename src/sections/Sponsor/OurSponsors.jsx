@@ -11,7 +11,8 @@ import hrt from "../../resources/images/sponsors/hrt.png";
 import zynga from "../../resources/images/sponsors/zynga.png";
 import cockroach from "../../resources/images/sponsors/cockroach.png";
 import expo from "../../resources/images/sponsors/expo.png";
-import sps from "../../resources/images/sponsors/sps.png";
+import ratiocity from "../../resources/images/sponsors/ratiocity.png";
+// import sps from "../../resources/images/sponsors/sps.png";
 
 /*
 import facebook from "../../resources/images/sponsors/bronze/facebook.png";
@@ -70,15 +71,19 @@ const OurSponsors = () => (
                     */}
             </div>
             <div className="our-sponsors-bronze">
+                <a href="https://www.cockroachlabs.com/careers/">
+                        <img src={expo} alt="Expo" />
+                </a>
                 <a href="https://www.hudsonrivertrading.com/careers/">
                     <img src={hrt} alt="hrt" style={{width:"170%"}}/>
+                </a>
+                <a href="https://www.ratio.city/careers">
+                        <img src={ratiocity} alt="Ratio.city" style={{width:"60%"}}/>
                 </a>
                 <a href="https://www.zynga.com/jobs/careers/">
                     <img src={zynga} alt="zynga" />
                 </a>
-                <a href="https://www.cockroachlabs.com/careers/">
-                        <img src={expo} alt="Expo" />
-                </a>
+                
                 {/*
                     <a href="https://about.facebook.com/">
                         <img src={facebook} alt="facebook" />
