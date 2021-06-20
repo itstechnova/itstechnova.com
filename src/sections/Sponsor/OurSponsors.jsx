@@ -74,7 +74,7 @@ const OurSponsors = () => (
                 <a href="https://www.cockroachlabs.com/careers/">
                         <img src={expo} alt="Expo" />
                 </a>
-                <a href="https://www.hudsonrivertrading.com/careers/">
+                <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
                     <img src={hrt} alt="hrt" style={{width:"170%"}}/>
                 </a>
                 <a href="https://www.ratio.city/careers">
