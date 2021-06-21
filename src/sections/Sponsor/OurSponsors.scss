@@ -30,14 +30,13 @@
       width: 90%;
       align-self: center;
       justify-self: center;
+      text-align: center;
       img {
         width: 100%;
+        text-align: center;
       }
     }
     @include phone {
-      padding: 16px;
-    }
-    @include small-phone {
       padding: 10px;
     }
   }
@@ -45,7 +44,11 @@
   &-gold {
     align-content: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    a {
+      max-width: 650px;
+      text-align: center;
+    }
     @include tablet {
       grid-template-columns: repeat(1, 1fr);
       a {
@@ -55,15 +58,14 @@
   }
 
   &-silver {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
     a {
       max-width: 350px;
-      width: 60%;
+      padding: 0 5px;
     }
     @include tablet {
-      grid-template-columns: repeat(2, 1fr);
       a {
         max-width: 300px;
         width: 90%;
@@ -71,26 +73,26 @@
     }
     @include phone {
       margin-top: 20px;
+      justify-content: space-around;
+      padding: 0;
     }
   }
 
   &-bronze {
-    margin-top: 20px;
+    margin-top: 50px;
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     a {
       max-width: 200px;
-      width: 40%;
     }
     @include tablet {
-      grid-template-columns: repeat(2, 1fr);
       a {
         max-width: 150px;
       }
     }
     @include phone {
       margin-top: 20px;
-      grid-template-columns: repeat(2, 1fr);
       a {
         width: 100%;
       }

@@ -20,20 +20,14 @@ import splunk from "../../resources/images/sponsors/bronze/splunk.png";
 */
 import wie from "../../resources/images/logo/wie.png";
 import wics from "../../resources/images/logo/wics.png";
-const amazonStyle = {
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
-    alignContent: "center",
-    width: "60%",
-};
+
 const OurSponsors = () => (
     <div className="our-sponsors-container">
         <h2 className="our-sponsors-title">Our Sponsors</h2>
         <div className="our-sponsors-logos">
             <div className="our-sponsors-gold">
-                <a href="https://www.aboutamazon.com/">
-                    <img src={amazon} alt="Amazon" style={amazonStyle}/> 
+                <a href="https://www.aboutamazon.com/" >
+                    <img src={amazon} alt="Amazon" style={{width: "60%"}}/> 
                 </a>
                 <a href="https://www.cockroachlabs.com/careers/">
                     <img src={cockroach} alt="Cockroach Labs" />
@@ -58,7 +52,7 @@ const OurSponsors = () => (
                     <img src={scotiabank} alt="Scotiabank" />
                 </a>
                 <a href="https://www.pagerduty.com/careers/">
-                    <img src={pagerduty} alt="PagerDuty" style={{width: "70%"}}/>
+                    <img src={pagerduty} alt="PagerDuty" style={{width: "80%"}}/>
                 </a>
                 {/*
                     <a href="https://about.google/">
@@ -72,16 +66,16 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-bronze">
                 <a href="https://www.cockroachlabs.com/careers/">
-                        <img src={expo} alt="Expo" style={{width:"120%"}}/>
+                        <img src={expo} alt="Expo" />
                 </a>
                 <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
-                    <img src={hrt} alt="hrt" style={{width:"190%", marginRight:"100%"}}/>
+                    <img src={hrt} alt="hrt" style={{width: "80%"}} />
                 </a>
                 <a href="https://www.ratio.city/careers">
-                        <img src={ratiocity} alt="Ratio.city" style={{width:"70%"}}/>
+                        <img src={ratiocity} alt="Ratio.city" style={{width: "70%"}} />
                 </a>
                 <a href="https://www.zynga.com/jobs/careers/">
-                    <img src={zynga} alt="zynga" style={{width:"120%"}}/>
+                    <img src={zynga} alt="zynga" />
                 </a>
                 
                 {/*
