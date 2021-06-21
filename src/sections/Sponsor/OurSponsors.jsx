@@ -12,7 +12,7 @@ import zynga from "../../resources/images/sponsors/zynga.png";
 import cockroach from "../../resources/images/sponsors/cockroach.png";
 import expo from "../../resources/images/sponsors/expo.png";
 import ratiocity from "../../resources/images/sponsors/ratiocity.png";
-// import sps from "../../resources/images/sponsors/sps.png";
+import sps from "../../resources/images/sponsors/sps.png";
 
 /*
 import facebook from "../../resources/images/sponsors/bronze/facebook.png";
@@ -31,6 +31,9 @@ const OurSponsors = () => (
                 </a>
                 <a href="https://www.cockroachlabs.com/careers/">
                     <img src={cockroach} alt="Cockroach Labs" />
+                </a>
+                <a href="https://jobs.spscommerce.com/">
+                    <img src={sps} alt="SPS Commerce" />
                 </a>
                 {/* <a href="https://www.spscommerce.com/">
                     <img src={sps} alt="SPS Commerce" />

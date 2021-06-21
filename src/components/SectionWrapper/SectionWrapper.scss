@@ -9,7 +9,7 @@
     &-container {
         width: $width-lg-max;
         padding-top: 80px;
-        padding-bottom: 64px;
+        padding-bottom: 16px;
         @include tablet {
             width: 100%;
         }

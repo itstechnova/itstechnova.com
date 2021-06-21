@@ -42,7 +42,7 @@ const FAQ = () => (
           <ExpandableCard question={"What if I don’t like coding?"}>
           That's ok! Hackers have many roles including project management and prototyping! Your team will need people to help ideate, design, and pitch your hack in order to bring it to life, so your unique skills will definitely be an asset!
           </ExpandableCard>
-          <ExpandableCard question={"Why is this event women only?"}>
+          <ExpandableCard question={"Why is this event women+ only?"}>
             Women+ are underrepresented in this field, and although there’s been progress, there is still a long way to go! Thus we want to create a safe and welcoming space for our hackers to grow and create unique projects.
           </ExpandableCard>
           <ExpandableCard question={"Is there a cost to attend?"}>
