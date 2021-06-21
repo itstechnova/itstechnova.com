@@ -10,7 +10,9 @@ import amazon from "../../resources/images/sponsors/amazon.png";
 import hrt from "../../resources/images/sponsors/hrt.png";
 import zynga from "../../resources/images/sponsors/zynga.png";
 import cockroach from "../../resources/images/sponsors/cockroach.png";
-//import expo from "../../resources/images/sponsors/expo.png";
+import expo from "../../resources/images/sponsors/expo.png";
+import ratiocity from "../../resources/images/sponsors/ratiocity.png";
+// import sps from "../../resources/images/sponsors/sps.png";
 
 /*
 import facebook from "../../resources/images/sponsors/bronze/facebook.png";
@@ -24,16 +26,16 @@ const OurSponsors = () => (
         <h2 className="our-sponsors-title">Our Sponsors</h2>
         <div className="our-sponsors-logos">
             <div className="our-sponsors-gold">
-                <a href="https://www.aboutamazon.com/">
-                    <img src={amazon} alt="Amazon" />
+                <a href="https://www.aboutamazon.com/" >
+                    <img src={amazon} alt="Amazon" style={{width: "60%"}}/> 
                 </a>
                 <a href="https://www.cockroachlabs.com/careers/">
                     <img src={cockroach} alt="Cockroach Labs" />
                 </a>
+                {/* <a href="https://www.spscommerce.com/">
+                    <img src={sps} alt="SPS Commerce" />
+                </a> */}
                 {/*
-                    <a href="https://www.cockroachlabs.com/careers/">
-                        <img src={expo} alt="Expo" />
-                    </a>
                     <a href="https://about.google/">
                         <img src={google} alt="Google" />
                     </a>
@@ -50,7 +52,7 @@ const OurSponsors = () => (
                     <img src={scotiabank} alt="Scotiabank" />
                 </a>
                 <a href="https://www.pagerduty.com/careers/">
-                    <img src={pagerduty} alt="PagerDuty" />
+                    <img src={pagerduty} alt="PagerDuty" style={{width: "80%"}}/>
                 </a>
                 {/*
                     <a href="https://about.google/">
@@ -63,12 +65,19 @@ const OurSponsors = () => (
                     */}
             </div>
             <div className="our-sponsors-bronze">
-                <a href="https://www.hudsonrivertrading.com/careers/">
-                    <img src={hrt} alt="hrt" />
+                <a href="https://www.cockroachlabs.com/careers/">
+                        <img src={expo} alt="Expo" />
+                </a>
+                <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
+                    <img src={hrt} alt="hrt" style={{width: "80%"}} />
+                </a>
+                <a href="https://www.ratio.city/careers">
+                        <img src={ratiocity} alt="Ratio.city" style={{width: "70%"}} />
                 </a>
                 <a href="https://www.zynga.com/jobs/careers/">
                     <img src={zynga} alt="zynga" />
                 </a>
+                
                 {/*
                     <a href="https://about.facebook.com/">
                         <img src={facebook} alt="facebook" />
