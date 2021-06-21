@@ -70,7 +70,7 @@ function Stories() {
     quote: ourStoryStrings.quote1Text,
     name: ourStoryStrings.quote1Name,
     role: ourStoryStrings.quote1Role,
-    image: storyImg3,
+    image: storyImg1,
     screenWidth: window.innerWidth,
   })
 
