@@ -68,7 +68,7 @@ const OurSponsors = () => (
                     */}
             </div>
             <div className="our-sponsors-bronze">
-                <a href="https://www.cockroachlabs.com/careers/">
+                <a href="https://expo.io/">
                         <img src={expo} alt="Expo" />
                 </a>
                 <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
