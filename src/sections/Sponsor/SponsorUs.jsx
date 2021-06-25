@@ -1,11 +1,28 @@
 import React from "react";
-//import Carousel from 'react-bootstrap/Carousel';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import Button from "../../components/Button/Button";
-//import Stories from "../../components/Stories/Stories";
+import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
+
 import plantAndBee from "../../resources/images/graphics/plant-and-bee.svg";
-import "./SponsorUs.scss";
+import scotiabank from "../../resources/images/sponsors/scotiabank.png";
+import pagerduty from "../../resources/images/sponsors/pagerduty.png";
 import OurSponsors from "./OurSponsors";
+import ourStoryStrings from "../../resources/strings/story";
+import "./SponsorUs.scss";
+
+var showcase = [
+    {
+        quote: ourStoryStrings.quote1Text,
+        link: ourStoryStrings.quote1Name,
+        image: scotiabank,
+    },
+    {
+        quote: ourStoryStrings.quote2Text,
+        link: ourStoryStrings.quote2Name,
+        image: pagerduty,
+    },
+]
+
 
 const SponsorUs = () => (
     <SectionWrapper id="sponsor">
@@ -25,8 +42,10 @@ const SponsorUs = () => (
                     <img className="plant-and-bee" src={plantAndBee} alt="plant and bee" />
                 </div>
             </div>
-            <h2 className="sponsor-us-showcase"> </h2>
-            {/*<Stories />*/}
+            <h2>Sponsor Showcase</h2>
+            <div className="sponsor-us-showcase">
+                {<Carousel content={showcase} type={CarouselTypes.sponsor} />}
+            </div>            
             <OurSponsors />
         </div>
     </SectionWrapper>

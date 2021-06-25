@@ -72,26 +72,6 @@
         padding-bottom: 20px;
       }
     }
-    /*
-    .leaves {
-      width: 50%;
-      padding-top: 60px;
-      animation: rotate 5s linear infinite;
-      @include phone {
-        content: url("../../resources/images/graphics/balloon-and-bee.svg");
-        width: 80%;
-        padding-top: 0;
-        animation: bounce-up 3s linear infinite;
-      }
-    }
-    .bee {
-      width: 25%;
-      animation: bounce-up 3s linear infinite;
-      @include phone {
-        display: none;
-      }
-    }
-    */
   }
 
   &-title {
@@ -112,20 +92,19 @@
       }
     }
   }
+
   &-image {
     width: 30%;
   }
-  &-showcase {
+
+  h2 {
     margin-top: 1rem;
-    margin-bottom: 3rem;
     @include phone {
       margin-bottom: 2rem;
     }
   }
-  &-carousel {
-    display: inline-block;
-    margin-left: 1ch;
-    height: 92vh;
-    width: 200ch;
+
+  &-showcase {
+    margin: 50px 96px;
   }
 }
