@@ -39,8 +39,6 @@ import prianka from "../../resources/images/team/prianka.jpg"
 import prianka2 from "../../resources/images/team/prianka2.jpg"
 import sam from "../../resources/images/team/sam.jpg"
 import sam2 from "../../resources/images/team/sam2.jpg"
-import zoey from "../../resources/images/team/zoey.jpg"
-import zoey2 from "../../resources/images/team/zoey2.png"
 
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import linkedin from "../../resources/images/socials/linkedinFill.svg";
@@ -65,7 +63,6 @@ const photos = [
     { hot: lucy, goof: lucy2, name: "Lucy Shen (she/her)", role: "Finance Lead, Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/lucy-shen/" },
     { hot: prianka, goof: prianka2, name: "Prianka Hoque (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/prianka-hoque/" },
     { hot: sam, goof: sam2, name: "Samantha Kaiser (she/her)", role: "Finance Coordinator, Logistics Coordinator", linkedin: "https://www.linkedin.com/in/samanthakaiser03/" },
-    { hot: zoey, goof: zoey2, name: "Zoey Vu (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/zoeyvu/" },
 ]
 
 const PhotoCard = (props) => {
