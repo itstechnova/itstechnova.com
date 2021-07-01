@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Team.scss";
-
+import abby from "../../resources/images/team/abby.jpg"
+import abby2 from "../../resources/images/team/abby2.jpg"
 import alex from "../../resources/images/team/alex.jpg"
 import alex2 from "../../resources/images/team/alex2.jpg"
 import amyl from "../../resources/images/team/amyl.jpg"
@@ -39,11 +40,15 @@ import prianka from "../../resources/images/team/prianka.jpg"
 import prianka2 from "../../resources/images/team/prianka2.jpg"
 import sam from "../../resources/images/team/sam.jpg"
 import sam2 from "../../resources/images/team/sam2.jpg"
+import tianke from "../../resources/images/team/tianke.jpg"
+import tianke2 from "../../resources/images/team/tianke2.jpg"
+
 
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import linkedin from "../../resources/images/socials/linkedinFill.svg";
 
 const photos = [
+    { hot: abby, goof: abby2, name: "Abby Zinman (she/her)", role: "Marketing Coordinator", linkedin: "https://www.linkedin.com/in/abby-zinman-79212a1aa/" },
     { hot: alex, goof: alex2, name: "Alex Bray (she/her)", role: "Design Co-Lead", linkedin: "https://www.linkedin.com/in/alex-bray-/" },
     { hot: amyl, goof: amyl2, name: "Amy Li (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/aamyli/" },
     { hot: amys, goof: amys2, name: "Amy Shao (she/her)", role: "Engineering Lead", linkedin: "https://www.linkedin.com/in/amy-shao-/" },
@@ -63,6 +68,7 @@ const photos = [
     { hot: lucy, goof: lucy2, name: "Lucy Shen (she/her)", role: "Finance Lead, Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/lucy-shen/" },
     { hot: prianka, goof: prianka2, name: "Prianka Hoque (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/prianka-hoque/" },
     { hot: sam, goof: sam2, name: "Samantha Kaiser (she/her)", role: "Finance Coordinator, Logistics Coordinator", linkedin: "https://www.linkedin.com/in/samanthakaiser03/" },
+    { hot: tianke, goof: tianke2, name: "Tianke Li (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/tianke-li-57b7b4193/" },
 ]
 
 const PhotoCard = (props) => {
