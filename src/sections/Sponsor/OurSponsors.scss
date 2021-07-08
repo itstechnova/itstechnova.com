@@ -61,6 +61,7 @@
   &-silver {
     margin-top: 60px;
     display: flex;
+    gap: 45px;
     justify-content: center;
     a {
       max-width: 400px;
@@ -83,7 +84,7 @@
     margin-top: 60px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     a {
       max-width: 200px;
     }
