@@ -27,13 +27,13 @@ const OurSponsors = () => (
         <div className="our-sponsors-logos">
             <div className="our-sponsors-gold">
                 <a href="https://www.aboutamazon.com/" >
-                    <img src={amazon} alt="Amazon" style={{width: "60%"}}/> 
+                    <img src={amazon} alt="Amazon" style={{width: "45%"}}/> 
                 </a>
                 <a href="https://www.cockroachlabs.com/careers/">
-                    <img src={cockroach} alt="Cockroach Labs" />
+                    <img src={cockroach} alt="Cockroach Labs" style={{width: "70%"}} />
                 </a>
                 <a href="https://jobs.spscommerce.com/">
-                    <img src={sps} alt="SPS Commerce" />
+                    <img src={sps} alt="SPS Commerce" style={{width: "70%"}}/>
                 </a>
                 {/*
                     <a href="https://about.google/">
