@@ -9,6 +9,7 @@ const Footer = () => (
                 <span className="footer-title">TechNova</span>
             </div>
             <p className="title">Made with ❤️ by UWaterloo Students</p>
+            <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" >Code of Conduct</a>
         </div>
     </React.Fragment>
 );

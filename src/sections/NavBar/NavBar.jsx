@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./NavBar.scss";
 import ModeToggle from "../../components/ModeToggle/ModeToggle";
-//import mlhBanner from "../../resources/images/graphics/mlh-banner.svg";
+import mlhBanner from "../../resources/images/graphics/mlh-banner.svg";
 import cross from "../../resources/images/icons/cross.svg";
 import hamburger from "../../resources/images/icons/hamburger.svg";
 
@@ -54,7 +54,7 @@ const NavBar = ({ routes, logoRoute }) => {
                         </div>
                     </div>
                 </div>
-                {/*<img className="mlh-banner" src={mlhBanner} alt="mlh-banner" />*/}
+                {<img className="mlh-banner" src={mlhBanner} alt="mlh-banner" />}
                 {showNav && <div className="nav-mobile-links">
                     {routes.map((route) => (
                         <Link
