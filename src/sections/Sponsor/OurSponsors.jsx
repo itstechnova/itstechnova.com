@@ -27,13 +27,13 @@ const OurSponsors = () => (
         <div className="our-sponsors-logos">
             <div className="our-sponsors-gold">
                 <a href="https://www.aboutamazon.com/" >
-                    <img src={amazon} alt="Amazon" style={{width: "60%"}}/> 
+                    <img src={amazon} alt="Amazon" style={{width: "55%"}}/> 
                 </a>
                 <a href="https://www.cockroachlabs.com/careers/">
-                    <img src={cockroach} alt="Cockroach Labs" style={{width: "80%"}} />
+                    <img src={cockroach} alt="Cockroach Labs" style={{width: "90%"}} />
                 </a>
                 <a href="https://jobs.spscommerce.com/">
-                    <img src={sps} alt="SPS Commerce" style={{width: "80%"}}/>
+                    <img src={sps} alt="SPS Commerce" style={{width: "85%"}}/>
                 </a>
                 {/*
                     <a href="https://about.google/">
@@ -49,7 +49,7 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-silver">
                 <a href="https://about.facebook.com/">
-                        <img src={facebook} alt="facebook" style={{width: "130%"}}/>
+                        <img src={facebook} alt="facebook" style={{width: "125%"}}/>
                 </a>
                 <a href="https://www.scotiabank.com/ca/en/about.html">
                     <img src={scotiabank} alt="Scotiabank" style={{width: "120%"}}/>
