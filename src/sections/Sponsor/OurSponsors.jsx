@@ -49,13 +49,13 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-silver">
                 <a href="https://about.facebook.com/">
-                        <img src={facebook} alt="facebook" style={{width: "125%"}}/>
+                        <img src={facebook} alt="facebook" style={{width: "90%"}}/>
                 </a>
                 <a href="https://www.scotiabank.com/ca/en/about.html">
-                    <img src={scotiabank} alt="Scotiabank" style={{width: "120%"}}/>
+                    <img src={scotiabank} alt="Scotiabank" style={{width: "100%"}}/>
                 </a>
                 <a href="https://www.pagerduty.com/careers/">
-                    <img src={pagerduty} alt="PagerDuty" style={{width: "90%"}}/>
+                    <img src={pagerduty} alt="PagerDuty" style={{width: "80%"}}/>
                 </a>
                 {/*
                     <a href="https://about.google/">
@@ -69,7 +69,7 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-bronze">
                 <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
-                    <img src={hrt} alt="hrt" style={{width: "80%"}} />
+                    <img src={hrt} alt="hrt" style={{width: "70%"}} />
                 </a>
                 <a href="https://campus.rogers.com/">
                         <img src={rogers} alt="Rogers" />
@@ -78,10 +78,10 @@ const OurSponsors = () => (
                     <img src={zynga} alt="zynga" />
                 </a>
                 <a href="https://expo.io/">
-                        <img src={expo} alt="Expo" style={{width: "65%"}}/>
+                        <img src={expo} alt="Expo" style={{width: "75%"}}/>
                 </a>
                 <a href="https://www.ratio.city/">
-                        <img src={ratiocity} alt="Ratio.city" style={{width: "45%"}} />
+                        <img src={ratiocity} alt="Ratio.city" style={{width: "50%"}} />
                 </a>
             </div>
         </div>

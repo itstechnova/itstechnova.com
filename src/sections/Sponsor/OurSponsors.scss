@@ -17,15 +17,19 @@
 
   &-title {
     margin-top: 50px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     @include phone {
       text-align: left;
     }
   }
 
   &-logos {
-    padding: 24px;
+    padding: 36px;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     a {
       width: 90%;
       align-self: center;
@@ -37,11 +41,12 @@
       }
     }
     @include phone {
-      padding: 10px;
+      padding: 16px;
     }
   }
 
   &-gold {
+    width: 60%;
     align-content: center;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -51,36 +56,42 @@
       text-align: center;
     }
     @include tablet {
-      grid-template-columns: repeat(1, 1fr);
       a {
         max-width: 450px;
+      }
+    }
+    @include phone {
+      width: 90%;
+      a {
+        padding-top: 10px;
       }
     }
   }
 
   &-silver {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    a {
-      max-width: 400px;
-      padding: 0 35px;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+    display: grid;
+    gap: 20px;
     @include tablet {
-      a {
-        max-width: 300px;
-        width: 90%;
-      }
+      gap: 0px;
     }
     @include phone {
-      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 40px;
       justify-content: space-around;
-      padding: 0;
+      gap: 8px;
+      a {
+        img {
+          max-width: 100%;
+        }
+      }
     }
   }
 
   &-bronze {
-    margin-top: 20px;
+    margin-top: 60px;
+    width: 80%;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(5, 1fr);
@@ -88,14 +99,21 @@
       max-width: 200px;
     }
     @include tablet {
+      width: 100%;
       a {
         max-width: 150px;
       }
     }
     @include phone {
-      margin-top: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 40px;
+      gap: 8px;
+      width: 80%;
       a {
         width: 100%;
+        img {
+          height: 100%;
+        }
       }
     }
   }
