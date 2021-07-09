@@ -64,6 +64,11 @@ const Landing = () => {
                 </div>
                 <div className="landing-button-container">
                     <Button link={landing.appLink} label={landing.applyCTA} />
+                    <Button link={landing.mentorAppLink} label={landing.mentorApplyCTA} type="button-2"/>
+                </div>
+                <div className="landing-button-container-mobile">
+                    <Button link={landing.appLink} label={landing.applyCTAMobile} />
+                    <Button link={landing.mentorAppLink} label={landing.mentorApplyCTAMobile} type="button-2"/>
                 </div>
 
                 <div className="landing-graphic-container">

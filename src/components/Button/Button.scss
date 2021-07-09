@@ -1,6 +1,6 @@
 @import "../../constants";
 
-.button-smaller {
+.button, .button-2 {
     padding: 15px 30px;
     display: flex;
     justify-content: center;
@@ -25,3 +25,10 @@
         transition: 0.1s linear;
     }
 }
+
+.button-2 {
+    background-color: transparent;
+    color: $accent-pink;
+    border: 2px solid $accent-pink;
+}
+

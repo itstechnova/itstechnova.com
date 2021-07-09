@@ -180,9 +180,6 @@
             align-self: flex-end;
             margin: 20px 0 0 0;
         }
-        @include small-phone {
-            margin: 30px 0 20px 0;
-        }
     }
     
 
@@ -234,9 +231,37 @@
         height: auto;
         align-self: flex-start;
         justify-self: flex-start;
-        padding-top: 20px;
+        padding-top: 40px;
+        display: flex;
+        gap: 16px;
+        @include tablet {
+            padding-top: 30px;
+            flex-direction: column;
+        }
         @include phone {
+            display: none;
+        }
+    }
+
+    &-button-container-mobile {
+        display: none;
+        @include phone {
+            display: flex;
+            gap: 8px;
+            padding-top: 16px;
+            flex-direction: row;
             justify-self: center;
+            a {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+        @include small-phone {
+            padding-top: 10px;
+            a {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
         }
     }
 
