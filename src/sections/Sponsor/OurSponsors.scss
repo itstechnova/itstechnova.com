@@ -61,9 +61,10 @@
       }
     }
     @include phone {
-      width: 90%;
+      width: 100%;
       a {
         padding-top: 10px;
+        max-width: none;
       }
     }
   }
@@ -91,25 +92,57 @@
 
   &-bronze {
     margin-top: 60px;
-    width: 80%;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
+    width: 50%;
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
     a {
       max-width: 200px;
     }
     @include tablet {
-      width: 100%;
+      width: 60%;
       a {
-        max-width: 150px;
+        min-width: 80px;
       }
     }
     @include phone {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin-top: 40px;
       gap: 8px;
-      width: 80%;
+      width: 90%;
       a {
+        width: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &-startup {
+    margin-top: 60px;
+    width: 18%;
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+    a {
+      min-width: 60px;
+    }
+    @include tablet {
+      width: 25%;
+      a {
+        min-width: 50px;
+      }
+    }
+    @include phone {
+      width: 38%;
+      margin-top: 20px;
+      gap: 16px;
+      a {
+        min-width: 0;
         width: 100%;
         img {
           height: 100%;

@@ -77,11 +77,13 @@ const OurSponsors = () => (
                 <a href="https://www.zynga.com/jobs/careers/">
                     <img src={zynga} alt="zynga" />
                 </a>
+            </div>
+            <div className="our-sponsors-startup">
                 <a href="https://expo.io/">
-                        <img src={expo} alt="Expo" style={{width: "75%"}}/>
+                        <img src={expo} alt="Expo" style={{width: "100%"}}/>
                 </a>
                 <a href="https://www.ratio.city/">
-                        <img src={ratiocity} alt="Ratio.city" style={{width: "50%"}} />
+                        <img src={ratiocity} alt="Ratio.city" style={{width: "80%"}} />
                 </a>
             </div>
         </div>
