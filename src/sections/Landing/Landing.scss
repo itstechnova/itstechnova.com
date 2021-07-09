@@ -176,7 +176,7 @@
                 font-family: $font-logo;
             }
             grid-area: text-title;
-            display: block;
+            display: flex;
             align-self: flex-end;
             margin: 20px 0 0 0;
         }

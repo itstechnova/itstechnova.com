@@ -58,6 +58,7 @@ $dark-blue: #7D92DB;
     --sponsor-logos: transparent;
     --nav-shadow-color: #FFD5CF;
     --image-shadow-color: #FF6078;
+    --mlh-logo: url("https://static.mlh.io/brand-assets/logo/official/mlh-logo-black.svg");
 }
 
 @mixin darkmode() {
@@ -72,6 +73,8 @@ $dark-blue: #7D92DB;
     --sponsor-logos: #C0CBF2;
     --nav-shadow-color: #19123c;
     --image-shadow-color: #FFA69E;
+    --mlh-logo: url("https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg");
+
 }
 
 // Breakpoints
