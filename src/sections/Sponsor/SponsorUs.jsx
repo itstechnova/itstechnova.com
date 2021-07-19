@@ -1,11 +1,21 @@
 import React from "react";
-//import Carousel from 'react-bootstrap/Carousel';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import Button from "../../components/Button/Button";
-//import Stories from "../../components/Stories/Stories";
+import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
+
 import plantAndBee from "../../resources/images/graphics/plant-and-bee.svg";
-import "./SponsorUs.scss";
+import amazon from "../../resources/images/sponsors/amazon.png";
 import OurSponsors from "./OurSponsors";
+import "./SponsorUs.scss";
+
+var showcase = [
+    {
+        quote: "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
+        link: "https://www.amazon.jobs/student-programs",
+        image: amazon,
+    },
+]
+
 
 const SponsorUs = () => (
     <SectionWrapper id="sponsor">
@@ -25,8 +35,10 @@ const SponsorUs = () => (
                     <img className="plant-and-bee" src={plantAndBee} alt="plant and bee" />
                 </div>
             </div>
-            <h2 className="sponsor-us-showcase"> </h2>
-            {/*<Stories />*/}
+            <h2 style={{marginTop:"24px"}}>Sponsor Showcase</h2>
+            <div className="sponsor-us-showcase">
+                {<Carousel content={showcase} type={CarouselTypes.sponsor} />}
+            </div>            
             <OurSponsors />
         </div>
     </SectionWrapper>
