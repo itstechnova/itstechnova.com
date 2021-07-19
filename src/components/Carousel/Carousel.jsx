@@ -77,13 +77,13 @@ export const Carousel = ({ content, type }) => {
 
     const prevSlide = () => {
         setResetTimer(true);
-        const newSlide = currentSlide - 1 < 0 ? content.length : currentSlide - 1;
+        const newSlide = currentSlide - 1 < 0 ? content.length - 1 : currentSlide - 1;
         setcurrentSlide(newSlide);
     };
 
     const SpeechBubble = () => (
         <div className="carousel-speech-bubble">
-            {screenWidth && screenWidth <= 800
+            {screenWidth && screenWidth <= 900
                 ? <img className="carousel-background-bubble2" alt="" src={speechBackgroundMobile} />
                 : <img className="carousel-background-bubble" alt="" src={speechBackground} />
             }

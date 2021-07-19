@@ -4,22 +4,15 @@ import Button from "../../components/Button/Button";
 import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
 
 import plantAndBee from "../../resources/images/graphics/plant-and-bee.svg";
-import scotiabank from "../../resources/images/sponsors/scotiabank.png";
-import pagerduty from "../../resources/images/sponsors/pagerduty.png";
+import amazon from "../../resources/images/sponsors/amazon.png";
 import OurSponsors from "./OurSponsors";
-import ourStoryStrings from "../../resources/strings/story";
 import "./SponsorUs.scss";
 
 var showcase = [
     {
-        quote: ourStoryStrings.quote1Text,
-        link: ourStoryStrings.quote1Name,
-        image: scotiabank,
-    },
-    {
-        quote: ourStoryStrings.quote2Text,
-        link: ourStoryStrings.quote2Name,
-        image: pagerduty,
+        quote: "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
+        link: "https://www.amazon.jobs/student-programs",
+        image: amazon,
     },
 ]
 
@@ -42,7 +35,7 @@ const SponsorUs = () => (
                     <img className="plant-and-bee" src={plantAndBee} alt="plant and bee" />
                 </div>
             </div>
-            <h2>Sponsor Showcase</h2>
+            <h2 style={{marginTop:"24px"}}>Sponsor Showcase</h2>
             <div className="sponsor-us-showcase">
                 {<Carousel content={showcase} type={CarouselTypes.sponsor} />}
             </div>            

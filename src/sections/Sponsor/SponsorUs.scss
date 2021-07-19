@@ -106,5 +106,8 @@
 
   &-showcase {
     margin: 50px 96px;
+    @include phone {
+      margin: 0px;
+    }
   }
 }
