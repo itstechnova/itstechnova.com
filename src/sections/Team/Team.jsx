@@ -24,6 +24,8 @@ import caroline from "../../resources/images/team/caroline.jpg"
 import caroline2 from "../../resources/images/team/caroline2.png"
 import celine from "../../resources/images/team/celine.png"
 import celine2 from "../../resources/images/team/celine2.jpg"
+import dea from "../../resources/images/team/dea.jpg"
+import dea2 from "../../resources/images/team/dea2.jpg"
 import faith from "../../resources/images/team/faith.jpeg"
 import faith2 from "../../resources/images/team/faith2.png"
 import grace from "../../resources/images/team/grace.jpg"
@@ -60,6 +62,7 @@ const photos = [
     { hot: brittney, goof: brittney2, name: "Brittney Cheng (she/her)", role: "Design Co-Lead", linkedin: "https://www.linkedin.com/in/brittney-cheng/" },
     { hot: caroline, goof: caroline2, name: "Caroline Chen (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/itscarolinechen/" },
     { hot: celine, goof: celine2, name: "Celine Nguyen (she/her)", role: "Logistics Lead", linkedin: "https://www.linkedin.com/in/celineqnnguyen/" },
+    { hot: dea, goof: dea2, name: "Dea Gjini (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/dea-gjini/" },
     { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
     { hot: grace, goof: grace2, name: "Grace Nguyen (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/grace-nguyen-ba5028158/" },
     { hot: jas, goof: jas2, name: "Jasmine Bal (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/jasminekbal/" },
