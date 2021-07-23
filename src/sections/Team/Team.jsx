@@ -38,6 +38,8 @@ import kun from "../../resources/images/team/kun.jpg"
 import kun2 from "../../resources/images/team/kun2.jpg"
 import lucy from "../../resources/images/team/lucy.jpg"
 import lucy2 from "../../resources/images/team/lucy2.jpg"
+import mehak from "../../resources/images/team/mehak.jpg"
+import mehak2 from "../../resources/images/team/mehak2.jpg"
 import prianka from "../../resources/images/team/prianka.jpg"
 import prianka2 from "../../resources/images/team/prianka2.jpg"
 import sam from "../../resources/images/team/sam.jpg"
@@ -69,6 +71,7 @@ const photos = [
     { hot: kaylee, goof: kaylee2, name: "Kaylee Ainsworth (she/they)", role: "Marketing Coordinator, Designer", linkedin: "http://linkedin.com/in/kaylee-ainsworth/" },
     { hot: kun, goof: kun2, name: "Kun Zhu (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/kun-zhu/" },
     { hot: lucy, goof: lucy2, name: "Lucy Shen (she/her)", role: "Finance Lead, Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/lucy-shen/" },
+    { hot: mehak, goof: mehak2, name: "Mehak Dhaliwal (she/her)", role: "Logistics Coordinator", linkedin: "http://www.linkedin.com/in/mehak-dhaliwal" },
     { hot: prianka, goof: prianka2, name: "Prianka Hoque (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/prianka-hoque/" },
     { hot: sam, goof: sam2, name: "Samantha Kaiser (she/her)", role: "Finance Coordinator, Logistics Coordinator", linkedin: "https://www.linkedin.com/in/samanthakaiser03/" },
     { hot: tianke, goof: tianke2, name: "Tianke Li (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/tianke-li-57b7b4193/" },
