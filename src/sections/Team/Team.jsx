@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Team.scss";
-import abby from "../../resources/images/team/abby.jpg"
-import abby2 from "../../resources/images/team/abby2.jpg"
 import alex from "../../resources/images/team/alex.jpg"
 import alex2 from "../../resources/images/team/alex2.jpg"
 import amyl from "../../resources/images/team/amyl.jpg"
@@ -52,7 +50,6 @@ import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import linkedin from "../../resources/images/socials/linkedinFill.svg";
 
 const photos = [
-    { hot: abby, goof: abby2, name: "Abby Zinman (she/her)", role: "Marketing Coordinator", linkedin: "https://www.linkedin.com/in/abby-zinman-79212a1aa/" },
     { hot: alex, goof: alex2, name: "Alex Bray (she/her)", role: "Design Co-Lead", linkedin: "https://www.linkedin.com/in/alex-bray-/" },
     { hot: amyl, goof: amyl2, name: "Amy Li (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/aamyli/" },
     { hot: amys, goof: amys2, name: "Amy Shao (she/her)", role: "Engineering Lead", linkedin: "https://www.linkedin.com/in/amy-shao-/" },
