@@ -5,6 +5,8 @@ import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
 
 import plantAndBee from "../../resources/images/graphics/plant-and-bee.svg";
 import amazon from "../../resources/images/sponsors/amazon.png";
+import cockroach from "../../resources/images/sponsors/cockroach.png";
+
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
 
@@ -13,6 +15,11 @@ var showcase = [
         quote: "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
         link: "https://www.amazon.jobs/student-programs",
         image: amazon,
+    },
+    {
+        quote: "Cockroach Labs is a company building CockroachDB, a distributed SQL database that helps you build cloud-native apps that survive everything and thrive everywhere -- just like a cockroach!",
+        link: "https://www.cockroachlabs.com/careers/",
+        image: cockroach,
     },
 ]
 

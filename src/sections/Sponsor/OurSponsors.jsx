@@ -15,6 +15,10 @@ import expo from "../../resources/images/sponsors/expo.png";
 import ratiocity from "../../resources/images/sponsors/ratiocity.png";
 import sps from "../../resources/images/sponsors/sps.png";
 import rogers from "../../resources/images/sponsors/rogers.png";
+import d2l from "../../resources/images/sponsors/d2l.png";
+import microsoft from "../../resources/images/sponsors/microsoft.png";
+
+
 /*
 import splunk from "../../resources/images/sponsors/bronze/splunk.png";
 */
@@ -35,6 +39,9 @@ const OurSponsors = () => (
                 <a href="https://jobs.spscommerce.com/">
                     <img src={sps} alt="SPS Commerce" style={{width: "85%"}}/>
                 </a>
+                <a href="https://careers.microsoft.com/us/en">
+                    <img src={microsoft} alt="Microsoft" style={{width: "70%"}}/>
+                </a>
                 {/*
                     <a href="https://about.google/">
                         <img src={google} alt="Google" />
@@ -49,12 +56,12 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-silver">
                 <a href="https://about.facebook.com/">
-                        <img src={facebook} alt="facebook" style={{width: "90%"}}/>
+                        <img src={facebook} alt="Facebook" style={{width: "90%"}}/>
                 </a>
                 <a href="https://www.scotiabank.com/ca/en/about.html">
                     <img src={scotiabank} alt="Scotiabank" style={{width: "100%"}}/>
                 </a>
-                <a href="https://www.pagerduty.com/careers/">
+                <a className="pagerduty" href="https://www.pagerduty.com/careers/">
                     <img src={pagerduty} alt="PagerDuty" style={{width: "80%"}}/>
                 </a>
                 {/*
@@ -69,13 +76,16 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-bronze">
                 <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
-                    <img src={hrt} alt="hrt" style={{width: "70%"}} />
+                    <img src={hrt} alt="HRT" style={{width: "70%"}} />
                 </a>
                 <a href="https://campus.rogers.com/">
                         <img src={rogers} alt="Rogers" />
                 </a>
                 <a href="https://www.zynga.com/jobs/careers/">
-                    <img src={zynga} alt="zynga" />
+                    <img src={zynga} alt="Zynga" />
+                </a>
+                <a className="d2l" href="https://www.d2l.com/careers/">
+                    <img src={d2l} alt="D2L" style={{width: "70%"}} />
                 </a>
             </div>
             <div className="our-sponsors-startup">
@@ -90,10 +100,10 @@ const OurSponsors = () => (
         <h2 className="our-sponsors-title">Our Partners</h2>
         <div className="our-sponsors-partners">
             <a href="https://cs.uwaterloo.ca/wics">
-                <img src={wics} alt="wics" />
+                <img src={wics} alt="WiCS" />
             </a>
             <a href="https://uwaterloo.ca/women-in-engineering/">
-                <img src={wie} alt="wie" />
+                <img src={wie} alt="WiE" />
             </a>
         </div>
     </div>

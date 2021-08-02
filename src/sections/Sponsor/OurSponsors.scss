@@ -87,21 +87,27 @@
           max-width: 100%;
         }
       }
+      .pagerduty {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 50%;
+        align-items: center;
+        justify-self: center;
+      }
     }
   }
 
   &-bronze {
     margin-top: 60px;
-    width: 50%;
+    padding: 0 80px;
     display: flex;
-    gap: 36px;
+    gap: 24px;
     justify-content: center;
     align-items: center;
     a {
-      max-width: 200px;
+      max-width: 150px;
     }
     @include tablet {
-      width: 60%;
       a {
         min-width: 80px;
       }
@@ -111,12 +117,14 @@
       grid-template-columns: repeat(3, 1fr);
       margin-top: 40px;
       gap: 8px;
-      width: 90%;
       a {
         width: 100%;
         img {
           height: 100%;
         }
+      }
+      .d2l {
+        grid-column-start: 2;
       }
     }
   }
