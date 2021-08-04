@@ -24,13 +24,13 @@ var showcase = [
         image: cockroach,
     },
     {
-        quote: "SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best. To date, more than 95,000 companies in retail, distribution, grocery and e-commerce have chosen SPS as their retail network. SPS has achieved 82 consecutive quarters of revenue growth and is headquartered in Minneapolis. For additional information, contact SPS at 866-245-8100 or visit www.spscommerce.com.",
-        link: "https://www.spscommerce.com/",
+        quote: <p>SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best. To date, more than 95,000 companies in retail, distribution, grocery and e-commerce have chosen SPS as their retail network. SPS has achieved 82 consecutive quarters of revenue growth and is headquartered in Minneapolis. For additional information, contact SPS at 866-245-8100 or visit <a style={{fontWeight: 'normal'}} href="https://www.spscommerce.com/">www.spscommerce.com</a>.</p>,
+        link: "https://jobs.spscommerce.com/",
         image: sps,
     },
     {
         quote: "PagerDuty is the digital operations management platform that empowers the right action, when seconds matter. For teams who build and run the digital systems that power business, PagerDuty is the best way to manage urgent, mission-critical work to keep operations running smoothly, without disruption of customer experiences. Over 40% of the Fortune 500 place PagerDuty at the center of their digital infrastructure to manage unplanned tasks, events, or opportunities. With more than 1,000 employees across offices in San Francisco, Atlanta, Toronto, Sydney, and London, PagerDuty is helping modern enterprises redefine their approach to operations in a digital-first world.",
-        link: "https://www.pagerduty.com/",
+        link: "https://www.pagerduty.com/careers/",
         image: pagerduty,
     },
 ]
