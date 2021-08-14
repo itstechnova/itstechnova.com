@@ -5,6 +5,8 @@ const nav = {
     faq: "FAQ",
     sponsor: "Sponsors",
     story: "Our Story",
+    keynote: "Keynote",
+    judges: "Judges"
 };
 
 export default nav;
