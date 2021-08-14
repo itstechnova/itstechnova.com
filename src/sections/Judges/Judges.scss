@@ -1,0 +1,36 @@
+@import "../../constants";
+
+.judge-photos {
+    display: grid;
+    margin-top: 48px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    align-items: flex-start;
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include phone {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include small-phone {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.judge-img {
+    align-self: flex-start;
+    width: 175px;
+    height: 175px;
+    
+        -moz-box-shadow: 5px 5px 0 var(--image-shadow-color);
+        -webkit-box-shadow: 5px 5px 0 var(--image-shadow-color);
+        box-shadow: 5px 5px 0 var(--image-shadow-color);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    
+    @include phone {
+        width: 90%;
+        height: auto;
+    }
+}
