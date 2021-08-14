@@ -17,7 +17,7 @@ import sps from "../../resources/images/sponsors/sps.png";
 import rogers from "../../resources/images/sponsors/rogers.png";
 import d2l from "../../resources/images/sponsors/d2l.png";
 import microsoft from "../../resources/images/sponsors/microsoft.png";
-
+import stickermule from "../../resources/images/sponsors/stickermule.png";
 
 /*
 import splunk from "../../resources/images/sponsors/bronze/splunk.png";
@@ -31,16 +31,16 @@ const OurSponsors = () => (
         <div className="our-sponsors-logos">
             <div className="our-sponsors-gold">
                 <a href="https://www.aboutamazon.com/" >
-                    <img src={amazon} alt="Amazon" style={{width: "55%"}}/> 
+                    <img src={amazon} alt="Amazon" style={{ width: "55%" }} />
                 </a>
                 <a href="https://www.cockroachlabs.com/careers/">
-                    <img src={cockroach} alt="Cockroach Labs" style={{width: "90%"}} />
+                    <img src={cockroach} alt="Cockroach Labs" style={{ width: "90%" }} />
                 </a>
                 <a href="https://jobs.spscommerce.com/">
-                    <img src={sps} alt="SPS Commerce" style={{width: "85%"}}/>
+                    <img src={sps} alt="SPS Commerce" style={{ width: "85%" }} />
                 </a>
                 <a href="https://careers.microsoft.com/us/en">
-                    <img src={microsoft} alt="Microsoft" style={{width: "70%"}}/>
+                    <img src={microsoft} alt="Microsoft" style={{ width: "70%" }} />
                 </a>
                 {/*
                     <a href="https://about.google/">
@@ -56,13 +56,13 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-silver">
                 <a href="https://about.facebook.com/">
-                        <img src={facebook} alt="Facebook" style={{width: "90%"}}/>
+                    <img src={facebook} alt="Facebook" style={{ width: "90%" }} />
                 </a>
                 <a href="https://www.scotiabank.com/ca/en/about.html">
-                    <img src={scotiabank} alt="Scotiabank" style={{width: "100%"}}/>
+                    <img src={scotiabank} alt="Scotiabank" style={{ width: "100%" }} />
                 </a>
                 <a className="pagerduty" href="https://www.pagerduty.com/careers/">
-                    <img src={pagerduty} alt="PagerDuty" style={{width: "80%"}}/>
+                    <img src={pagerduty} alt="PagerDuty" style={{ width: "80%" }} />
                 </a>
                 {/*
                     <a href="https://about.google/">
@@ -76,24 +76,24 @@ const OurSponsors = () => (
             </div>
             <div className="our-sponsors-bronze">
                 <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
-                    <img src={hrt} alt="HRT" style={{width: "70%"}} />
+                    <img src={hrt} alt="HRT" style={{ width: "70%" }} />
                 </a>
                 <a href="https://campus.rogers.com/">
-                        <img src={rogers} alt="Rogers" />
+                    <img src={rogers} alt="Rogers" />
                 </a>
                 <a href="https://www.zynga.com/jobs/careers/">
                     <img src={zynga} alt="Zynga" />
                 </a>
                 <a className="d2l" href="https://www.d2l.com/careers/">
-                    <img src={d2l} alt="D2L" style={{width: "70%"}} />
+                    <img src={d2l} alt="D2L" style={{ width: "70%" }} />
                 </a>
             </div>
             <div className="our-sponsors-startup">
                 <a href="https://expo.io/">
-                        <img src={expo} alt="Expo" style={{width: "100%"}}/>
+                    <img src={expo} alt="Expo" style={{ width: "100%" }} />
                 </a>
                 <a href="https://www.ratio.city/">
-                        <img src={ratiocity} alt="Ratio.city" style={{width: "80%"}} />
+                    <img src={ratiocity} alt="Ratio.city" style={{ width: "80%" }} />
                 </a>
             </div>
         </div>
@@ -104,6 +104,12 @@ const OurSponsors = () => (
             </a>
             <a href="https://uwaterloo.ca/women-in-engineering/">
                 <img src={wie} alt="WiE" />
+            </a>
+        </div>
+        <div className="our-sponsors-special">
+            <h3>❤️ With special thanks to  </h3>
+            <a href="http://hackp.ac/mlh-stickermule-hackathons">
+                <img src={stickermule} alt="Sticker Mule" style={{ width: "300px", padding: "24px" }}/>
             </a>
         </div>
     </div>

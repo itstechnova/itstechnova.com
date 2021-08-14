@@ -191,4 +191,16 @@
       }
     }
   }
+
+  &-special {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+     @include tablet {
+       flex-direction: column;
+       img {
+         padding: 24px;
+       }
+     }
+  }
 }
