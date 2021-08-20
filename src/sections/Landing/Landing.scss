@@ -181,6 +181,27 @@
             margin: 20px 0 0 0;
         }
     }
+
+    &-apps-closed {
+        max-width: 540px;
+        margin-top: 16px;
+        font-weight: bold;
+        @include phone {
+            visibility: hidden;
+            display: none;
+        }
+    }
+
+    &-apps-closed-mobile {
+        
+        visibility: hidden;
+        @include phone {
+            max-width: 540px;
+            visibility: visible;
+            align-self: flex-end;
+            margin: 20px 0 0 0;
+        }
+    }
     
 
     &-slogan {
@@ -309,3 +330,5 @@ h4 {
         margin-top: 5px;
     }
 }
+
+
