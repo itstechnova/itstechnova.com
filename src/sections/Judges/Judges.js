@@ -5,6 +5,10 @@ import judge1 from "../../resources/images/judges/judge1.svg"
 import judge2 from "../../resources/images/judges/judge2.svg"
 import judge3 from "../../resources/images/judges/judge3.svg"
 import judge4 from "../../resources/images/judges/judge4.svg"
+import judge5 from "../../resources/images/judges/judge5.svg"
+import judge6 from "../../resources/images/judges/judge6.svg"
+import judge7 from "../../resources/images/judges/judge7.svg"
+import judge8 from "../../resources/images/judges/judge8.svg"
 import judgeG from "../../resources/images/judges/judgeG.svg"
 
 
@@ -26,7 +30,7 @@ const JudgeCard = (props) => {
 }
 
 const judgeList = [
- {
+    {
         name: "Charlie Cheever",
         org: "Expo",
         pic: judge1,
@@ -55,6 +59,42 @@ const judgeList = [
         org: "SPS Commerce",
         pic: judgeG,
         role: "Application Engineer"
+    },
+    {
+        name: "Seema Bansal",
+        org: "Microsoft",
+        pic: judge5,
+        role: "Program Manager"
+    },
+    {
+        name: "Chloe Collins",
+        org: "JP Morgan",
+        pic: judgeG,
+        role: "Software Engineer"
+    },
+    {
+        name: "Shoma Sinha",
+        org: "Concept",
+        pic: judge6,
+        role: "Partnerships Development Officer"
+    },
+    {
+        name: "Rukmani Gopalan",
+        org: "Microsoft",
+        pic: judge7,
+        role: "Principal PM Manager"
+    },
+    {
+        name: "Mila Banerjee",
+        org: "Concept",
+        pic: judge8,
+        role: "Business Advisor Deeptech - AI"
+    },
+    {
+        name: "Cressa Price",
+        org: "D2L",
+        pic: judgeG,
+        role: "Engineering Director"
     }
 ]
 
