@@ -5,6 +5,7 @@ import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import landing from "../../resources/strings/landing";
 import bridgeTile from "../../resources/images/graphics/bridge-tile.svg";
 import chevron from "../../resources/images/icons/learn_more.svg"
+import Button from "../../components/Button/Button";
 
 const TextLoop = () => {
     const [mounted, setMounted] = useState(true);
@@ -61,8 +62,12 @@ const Landing = () => {
                         {landing.description}
                     </h4>
 
-                <h4 className="landing-apps-closed">Applications for TechNova’s Hack with Us are now closed. Please check your inbox as acceptances are rolling out! </h4>
-                <h4 className="landing-apps-closed-mobile">Applications are now closed. </h4>
+                    </div>
+                <div className="landing-button-container">
+                    <Button link={landing.devpostLink} label={landing.viewDevpost} />
+                </div>
+                <div className="landing-button-container-mobile">
+                    <Button link={landing.devpostLink} label={landing.viewDevpost} />
                 </div>
 
                 <div className="landing-graphic-container">
