@@ -1,7 +1,7 @@
 # itsTechNova Website
 
 **Checkout the live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
-**Dev site: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
+**Dev site: [itstechnova2022-dev.netlify.app/](https://itstechnova2022-dev.netlify.app/)**  
 **Netlify domain: [itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
 
 
@@ -13,7 +13,7 @@ git clone https://github.com/itstechnova/itstechnova.com
 ```
 Navigate to project directory and install required packages:
 ```
-cd itstechnova.com
+cd technova-2022
 yarn install
 ```
 Run the following to view live changes on http://localhost:3000
@@ -25,7 +25,7 @@ yarn start
 ## Deployment
 
 Netlify is set up to **automatically trigger deployments** upon changes to:  
-- dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)  
+- dev branch for: [itstechnova2022-dev.netlify.app/](https://itstechnova2022-dev.netlify.app/)  
 - main branch for: [www.itstechnova.com](http://itstechnova.com/)     
 
 A preview website will be deployed by Netlify when you create a pull request. Navigate by clicking on the `Details` button below:   
