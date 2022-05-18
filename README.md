@@ -1,7 +1,7 @@
 # itsTechNova Website
 
 **Checkout the live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
-**Dev site: [itstechnova2022-dev.netlify.app/](https://itstechnova2022-dev.netlify.app/)**  
+**Dev site: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
 **Netlify domain: [itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
 
 
@@ -13,7 +13,7 @@ git clone https://github.com/itstechnova/itstechnova.com
 ```
 Navigate to project directory and install required packages:
 ```
-cd technova-2022
+cd itstechnova.com
 yarn install
 ```
 Run the following to view live changes on http://localhost:3000
@@ -25,7 +25,7 @@ yarn start
 ## Deployment
 
 Netlify is set up to **automatically trigger deployments** upon changes to:  
-- dev branch for: [itstechnova2022-dev.netlify.app/](https://itstechnova2022-dev.netlify.app/)  
+- dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)  
 - main branch for: [www.itstechnova.com](http://itstechnova.com/)     
 
 A preview website will be deployed by Netlify when you create a pull request. Navigate by clicking on the `Details` button below:   
@@ -56,4 +56,3 @@ Unfortunately the free plan does not allow for adding team members.
 
 - Always run `yarn install` after pulling from master or checking out to a remote branch
 - Always update your local master branch by running `git pull` everytime a PR is merged to minimize the need to resolve conflicts when you are creating a PR
-
