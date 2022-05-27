@@ -30,7 +30,20 @@ const SponsorPackage = `${process.env.PUBLIC_URL}/pdfs/sponsorship_package.pdf`;
 // PDF locations in public folder
 //const SponsorPackage = `${process.env.PUBLIC_URL}/pdfs/sponsorship_package.pdf`;
 
+function checkIfDarkModeOnLoad() {
+    /**
+     * Check if device using dark mode
+     * Auto switch to dark mode
+     * Function runs on load
+     */
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        window.localStorage.setItem("mode", "dark");
+    else
+        window.localStorage.setItem("mode", "light");
+}
+
 const App = () => {
+    checkIfDarkModeOnLoad();
     return (
         <BrowserRouter>
             <Switch>
